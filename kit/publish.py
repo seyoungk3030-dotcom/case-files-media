@@ -1,6 +1,6 @@
 """Publish one episode (carousel + reel) to @case_files_after_work via the Instagram API.
 
-Usage: python3 publish.py <episode_dir> <public_base_url>
+Usage: python3 publish.py <episode_dir> <video_base_url> [<image_base_url>]
   public_base_url must serve <base>/cards/card-NN.png and <base>/reel.mp4 publicly.
 Needs env IG_ACCESS_TOKEN. Never prints the token.
 Safe to re-run: anything already on the account (matched by caption prefix "[ROOM NNN") is skipped.
@@ -48,31 +48,48 @@ def wait(cid, tries=90):
 
 
 def publish(room, kind, cid):
-    try:
-        call('/me/media_publish', {'creation_id': cid})
-    except RuntimeError as e:
-        # Instagram sometimes returns 2207051 "action is blocked" yet publishes anyway.
-        time.sleep(10)
-        m = find(room, kind)
-        if m: return m
-        raise
-    for _ in range(6):
+    for attempt in range(8):
+        try:
+            call('/me/media_publish', {'creation_id': cid})
+            break
+        except RuntimeError as e:
+            # 2207027 = container not ready yet: wait and publish the SAME container again.
+            # 2207051 "action is blocked" sometimes publishes anyway: check the account first.
+            time.sleep(15)
+            m = find(room, kind)
+            if m: return m
+            if '2207027' in str(e) and attempt < 7:
+                continue
+            raise
+    for _ in range(8):
         m = find(room, kind)
         if m: return m
         time.sleep(5)
     raise RuntimeError(f'{kind} published but not visible yet')
 
 
-def main(ep_dir, base):
+def main(ep_dir, base, img_base=None):
+    img_base = img_base or base
     ep = json.load(open(f'{ep_dir}/episode.json')); room = ep['room']
     cards = sorted(glob.glob(f'{ep_dir}/cards/card-*.png'))
     cap_c = open(f'{ep_dir}/notes/caption-carousel.txt').read().strip()
     cap_r = open(f'{ep_dir}/notes/caption-reel.txt').read().strip()
     assert cap_c.startswith(f'[ROOM {room:03d}') and cap_r.startswith(f'[ROOM {room:03d}')
+    # The CDN needs a little time after a push; wait until every file is served (200) before Instagram fetches it.
+    urls = [f'{img_base}/cards/{os.path.basename(c)}' for c in cards] + [f'{base}/reel.mp4']
+    for u in urls:
+        for _ in range(40):
+            try:
+                if urllib.request.urlopen(urllib.request.Request(u, method='HEAD'), timeout=60).status == 200: break
+            except Exception:
+                pass
+            time.sleep(15)
+        else:
+            raise RuntimeError(f'media not reachable: {u}')
     rec = {}
     m = find(room, 'carousel')
     if not m:
-        kids = [call('/me/media', {'image_url': f'{base}/cards/{os.path.basename(c)}', 'is_carousel_item': 'true'})['id'] for c in cards]
+        kids = [call('/me/media', {'image_url': f'{img_base}/cards/{os.path.basename(c)}', 'is_carousel_item': 'true'})['id'] for c in cards]
         for k in kids: wait(k)
         cid = call('/me/media', {'media_type': 'CAROUSEL', 'children': ','.join(kids), 'caption': cap_c})['id']
         wait(cid); m = publish(room, 'carousel', cid)
@@ -105,4 +122,4 @@ def main(ep_dir, base):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1], sys.argv[2].rstrip('/'))
+    main(sys.argv[1], sys.argv[2].rstrip('/'), sys.argv[3].rstrip('/') if len(sys.argv) > 3 else None)
