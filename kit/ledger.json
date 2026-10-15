@@ -78,6 +78,14 @@
    "carousel_url": "https://www.instagram.com/p/DegTiH3kcgl/",
    "reel_url": "https://www.instagram.com/reel/DegToWRElwi/",
    "published_at": "2026-10-15T06:24:36.643673+00:00"
+  },
+  {
+   "room": 12,
+   "title": "다섯 명 중 한 명이 거짓말",
+   "mechanic": "one_liar_five_statements",
+   "answer": "6342",
+   "date": "2026-10-15",
+   "status": "READY"
   }
  ],
  "extra": [

@@ -1,0 +1,29 @@
+{
+ "unique_answer": "6342",
+ "liar": "도윤",
+ "tested_codes": 3024,
+ "solutions_if_all_true": 0,
+ "statements": [
+  [
+   "민재",
+   "A는 B의 두 배"
+  ],
+  [
+   "유나",
+   "C + D = A"
+  ],
+  [
+   "도윤",
+   "C가 가장 크다"
+  ],
+  [
+   "서연",
+   "D가 가장 작다"
+  ],
+  [
+   "하준",
+   "C는 D의 두 배"
+  ]
+ ],
+ "rules": "ABCD each 1-9, all different, exactly one statement false"
+}

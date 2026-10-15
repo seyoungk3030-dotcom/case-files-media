@@ -9,7 +9,7 @@ Setup: `python3 -m pip install -q edge-tts numpy pillow` (ffmpeg is preinstalled
 ## 0. Guard
 - If today (KST) is after 2026-12-31, do nothing and stop.
 - Read `kit/ledger.json`. If a room has status READY or FAILED, finish it first: re-run publish, which skips anything already posted. Then stop.
-- Run `python3 -I -c "import sys; sys.path.insert(0,'kit'); import publish; [print(m['timestamp'], (m.get('caption') or '')[:30]) for m in publish.recent(6)]"`. If a `[ROOM` post exists from the last 3 hours, this slot is already covered, so stop.
+- Run `python3 -I -c "import sys; sys.path.insert(0,'kit'); import publish; [print(m['timestamp'], (m.get('caption') or '')[:30]) for m in publish.recent(6)]"`. If a `[ROOM` post exists from the last 90 minutes, this slot is already covered, so stop. (Slots are 3+ hours apart; a manual post earlier in the day does not count as this slot.)
 - The next room is the highest `room` in the ledger + 1, and the date is today in KST (`YYYY.MM.DD`).
 
 ## 1. Design the puzzle
