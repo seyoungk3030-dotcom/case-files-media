@@ -1,0 +1,90 @@
+{
+ "account": "case_files_after_work",
+ "timezone": "Asia/Seoul",
+ "end_date": "2026-12-31",
+ "schedule_kst": [
+  "12:00",
+  "18:00",
+  "21:00"
+ ],
+ "note": "One episode = one original puzzle as a 7-card carousel + narrated reel (Reels tab only). Never reuse a mechanic within 10 rooms; never repeat an exact puzzle.",
+ "episodes": [
+  {
+   "room": 1,
+   "title": "9시 5분의 세 알리바이",
+   "mechanic": "cctv_clock_offset_alibi",
+   "status": "PUBLISHED"
+  },
+  {
+   "room": 2,
+   "title": "겹쳐진 봉인",
+   "mechanic": "sticker_key_swap_order",
+   "status": "PUBLISHED"
+  },
+  {
+   "room": 3,
+   "title": "숫자가 없는 도어록",
+   "mechanic": "doorlock_shadow_digits",
+   "status": "PUBLISHED"
+  },
+  {
+   "room": 4,
+   "title": "잘린 모서리",
+   "mechanic": "rotating_overlay_decoder",
+   "status": "PUBLISHED"
+  },
+  {
+   "room": 5,
+   "title": "마지막 입력",
+   "mechanic": "mastermind_order_feedback",
+   "status": "PUBLISHED"
+  },
+  {
+   "room": 6,
+   "title": "거울 하나가 틀렸다",
+   "mechanic": "mirror_light_path",
+   "status": "PUBLISHED"
+  },
+  {
+   "room": 7,
+   "title": "굴러가는 금고",
+   "mechanic": "rolling_cube_floor_scanner",
+   "status": "PUBLISHED"
+  },
+  {
+   "room": 8,
+   "title": "불을 끄면 열리는 문",
+   "mechanic": "six_lamp_ring_exact_four_toggles",
+   "status": "PUBLISHED"
+  },
+  {
+   "room": 9,
+   "title": "가짜 금괴는 두 개",
+   "mechanic": "two_light_counterfeits_balance",
+   "status": "PUBLISHED"
+  },
+  {
+   "room": 10,
+   "title": "숫자는 맞는데 왜 잠겼지",
+   "mechanic": "connected_island_bridges",
+   "status": "PUBLISHED"
+  },
+  {
+   "room": 11,
+   "title": "보이는 빌딩만 센다",
+   "mechanic": "skyscraper_4x4_visibility",
+   "answer": "1432",
+   "status": "PUBLISHED",
+   "carousel_url": "https://www.instagram.com/p/DegTiH3kcgl/",
+   "reel_url": "https://www.instagram.com/reel/DegToWRElwi/",
+   "published_at": "2026-10-15T06:24:36.643673+00:00"
+  }
+ ],
+ "extra": [
+  {
+   "title": "아무도 안 읽었는데, 비밀번호가 털렸다",
+   "mechanic": "chat_unread_count_deduction",
+   "status": "PUBLISHED"
+  }
+ ]
+}

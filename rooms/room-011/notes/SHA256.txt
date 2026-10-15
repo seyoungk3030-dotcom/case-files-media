@@ -1,0 +1,8 @@
+0f6a93325b7e2c66e28f1a772896f26bf1a7e9019607b60d9d35f68419720bad  /mnt/project-files/content/CASE-011/cards/card-01.png
+3ffd3189f2b7094ac88a873234f7852d27ba499187034504eb24571330da2a26  /mnt/project-files/content/CASE-011/cards/card-02.png
+e2439e9c3ad57c73a03e67350d063035f81f023c557a96a92dbb1837ddc9fd35  /mnt/project-files/content/CASE-011/cards/card-03.png
+866a7617ee2854293bb5c25debb9550d52484dde37278f4a6c4c9279b50a14cd  /mnt/project-files/content/CASE-011/cards/card-04.png
+ce382fb95606b59ff58ac135ff3affdfa0114ecc9c0d3158e7e47da6407e40aa  /mnt/project-files/content/CASE-011/cards/card-05.png
+5e0fa3831e7b9fb5799d178b2c5e5cfde13e2ce7a289da2da03ce452fd2a0aa3  /mnt/project-files/content/CASE-011/cards/card-06.png
+6f6e7950b2b538dffa4941260ca2a7bb5b59fc5db17cb87d45bc04454989fe18  /mnt/project-files/content/CASE-011/cards/card-07.png
+934e8cc1772d8ff30df55a04d72ecdc19cc27f12499e1e3e25ad432b2422f3b7  /mnt/project-files/content/CASE-011/reel.mp4
