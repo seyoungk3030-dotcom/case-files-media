@@ -89,6 +89,14 @@
    "carousel_url": "https://www.instagram.com/p/DegjnSHlpJk/",
    "reel_url": "https://www.instagram.com/reel/Degj4M8ACab/",
    "published_at": "2026-10-15T08:46:30.123384+00:00"
+  },
+  {
+   "room": 13,
+   "title": "달력에서 지워진 두 개의 별",
+   "mechanic": "calendar_weekday_dates",
+   "answer": "1327",
+   "date": "2026-10-15",
+   "status": "READY"
   }
  ],
  "extra": [

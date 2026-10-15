@@ -1,0 +1,15 @@
+{
+ "unique_answer": "1327",
+ "tested_pairs": 210,
+ "clues": [
+  "두 날은 같은 요일",
+  "두 번째 날은 금요일",
+  "두 번째 날은 20일 이후",
+  "네 자리 숫자는 모두 다르다"
+ ],
+ "rules": "November 2026 calendar, both dates 10-30, first < second, code = first DD + second DD",
+ "candidates_without_distinct_digit_clue": [
+  "1327",
+  "2027"
+ ]
+}
