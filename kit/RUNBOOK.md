@@ -39,8 +39,8 @@ Rules for the text: Korean, lines under about 900px wide, nothing overlapping or
 ## 5. Host, publish, record
 1. Add the room to `kit/ledger.json` (room, title, mechanic, answer, date) with status READY.
 2. Delete `.build/`, then `git add -A`, commit `ROOM NNN`, and `git push origin main`. Take `SHA=$(git rev-parse HEAD)`.
-3. Set `VBASE=https://cdn.jsdelivr.net/gh/seyoungk3030-dotcom/case-files-media@$SHA/rooms/room-NNN` (video: jsDelivr serves `video/mp4`) and `IBASE=https://raw.githubusercontent.com/seyoungk3030-dotcom/case-files-media/$SHA/rooms/room-NNN` (images: Instagram sometimes fails to fetch fresh jsDelivr image URLs).
-4. Run `python3 -I kit/publish.py rooms/room-NNN $VBASE $IBASE`. It waits until the files are reachable, skips anything already posted, retries "not ready yet" on the same container, handles the false "action is blocked" error, and retries transient video-fetch failures.
+3. Set `BASE=https://raw.githubusercontent.com/seyoungk3030-dotcom/case-files-media/$SHA/rooms/room-NNN` and use it for both video and images. Instagram accepted the raw reel URL on ROOM 013 while jsDelivr's GitHub endpoint was returning 503. Only if raw fails, try `https://cdn.jsdelivr.net/gh/seyoungk3030-dotcom/case-files-media@$SHA/rooms/room-NNN` for the video.
+4. Run `python3 -I kit/publish.py rooms/room-NNN $BASE $BASE`. It waits until the files are reachable, skips anything already posted, retries "not ready yet" on the same container, handles the false "action is blocked" error, and retries transient video-fetch failures.
 5. If it fails, set the ledger status to FAILED with a short reason, commit and push, and stop. Never retry without checking the account first. **Never post the same room twice.**
 6. On success the ledger shows PUBLISHED with URLs. Commit and push the ledger.
 
