@@ -1,0 +1,20 @@
+{
+ "unique_answer": "4861",
+ "tested_codes": 3024,
+ "candidates_clues_1_to_3": [
+  "4861",
+  "7534",
+  "8425",
+  "9316"
+ ],
+ "extra_solutions_if_digits_may_repeat": [
+  "5752"
+ ],
+ "clues": [
+  "① 윗줄 A + B = 12",
+  "② 아랫줄 C + D = 7",
+  "③ 왼쪽 줄 A + C = 10",
+  "④ 가장 큰 숫자는 B"
+ ],
+ "rules": "A B / C D each 1-9, all different, code = A B C D"
+}

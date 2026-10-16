@@ -100,6 +100,14 @@
    "carousel_url": "https://www.instagram.com/p/Deg6DOqlSqk/",
    "reel_url": "https://www.instagram.com/reel/Deg6G3Bk3MM/",
    "published_at": "2026-10-15T12:00:50.162207+00:00"
+  },
+  {
+   "room": 14,
+   "title": "합만 남은 금고 다이얼",
+   "mechanic": "kakuro_lite_2x2_sums",
+   "answer": "4861",
+   "date": "2026-10-16",
+   "status": "READY"
   }
  ],
  "extra": [
