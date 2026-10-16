@@ -122,6 +122,14 @@
    "carousel_url": "https://www.instagram.com/p/DejIbkQlpAx/",
    "reel_url": "https://www.instagram.com/reel/DejIhmlj6hu/",
    "published_at": "2026-10-16T08:45:13.849549+00:00"
+  },
+  {
+   "room": 16,
+   "title": "거울 속 벽시계",
+   "mechanic": "mirror_clock_time",
+   "answer": "1950",
+   "date": "2026-10-16",
+   "status": "READY"
   }
  ],
  "extra": [

@@ -1,0 +1,13 @@
+{
+ "unique_answer": "1950",
+ "tested_times": 1440,
+ "mirror_matches_any_time": [
+  "0750",
+  "1950"
+ ],
+ "traps": {
+  "read_without_mirror": "0410",
+  "forgot_evening": "0750"
+ },
+ "rules": "mirror flips left-right; code = real time in 24h HHMM; incident is in the evening after work (18-23h)"
+}
