@@ -111,6 +111,14 @@
    "carousel_url": "https://www.instagram.com/p/DeifMKhFE3M/",
    "reel_url": "https://www.instagram.com/reel/DeifPRXFaMI/",
    "published_at": "2026-10-16T02:44:33.673071+00:00"
+  },
+  {
+   "room": 15,
+   "title": "사물함 네 칸의 주인",
+   "mechanic": "locker_grid_positions",
+   "answer": "5697",
+   "date": "2026-10-16",
+   "status": "READY"
   }
  ],
  "extra": [
