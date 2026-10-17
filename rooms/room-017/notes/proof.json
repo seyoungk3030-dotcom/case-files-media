@@ -1,0 +1,18 @@
+{
+ "unique_answer": "7465",
+ "tested_codes": 1680,
+ "candidates_clues_1_2": [
+  "5243",
+  "6354",
+  "7465",
+  "8576",
+  "9687"
+ ],
+ "trap_floors_in_exit_order": "4567",
+ "clues": [
+  "① 내린 순서: 유나 → 서연 → 도윤 → 민재",
+  "② 민재는 유나보다 정확히 3층 위",
+  "③ 네 사람이 내린 층을 더하면 22"
+ ],
+ "rules": "floors 2-9, all different, elevator only goes up; code = 민재 유나 도윤 서연 floors"
+}

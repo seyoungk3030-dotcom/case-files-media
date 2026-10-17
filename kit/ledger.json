@@ -133,6 +133,14 @@
    "carousel_url": "https://www.instagram.com/p/Dejc_nElG_Z/",
    "reel_url": "https://www.instagram.com/reel/DejdHVokohV/",
    "published_at": "2026-10-16T11:45:08.315026+00:00"
+  },
+  {
+   "room": 17,
+   "title": "엘리베이터 기록지",
+   "mechanic": "elevator_floor_log",
+   "answer": "7465",
+   "date": "2026-10-17",
+   "status": "READY"
   }
  ],
  "extra": [
