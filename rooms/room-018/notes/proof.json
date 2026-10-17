@@ -1,0 +1,16 @@
+{
+ "unique_answer": "1649",
+ "tested_codes": 10000,
+ "candidates_clues_1_to_3": [
+  "1649",
+  "6194"
+ ],
+ "memo": "3861",
+ "clues": [
+  "① 메모 = 진짜 암호의 모든 자리를 같은 수(1~9)만큼 앞으로 민 것",
+  "② 진짜 암호에 0은 없다",
+  "③ 진짜 암호의 네 숫자를 더하면 20",
+  "④ 진짜 암호는 홀수"
+ ],
+ "rules": "each digit shifted forward by the same k in 1-9, 9 wraps to 0"
+}
