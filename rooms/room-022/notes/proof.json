@@ -1,0 +1,11 @@
+{
+ "unique_answer": "1325",
+ "assignments_tested": 6561,
+ "order": "circle triangle square star",
+ "scales": [
+  "3 circles = triangle",
+  "triangle + circle = 2 squares",
+  "star + square = 2 triangles + circle"
+ ],
+ "why_unique": "everything is a multiple of the circle; star = 5 x circle, so circle = 2 would make star 10 > 9"
+}

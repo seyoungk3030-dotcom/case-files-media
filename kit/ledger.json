@@ -188,6 +188,14 @@
    "carousel_url": "https://www.instagram.com/p/DeoR4bJFnR8/",
    "reel_url": "https://www.instagram.com/reel/DeoR7XhEzeu/",
    "published_at": "2026-10-18T08:43:39.360359+00:00"
+  },
+  {
+   "room": 22,
+   "title": "수평을 이룬 세 저울",
+   "mechanic": "seesaw_symbol_weights",
+   "answer": "1325",
+   "date": "2026-10-18",
+   "status": "READY"
   }
  ],
  "extra": [
