@@ -177,6 +177,14 @@
    "carousel_url": "https://www.instagram.com/p/Deno5s5lfob/",
    "reel_url": "https://www.instagram.com/reel/Deno9CFDbrk/",
    "published_at": "2026-10-18T02:45:38.200213+00:00"
+  },
+  {
+   "room": 21,
+   "title": "접히지 않은 주사위",
+   "mechanic": "cube_net_opposite_faces",
+   "answer": "4318",
+   "date": "2026-10-18",
+   "status": "READY"
   }
  ],
  "extra": [
