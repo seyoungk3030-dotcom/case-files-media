@@ -166,6 +166,14 @@
    "carousel_url": "https://www.instagram.com/p/DemBw_rIIcM/",
    "reel_url": "https://www.instagram.com/reel/DemB5u3iMXD/",
    "published_at": "2026-10-17T11:45:10.561473+00:00"
+  },
+  {
+   "room": 20,
+   "title": "열화상에 찍힌 도어록",
+   "mechanic": "thermal_keypad_order",
+   "answer": "9856",
+   "date": "2026-10-18",
+   "status": "READY"
   }
  ],
  "extra": [

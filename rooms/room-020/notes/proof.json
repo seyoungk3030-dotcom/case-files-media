@@ -1,0 +1,9 @@
+{
+ "unique_answer": "9856",
+ "codes_tested": 10000,
+ "heat_only_candidates": [
+  "9586",
+  "9856"
+ ],
+ "rule_that_breaks_tie": "orthogonal adjacency (9-5 is diagonal)"
+}
