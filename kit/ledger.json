@@ -221,6 +221,14 @@
    "carousel_url": "https://www.instagram.com/p/Deq23lNnMz3/",
    "reel_url": "https://www.instagram.com/reel/Deq26oFD8S_/",
    "published_at": "2026-10-19T08:45:17.703316+00:00"
+  },
+  {
+   "room": 25,
+   "title": "빌딩 숲의 암호",
+   "mechanic": "skyscraper_visibility_4x4",
+   "answer": "1213",
+   "date": "2026-10-19",
+   "status": "READY"
   }
  ],
  "extra": [
