@@ -210,6 +210,14 @@
    "carousel_url": "https://www.instagram.com/p/DeqNpVllBtm/",
    "reel_url": "https://www.instagram.com/reel/DeqNtR-jai_/",
    "published_at": "2026-10-19T02:45:14.866277+00:00"
+  },
+  {
+   "room": 24,
+   "title": "별 다섯 개의 금고",
+   "mechanic": "star_placement_regions_5x5",
+   "answer": "4251",
+   "date": "2026-10-19",
+   "status": "READY"
   }
  ],
  "extra": [
