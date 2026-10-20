@@ -254,6 +254,14 @@
    "carousel_url": "https://www.instagram.com/p/Detbr-Im75K/",
    "reel_url": "https://www.instagram.com/reel/Detbv0YE7mI/",
    "published_at": "2026-10-20T08:45:41.834511+00:00"
+  },
+  {
+   "room": 28,
+   "title": "꺼진 전광판의 숫자",
+   "mechanic": "nonogram_digit_panels_3x5",
+   "answer": "5293",
+   "date": "2026-10-20",
+   "status": "READY"
   }
  ],
  "extra": [
