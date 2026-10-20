@@ -232,6 +232,14 @@
    "carousel_url": "https://www.instagram.com/p/DerLoTLGxPR/",
    "reel_url": "https://www.instagram.com/reel/DerLr3rlRsC/",
    "published_at": "2026-10-19T11:47:00.623220+00:00"
+  },
+  {
+   "room": 26,
+   "title": "창가석 네 자리의 영수증",
+   "mechanic": "cafe_seat_drink_logic_grid",
+   "answer": "3142",
+   "date": "2026-10-20",
+   "status": "READY"
   }
  ],
  "extra": [
