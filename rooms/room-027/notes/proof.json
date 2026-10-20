@@ -1,0 +1,40 @@
+{
+ "unique_answer": "6285",
+ "routes_without_walls": 48,
+ "routes_with_walls": 1,
+ "every_wall_needed": true,
+ "route": [
+  "r1c1",
+  "r1c2",
+  "r1c3",
+  "r2c3",
+  "r2c4",
+  "r1c4",
+  "r1c5",
+  "r2c5",
+  "r3c5",
+  "r4c5",
+  "r5c5",
+  "r5c4",
+  "r5c3",
+  "r5c2",
+  "r5c1",
+  "r4c1",
+  "r3c1",
+  "r2c1",
+  "r2c2",
+  "r3c2",
+  "r4c2",
+  "r4c3",
+  "r4c4",
+  "r3c4",
+  "r3c3"
+ ],
+ "tiles": {
+  "r2c4": 6,
+  "r5c2": 2,
+  "r2c2": 8,
+  "r4c4": 5
+ },
+ "reading_order_trap": "8652"
+}

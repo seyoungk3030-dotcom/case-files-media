@@ -243,6 +243,14 @@
    "carousel_url": "https://www.instagram.com/p/Desyb9HjIO-/",
    "reel_url": "https://www.instagram.com/reel/DesygIyiq0K/",
    "published_at": "2026-10-20T02:45:17.747459+00:00"
+  },
+  {
+   "room": 27,
+   "title": "로봇 청소기의 마지막 경로",
+   "mechanic": "hamiltonian_robot_path_walls_5x5",
+   "answer": "6285",
+   "date": "2026-10-20",
+   "status": "READY"
   }
  ],
  "extra": [
