@@ -70,7 +70,8 @@ def publish(room, kind, cid):
 
 def main(ep_dir, base, img_base=None):
     img_base = img_base or base
-    ep = json.load(open(f'{ep_dir}/episode.json')); room = ep['room']
+    ep = f'{ep_dir}/short3d.json' if os.path.exists(f'{ep_dir}/short3d.json') else f'{ep_dir}/episode.json'
+    room = json.load(open(ep))['room']
     cards = sorted(glob.glob(f'{ep_dir}/cards/card-*.png'))
     cap_c = open(f'{ep_dir}/notes/caption-carousel.txt').read().strip()
     cap_r = open(f'{ep_dir}/notes/caption-reel.txt').read().strip()
