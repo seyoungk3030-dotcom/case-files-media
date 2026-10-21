@@ -41,7 +41,7 @@ Korean text, lines under about 900 px, nothing overlapping or clipped, no emoji 
 - Run `python3 -I kit/short3d.py /abs/path/rooms/room-NNN`, then Read `.build-short/qa-hook.png`, `qa-count.png`, `qa-answer.png`, `qa-cta.png`. Aim for 30–40 seconds.
 
 ## 4. Captions
-`notes/caption-carousel.txt` and `notes/caption-reel.txt`. Copy the format of `rooms/room-011/notes/` exactly: the first line is `[ROOM NNN · 제목] YYYY.MM.DD <one emoji>`. The reel caption keeps the line about synthetic narration and the BGM we made, and says the answer is at the end of the video (10-second countdown). ROOM 029's captions show the current wording. Hashtags: `#퇴근후사건파일 #방탈출 #추리게임 #팔로우 #좋아요`.
+`notes/caption-carousel.txt` and `notes/caption-reel.txt`. Copy the format of `rooms/room-011/notes/` exactly: the first line is `[ROOM NNN · 제목] YYYY.MM.DD <one emoji>`. The reel caption keeps the line about synthetic narration and the BGM we made, and says the answer is at the end of the video (10-second countdown). ROOM 029's captions show the current wording. Hashtags (since ROOM 029): `#퇴근후사건파일 #두뇌게임 #퍼즐 #퀴즈 #방탈출 #추리게임 #수수께끼 #IQ테스트` (niche puzzle tags reach people who look for puzzles; generic #팔로우 #좋아요 were dropped).
 
 ## 5. Host, publish, record
 1. Add the room to `kit/ledger.json` (room, title, mechanic, answer, date) with status READY.
