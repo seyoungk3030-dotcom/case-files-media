@@ -148,3 +148,41 @@ def project(placed):
 def render(path):
     bpy.context.scene.render.filepath = path
     bpy.ops.render.render(write_still=True)
+
+
+def cubestack(hm, col, ghost=(), hidden_col=None, n=3):
+    """hm[row][col] heights, row 0 = front (y=0), col 0 = left (x=0). Cubes are unit size on an n x n floor.
+    Cells in ghost (i, j, k) are hidden cubes: they get hidden_col, every other cube turns see-through."""
+    tile = mat('tile', (0.62, 0.68, 0.78), rough=0.5, coat=0.0)
+    base = mat('base', (0.20, 0.26, 0.36), rough=0.5, coat=0.0)
+    solid = mat('cube', col, rough=0.3, coat=0.5)
+    glass = mat('glass', col, rough=0.2, coat=0.0)
+    hidm = mat('hid', hidden_col or col)
+    q = hidm.node_tree.nodes['Principled BSDF']; q.inputs['Emission Color'].default_value = (*(hidden_col or col), 1)
+    q.inputs['Emission Strength'].default_value = 1.4
+    if ghost:
+        p = glass.node_tree.nodes['Principled BSDF']; p.inputs['Alpha'].default_value = 0.11
+    bpy.ops.mesh.primitive_cube_add(size=1, location=(n / 2, n / 2, -0.16))
+    b = bpy.context.object; b.scale = (n + 0.3, n + 0.3, 0.3); b.data.materials.append(base); bevel(b, 0.06)
+    for i in range(n):
+        for j in range(n):
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(i + 0.5, j + 0.5, -0.02))
+            t = bpy.context.object; t.scale = (0.94, 0.94, 0.04); t.data.materials.append(tile)
+            for k in range(hm[j][i]):
+                bpy.ops.mesh.primitive_cube_add(size=0.985, location=(i + 0.5, j + 0.5, k + 0.5))
+                c = bpy.context.object
+                hid = (i, j, k) in ghost
+                c.data.materials.append(hidm if hid else (glass if ghost else solid))
+                bevel(c, 0.07, 3)
+
+
+def stack_camera(center, scale, az=33.0, el=30.0):
+    """Orthographic camera from the front-right-top; matches the visibility model in a room's view.py."""
+    d = (math.sin(math.radians(az)) * math.cos(math.radians(el)), -math.cos(math.radians(az)) * math.cos(math.radians(el)),
+         math.sin(math.radians(el)))
+    bpy.ops.object.camera_add(location=tuple(c + 30 * x for c, x in zip(center, d)))
+    cam = bpy.context.object; cam.data.type = 'ORTHO'; cam.data.ortho_scale = scale; cam.data.clip_end = 100
+    tgt = bpy.data.objects.new('tgt', None); bpy.context.collection.objects.link(tgt); tgt.location = center
+    c = cam.constraints.new('TRACK_TO'); c.target = tgt; c.track_axis = 'TRACK_NEGATIVE_Z'; c.up_axis = 'UP_Y'
+    bpy.context.scene.camera = cam
+    return cam

@@ -265,6 +265,14 @@
    "carousel_url": "https://www.instagram.com/p/DetwWW8oKF3/",
    "reel_url": "https://www.instagram.com/reel/DetwbnmEpzy/",
    "published_at": "2026-10-20T11:46:56.739486+00:00"
+  },
+  {
+   "room": 29,
+   "title": "보이지 않는 큐브까지",
+   "mechanic": "cube_stack_hidden_supports_3d",
+   "answer": "7596",
+   "date": "2026-10-21",
+   "status": "READY"
   }
  ],
  "extra": [
