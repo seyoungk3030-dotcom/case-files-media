@@ -51,4 +51,7 @@ Korean text, lines under about 900 px, nothing overlapping or clipped, no emoji 
 5. If it fails, set the ledger status to FAILED with a short reason, commit and push, and stop. Never retry without checking the account first. **Never post the same room twice.**
 6. On success the ledger shows PUBLISHED with URLs. Commit and push the ledger.
 
+## 6. Comment replies
+Run `python3 -I kit/comments.py`. It replies only to comments with a 4-digit guess on recent posts (congrats if right, otherwise how many digits are in place; never the answer) and skips anything already answered. If it errors, note it in the status and carry on; it never blocks publishing.
+
 Finish with a one-line summary: room, title, answer, and both URLs.
