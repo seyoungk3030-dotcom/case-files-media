@@ -228,3 +228,40 @@ def die(R, loc=(0, 0, 0.5), faces=None, body=(0.92, 0.90, 0.84), pip=(0.06, 0.07
                 (float(R[2][0]), float(R[2][1]), float(R[2][2]), loc[2]), (0, 0, 0, 1)))
     root.matrix_world = M
     return root
+
+
+def gear(n, m=0.12, loc=(0, 0, 0), theta=0.0, mt=None, thick=0.22, hub=None):
+    """Spur gear lying flat: n teeth, module m (pitch radius m*n/2), centre loc (bottom face at loc z), rotated
+    theta radians; tooth k is centred at angle theta + 2*pi*k/n. Returns the gear object."""
+    r = m * n / 2; ra, rf = r + m, r - 1.2 * m
+    pts = []
+    for k in range(n):
+        c = theta + 2 * math.pi * k / n; w = math.pi / n
+        for a, rr in ((c - w * 1.0, rf), (c - w * 0.55, rf), (c - w * 0.32, ra), (c + w * 0.32, ra), (c + w * 0.55, rf), (c + w * 1.0, rf)):
+            pts.append((math.cos(a) * rr, math.sin(a) * rr))
+    me = bpy.data.meshes.new('gear'); bm = bmesh.new()
+    vs = [bm.verts.new((x, y, 0)) for x, y in pts[:-1] if True]
+    bmesh.ops.remove_doubles(bm, verts=vs, dist=1e-5)
+    f = bm.faces.new(bm.verts)
+    ext = bmesh.ops.extrude_face_region(bm, geom=[f])
+    bmesh.ops.translate(bm, verts=[v for v in ext['geom'] if isinstance(v, bmesh.types.BMVert)], vec=(0, 0, thick))
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    bm.to_mesh(me); bm.free()
+    o = bpy.data.objects.new('gear', me); bpy.context.collection.objects.link(o)
+    o.location = loc; o.data.materials.append(mt)
+    bevel(o, 0.018, 2)
+    bpy.ops.mesh.primitive_cylinder_add(radius=max(0.09, r * 0.28), depth=thick + 0.06, vertices=48,
+                                        location=(loc[0], loc[1], loc[2] + thick / 2))
+    h = bpy.context.object; h.data.materials.append(hub or mt); bevel(h, 0.02, 2)
+    return o
+
+
+MESH_SIGN = 1
+
+
+def mesh_angle(c2, n2, c3, n3, th2, m=0.12):
+    """Rotation for gear 3 so it meshes with gear 2 (centres c2, c3; teeth n2, n3; gear 2 rotated th2)."""
+    psi = math.atan2(c3[1] - c2[1], c3[0] - c2[0]); r2, r3 = m * n2 / 2, m * n3 / 2
+    step = 2 * math.pi / n2; u = r2 * ((psi - th2) % step)
+    if u > r2 * step / 2: u -= r2 * step
+    return psi + math.pi + math.pi / n3 + MESH_SIGN * u / r3

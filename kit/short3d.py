@@ -2,7 +2,8 @@
 
 Episode folder needs sprites in .build-3d/ and short3d.json. The puzzle area (y 330..1380) is either
  "layout": [{"sprite": "stack-A", "answer_sprite": "xray-A", "x": 290, "y": 600, "w": 440, "label": "A", "key": "A"}, ...]
-   (free placement; "key" puts that legend value's badge on the sprite's top-right corner during the answer), or
+   (free placement; "key" puts that legend value's badge on the sprite's top centre during the answer; or
+   "marks": "<json name>" with "tags": {key: "text"} to pin text pills and answer badges to points in one big sprite), or
  "stack": ["scale1", ...], "stack_labels": ["저울 1", ...]  (full-width rows; <name>.json from b3d.project places badges).
 Other fields: {"hook": ["line 1", "line 2"], "rule": ["line", "line"], "legend": ["c", "t", "s", "r"]
  (icon-<k>.png if present, else a letter pill coloured by optional "legend_colors"), "values": {"c": 1, ...},
@@ -32,14 +33,24 @@ class Scene:
         self.items = []                      # sprite, answer sprite, centre, label, badge marks relative to the sprite's top-left
         if 'layout' in sh:
             for it in sh['layout']:
-                im = trim(Image.open(f'{B}/{it["sprite"]}.png').convert('RGBA'))
-                im = im.resize((it['w'], round(im.height * it['w'] / im.width)), Image.LANCZOS)
+                im = Image.open(f'{B}/{it["sprite"]}.png').convert('RGBA')
+                if not it.get('marks'): im = trim(im)
+                sc = it['w'] / im.width
+                im = im.resize((it['w'], round(im.height * sc)), Image.LANCZOS)
                 ans = im
                 if it.get('answer_sprite'):
                     ans = trim(Image.open(f'{B}/{it["answer_sprite"]}.png').convert('RGBA'))
                     k = min(im.width / ans.width, im.height / ans.height); ans = ans.resize((round(ans.width * k), round(ans.height * k)), Image.LANCZOS)
+                marks, tags = ([(it['key'], im.width / 2, 0, 1.35)] if it.get('key') else []), []
+                if it.get('marks'):   # positions from b3d-style json [{key, x, y}] in the untrimmed sprite's pixels
+                    pts = json.load(open(f'{B}/{it["marks"]}.json'))
+                    off = it.get('badge_offset', {})
+                    marks = [(p['key'], p['x'] * sc + off.get(p['key'], [70, -50])[0], p['y'] * sc + off.get(p['key'], [70, -50])[1], 1.0)
+                             for p in pts if p['key'] in sh['legend']]
+                    tags = [(pill(it['tags'][p['key']], 30, (16, 28, 44), (244, 246, 250, 245)),
+                             p['x'] * sc, p['y'] * sc) for p in pts if p['key'] in it.get('tags', {})]
                 self.items.append({'im': im, 'ans': ans, 'cx': it['x'], 'cy': it['y'], 'label': it.get('label'),
-                                   'lpos': (14, 22), 'marks': [(it['key'], im.width / 2, 0, 1.35)] if it.get('key') else []})
+                                   'lpos': (14, 22), 'marks': marks, 'tags': tags})
         else:
             for i, (name, lab) in enumerate(zip(sh['stack'], sh['stack_labels'])):
                 im = Image.open(f'{B}/{name}.png').convert('RGBA')
@@ -105,6 +116,7 @@ class Scene:
             left = it['cx'] - spr.width / 2
             put(fr, spr, it['cx'], top + spr.height / 2, 1, min(1, max(0, (t - st) * 3)))
             if it['lab']: put(fr, it['lab'], left + it['lpos'][0], top + it['lpos'][1], 1, min(1, max(0, (t - st - 0.3) * 3)))
+            for lay, tx, ty in it.get('tags', []): put(fr, lay, left + tx, top + ty, 1, min(1, max(0, (t - st - 0.4) * 3)))
             if answer:
                 for key, dx, dy, sc in it['marks']:
                     j = self.sh['legend'].index(key)
