@@ -276,6 +276,14 @@
    "carousel_url": "https://www.instagram.com/p/DevW6cogN1a/",
    "reel_url": "https://www.instagram.com/reel/DevW-nVikxq/",
    "published_at": "2026-10-21T02:42:08.567201+00:00"
+  },
+  {
+   "room": 30,
+   "title": "바닥에 닿은 숫자",
+   "mechanic": "dice_bottom_faces_3d",
+   "answer": "4162",
+   "date": "2026-10-21",
+   "status": "READY"
   }
  ],
  "extra": [

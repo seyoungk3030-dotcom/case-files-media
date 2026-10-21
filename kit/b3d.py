@@ -186,3 +186,45 @@ def stack_camera(center, scale, az=33.0, el=30.0):
     c = cam.constraints.new('TRACK_TO'); c.target = tgt; c.track_axis = 'TRACK_NEGATIVE_Z'; c.up_axis = 'UP_Y'
     bpy.context.scene.camera = cam
     return cam
+
+
+PIPS = {1: [(0, 0)], 2: [(-1, -1), (1, 1)], 3: [(-1, -1), (0, 0), (1, 1)], 4: [(-1, -1), (-1, 1), (1, -1), (1, 1)],
+        5: [(-1, -1), (-1, 1), (0, 0), (1, -1), (1, 1)], 6: [(-1, -1), (-1, 0), (-1, 1), (1, -1), (1, 0), (1, 1)]}
+
+
+def die(R, loc=(0, 0, 0.5), faces=None, body=(0.92, 0.90, 0.84), pip=(0.06, 0.07, 0.10), glow=None):
+    """A standard die (rounded cube of size 1) rotated by the 3x3 matrix R about its centre at loc.
+    faces maps unrotated outward normals to numbers (default: 1 up, 2 front, 3 right). glow: (normal in world,
+    colour) lights up the pips of the face pointing that way."""
+    from mathutils import Matrix
+    faces = faces or {(0, 0, 1): 1, (0, 0, -1): 6, (0, -1, 0): 2, (0, 1, 0): 5, (1, 0, 0): 3, (-1, 0, 0): 4}
+    root = bpy.data.objects.new('die', None); bpy.context.collection.objects.link(root)
+    bpy.ops.mesh.primitive_cube_add(size=1)
+    b = bpy.context.object; b.data.materials.append(mat('die', body, rough=0.25, coat=0.7)); bevel(b, 0.13, 6)
+    for p in b.data.polygons: p.use_smooth = True
+    b.parent = root
+    pm = mat('pip', pip, rough=0.4, coat=0.3)
+    gm = None
+    if glow:
+        gm = mat('pipglow', glow[1], rough=0.3, coat=0.0)
+        q = gm.node_tree.nodes['Principled BSDF']; q.inputs['Emission Color'].default_value = (*glow[1], 1)
+        q.inputs['Emission Strength'].default_value = 2.5
+    for n, num in faces.items():
+        n = tuple(n); ax = [i for i in range(3) if n[i] == 0]
+        world_n = tuple(int(v) for v in (R @ __import__('numpy').array(n)))
+        m = gm if glow and world_n == tuple(glow[0]) else pm
+        for u, v in PIPS[num]:
+            pos = [0.0, 0.0, 0.0]; pos[ax[0]] = u * 0.25; pos[ax[1]] = v * 0.25
+            for i in range(3):
+                if n[i]: pos[i] = n[i] * 0.497
+            bpy.ops.mesh.primitive_uv_sphere_add(radius=0.085, segments=24, ring_count=12, location=pos)
+            s = bpy.context.object; sc = [1, 1, 1]
+            for i in range(3):
+                if n[i]: sc[i] = 0.35
+            s.scale = sc; s.data.materials.append(m)
+            for p in s.data.polygons: p.use_smooth = True
+            s.parent = root
+    M = Matrix(((float(R[0][0]), float(R[0][1]), float(R[0][2]), loc[0]), (float(R[1][0]), float(R[1][1]), float(R[1][2]), loc[1]),
+                (float(R[2][0]), float(R[2][1]), float(R[2][2]), loc[2]), (0, 0, 0, 1)))
+    root.matrix_world = M
+    return root

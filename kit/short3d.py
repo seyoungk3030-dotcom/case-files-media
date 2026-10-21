@@ -36,7 +36,8 @@ class Scene:
                 im = im.resize((it['w'], round(im.height * it['w'] / im.width)), Image.LANCZOS)
                 ans = im
                 if it.get('answer_sprite'):
-                    ans = trim(Image.open(f'{B}/{it["answer_sprite"]}.png').convert('RGBA')).resize(im.size, Image.LANCZOS)
+                    ans = trim(Image.open(f'{B}/{it["answer_sprite"]}.png').convert('RGBA'))
+                    k = min(im.width / ans.width, im.height / ans.height); ans = ans.resize((round(ans.width * k), round(ans.height * k)), Image.LANCZOS)
                 self.items.append({'im': im, 'ans': ans, 'cx': it['x'], 'cy': it['y'], 'label': it.get('label'),
                                    'lpos': (14, 22), 'marks': [(it['key'], im.width / 2, 0, 1.35)] if it.get('key') else []})
         else:

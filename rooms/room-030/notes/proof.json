@@ -1,0 +1,68 @@
+{
+ "unique_answer": "4162",
+ "orientations_tested_per_die": 24,
+ "dice": {
+  "A": {
+   "top_front_right": [
+    3,
+    2,
+    6
+   ],
+   "bottom": [
+    4
+   ],
+   "bottom_without_rule": [
+    1,
+    4,
+    5
+   ]
+  },
+  "B": {
+   "top_front_right": [
+    6,
+    4,
+    5
+   ],
+   "bottom": [
+    1
+   ],
+   "bottom_without_rule": [
+    1,
+    2,
+    3
+   ]
+  },
+  "C": {
+   "top_front_right": [
+    1,
+    5,
+    4
+   ],
+   "bottom": [
+    6
+   ],
+   "bottom_without_rule": [
+    2,
+    3,
+    6
+   ]
+  },
+  "D": {
+   "top_front_right": [
+    5,
+    1,
+    3
+   ],
+   "bottom": [
+    2
+   ],
+   "bottom_without_rule": [
+    2,
+    4,
+    6
+   ]
+  }
+ },
+ "trap_top_faces": "3615",
+ "why": "the bottom is opposite the top, so bottom = 7 - top; front and right only confirm the die is standard"
+}
