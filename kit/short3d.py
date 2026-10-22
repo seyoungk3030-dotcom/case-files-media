@@ -39,7 +39,8 @@ class Scene:
                 im = im.resize((it['w'], round(im.height * sc)), Image.LANCZOS)
                 ans = im
                 if it.get('answer_sprite'):
-                    ans = trim(Image.open(f'{B}/{it["answer_sprite"]}.png').convert('RGBA'))
+                    ans = Image.open(f'{B}/{it["answer_sprite"]}.png').convert('RGBA')
+                    if not it.get('marks'): ans = trim(ans)
                     k = min(im.width / ans.width, im.height / ans.height); ans = ans.resize((round(ans.width * k), round(ans.height * k)), Image.LANCZOS)
                 marks, tags = ([(it['key'], im.width / 2, 0, 1.35)] if it.get('key') else []), []
                 if it.get('marks'):   # positions from b3d-style json [{key, x, y}] in the untrimmed sprite's pixels

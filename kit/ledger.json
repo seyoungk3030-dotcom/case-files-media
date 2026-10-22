@@ -298,6 +298,14 @@
    "carousel_url": "https://www.instagram.com/p/DewW_K8EUOz/",
    "reel_url": "https://www.instagram.com/reel/DewXClfiIRa/",
    "published_at": "2026-10-21T12:01:58.850218+00:00"
+  },
+  {
+   "room": 32,
+   "title": "빛이 닿는 곳",
+   "mechanic": "mirror_light_beams_3d",
+   "answer": "3142",
+   "date": "2026-10-22",
+   "status": "READY"
   }
  ],
  "extra": [
