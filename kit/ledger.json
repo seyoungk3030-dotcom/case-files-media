@@ -342,6 +342,14 @@
    "carousel_url": "https://www.instagram.com/p/De0hbptoG2s/",
    "reel_url": "https://www.instagram.com/reel/De0hfXnjHUH/",
    "published_at": "2026-10-23T02:50:07.302014+00:00"
+  },
+  {
+   "room": 36,
+   "title": "컵 바꾸기",
+   "mechanic": "cup_position_swaps_3d",
+   "answer": "2431",
+   "date": "2026-10-23",
+   "status": "READY"
   }
  ],
  "extra": [
