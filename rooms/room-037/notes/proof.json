@@ -1,0 +1,17 @@
+{
+ "unique_answer": "5214",
+ "stackings_tested": 120,
+ "order_top_to_bottom": "CBGDA",
+ "trap_skip_gray": "4213",
+ "crossings": [
+  "D 위 (A-D)",
+  "B 위 (A-B)",
+  "C 위 (A-C)",
+  "G 위 (D-G)",
+  "B 위 (D-B)",
+  "C 위 (D-C)",
+  "B 위 (G-B)",
+  "C 위 (B-C)"
+ ],
+ "why": "C가 B 위, B가 회색 위, 회색이 D 위, D가 A 위 → 위에서부터 C B 회색 D A"
+}
