@@ -375,6 +375,14 @@
    "carousel_url": "https://www.instagram.com/p/De3GQ6JEb8n/",
    "reel_url": "https://www.instagram.com/reel/De3GbPHk2_e/",
    "published_at": "2026-10-24T02:51:44.473436+00:00"
+  },
+  {
+   "room": 39,
+   "title": "조각 맞추기",
+   "mechanic": "tetromino_hole_fit_no_flip_3d",
+   "answer": "3412",
+   "date": "2026-10-24",
+   "status": "READY"
   }
  ],
  "extra": [
