@@ -364,6 +364,14 @@
    "carousel_url": "https://www.instagram.com/p/De1fvdHFgQ4/",
    "reel_url": "https://www.instagram.com/reel/De1f1YaAnoD/",
    "published_at": "2026-10-23T11:55:22.913861+00:00"
+  },
+  {
+   "room": 38,
+   "title": "불빛 자물쇠",
+   "mechanic": "dial_lock_lamp_feedback_3d",
+   "answer": "8361",
+   "date": "2026-10-24",
+   "status": "READY"
   }
  ],
  "extra": [
