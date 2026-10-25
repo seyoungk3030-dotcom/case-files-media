@@ -1,0 +1,7 @@
+{
+ "unique_answer": "4123",
+ "weight_sets_fitting": 14,
+ "order": "A ball, B pyramid, C cube, D star",
+ "trap_lightest_first": "1432",
+ "why": "큐브 = 공 2개 · 피라미드는 공 3개보다 무겁고 큐브 2개(공 4개)보다 가볍다 · 별 2개 = 피라미드 → 별은 공 1.5~2개 → 피라미드 > 큐브 > 별 > 공"
+}
