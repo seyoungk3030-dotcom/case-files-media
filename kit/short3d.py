@@ -9,6 +9,8 @@ Other fields: {"hook": ["line 1", "line 2"], "rule": ["line", "line"], "legend":
  (icon-<k>.png if present, else a letter pill coloured by optional "legend_colors"), "values": {"c": 1, ...},
  "answer": "1325", "count": 10, "cta": "one line",
  "narration": {"hook": "...", "rule": "...", "answer": "...", "cta": "..."}}   (numbers in narration as Korean words)
+Tease reel ("tease": true): hook, rule, countdown, then "정답은 다음 릴스에서" (narration "tease") instead of the answer; with
+ "prev": {"room": 43, "answer": "2435"} it ends on the previous room's answer (narration "prev").
 The answer narration should name the legend items in order; their reveals are spaced across its first 70%.
 Usage: python3 short3d.py <absolute episode_dir>
 """
@@ -85,9 +87,16 @@ class Scene:
         rng = np.random.default_rng(room + 7)
         self.conf = [(rng.uniform(-14, 14), rng.uniform(-30, -12), rng.uniform(0, 6.28), rng.uniform(-0.3, 0.3),
                       [S.MINT, S.YEL, S.CORAL, (140, 170, 255), S.WHITE][rng.integers(5)]) for _ in range(90)]
-        a = next(s for s in segs if s[0] == 'answer')
-        self.reveal = [a[1] + a[2] * (0.12 + 0.15 * i) for i in range(len(sh['legend']))]
-        self.code_t = a[1] + a[2] * 0.78
+        a = next((s for s in segs if s[0] == 'answer'), None)
+        if a:
+            self.reveal = [a[1] + a[2] * (0.12 + 0.15 * i) for i in range(len(sh['legend']))]
+            self.code_t = a[1] + a[2] * 0.78
+        else:   # tease reel: the answer is kept for the next reel
+            self.reveal = [1e9] * len(sh['legend']); self.code_t = 1e9
+        self.tease = [text_layer('정답은 다음 릴스에서!', 72, S.YEL, glow=S.YEL), text_layer('팔로우하면 놓치지 않아요', 48, S.WHITE, 'Bold')]
+        if sh.get('prev'):
+            self.prev = [text_layer(f'지난 문제 ROOM {sh["prev"]["room"]:03d} 정답', 46, (200, 212, 226), 'Bold'),
+                         text_layer(' '.join(sh['prev']['answer']), 140, S.MINT, glow=S.MINT)]
 
     def legend_row(self, fr, t, y, show_vals):
         keys = self.sh['legend']; n = len(keys); gap = 195; x0 = W / 2 - gap * (n - 1) / 2 + 70
@@ -138,6 +147,11 @@ class Scene:
             sec = math.ceil(left - 1e-6); beat = pt - math.floor(pt)
             put(fr, self.count_nums[max(sec, 0)], cx, cy - 20, 1 + 0.18 * (1 - ease(beat / 0.25)))
             put(fr, self.count_hint, W / 2, PANEL_Y + 425)
+        elif phase in ('tease', 'prev'):
+            a = next(s for s in self.segs if s[0] == phase)[1]; k = ease_out_back((t - a) / 0.45)
+            lays = self.tease if phase == 'tease' else self.prev
+            put(fr, lays[0], W / 2, PANEL_Y + (150 if phase == 'tease' else 110), k)
+            put(fr, lays[1], W / 2, PANEL_Y + (280 if phase == 'tease' else 270), k)
         else:
             self.legend_row(fr, t, PANEL_Y + 120, True)
             if t >= self.code_t:
@@ -173,7 +187,7 @@ def build(ep_dir):
     room = sh['room'] if 'room' in sh else json.load(open(f'{ep_dir}/episode.json'))['room']
     COUNT = sh.get('count', 10)
     T = f'{ep_dir}/.build-short'; os.makedirs(T, exist_ok=True)
-    keys = ['hook', 'rule', 'answer', 'cta']
+    keys = ['hook', 'rule', 'tease'] + (['prev'] if sh.get('prev') else []) if sh.get('tease') else ['hook', 'rule', 'answer', 'cta']
 
     async def tts():
         for k in keys:
@@ -183,7 +197,7 @@ def build(ep_dir):
 
     segs, t0 = [], 0.0
     for k in keys:
-        dd = R.dur(f'{T}/{k}.wav') + (0.9 if k == 'answer' else 0.4)
+        dd = R.dur(f'{T}/{k}.wav') + (0.9 if k in ('answer', 'prev') else 0.4)
         segs.append((k, t0, dd)); t0 += dd
         if k == 'rule': segs.append(('count', t0, COUNT)); t0 += COUNT
     total = t0
@@ -198,7 +212,7 @@ def build(ep_dir):
             add(np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16) / 32768, st + 0.05)
     for i in range(len(sc.items)): add(sfx(0.3, 'thud'), 0.25 + 0.22 * i + 0.3)
     for r in sc.reveal: add(sfx(0.25, 'pop'), r)
-    add(sfx(1.6, 'chime'), sc.code_t)
+    add(sfx(1.6, 'chime'), next((st for k, st, dd in segs if k == 'prev'), sc.code_t))
     music = R.bgm(len(voice) / R.SR, room)
     music = np.pad(music, (0, max(0, len(voice) - len(music))))[:len(voice)]
     duck = np.full_like(voice, 0.45); tick = np.zeros_like(voice)
@@ -218,7 +232,7 @@ def build(ep_dir):
                            '-i', '-', '-i', f'{T}/mix.wav', '-vf', 'format=yuv420p', '-c:v', 'libx264', '-preset', 'medium', '-crf', '19',
                            '-profile:v', 'high', '-c:a', 'aac', '-b:a', '160k', '-ar', str(R.SR), '-t', f'{total:.3f}',
                            '-movflags', '+faststart', f'{ep_dir}/reel.mp4'], stdin=subprocess.PIPE)
-    qa = {k: st + dd * (0.95 if k in ('answer', 'cta') else 0.5) for k, st, dd in segs}
+    qa = {k: st + dd * (0.95 if k in ('answer', 'cta', 'tease', 'prev') else 0.5) for k, st, dd in segs}
     for i in range(int(total * FPS) + 1):
         t = i / FPS; k, st, dd = next((s for s in segs if s[1] <= t < s[1] + s[2]), segs[-1])
         fr = sc.draw(t, k, t - st); ff.stdin.write(fr.tobytes())
