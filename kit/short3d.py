@@ -189,15 +189,21 @@ def build(ep_dir):
     T = f'{ep_dir}/.build-short'; os.makedirs(T, exist_ok=True)
     keys = ['hook', 'rule', 'tease'] + (['prev'] if sh.get('prev') else []) if sh.get('tease') else ['hook', 'rule', 'answer', 'cta']
 
-    async def tts():
+    async def tts():   # Qwen3-TTS lines from kit/qtts.py (<k>.txt matches the text) are reused; anything else uses edge-tts
         for k in keys:
-            await edge_tts.Communicate(sh['narration'][k], R.VOICE, rate='+12%').save(f'{T}/{k}.mp3')
-            subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-i', f'{T}/{k}.mp3', '-ar', str(R.SR), '-ac', '1', f'{T}/{k}.wav'], check=True)
+            q = f'{T}/{k}.txt'
+            if os.path.exists(q) and open(q).read() == sh['narration'][k] and os.path.exists(f'{T}/{k}.wav'):
+                subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-i', f'{T}/{k}.wav', '-af', 'atempo=1.06', '-ar', str(R.SR), '-ac', '1',
+                                f'{T}/{k}-v.wav'], check=True)
+            else:
+                print('edge-tts for', k)
+                await edge_tts.Communicate(sh['narration'][k], R.VOICE, rate='+12%').save(f'{T}/{k}.mp3')
+                subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-i', f'{T}/{k}.mp3', '-ar', str(R.SR), '-ac', '1', f'{T}/{k}-v.wav'], check=True)
     asyncio.run(tts())
 
     segs, t0 = [], 0.0
     for k in keys:
-        dd = R.dur(f'{T}/{k}.wav') + (0.9 if k in ('answer', 'prev') else 0.4)
+        dd = R.dur(f'{T}/{k}-v.wav') + (0.9 if k in ('answer', 'prev') else 0.4)
         segs.append((k, t0, dd)); t0 += dd
         if k == 'rule': segs.append(('count', t0, COUNT)); t0 += COUNT
     total = t0
@@ -208,7 +214,7 @@ def build(ep_dir):
         s0 = int(at * R.SR); voice[s0:s0 + len(sig)] += sig[:max(0, len(voice) - s0)]
     for k, st, dd in segs:
         if k == 'count': continue
-        with wave.open(f'{T}/{k}.wav') as w:
+        with wave.open(f'{T}/{k}-v.wav') as w:
             add(np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16) / 32768, st + 0.05)
     for i in range(len(sc.items)): add(sfx(0.3, 'thud'), 0.25 + 0.22 * i + 0.3)
     for r in sc.reveal: add(sfx(0.25, 'pop'), r)
