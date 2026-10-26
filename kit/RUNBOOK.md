@@ -52,6 +52,7 @@ Korean text, lines under about 900 px, nothing overlapping or clipped, no emoji 
 4. Run `python3 -I kit/publish.py rooms/room-NNN $BASE $BASE`. It waits until the files are reachable, skips anything already posted, retries "not ready yet" on the same container, handles the false "action is blocked" error, and retries transient video-fetch failures.
 5. If it fails, set the ledger status to FAILED with a short reason, commit and push, and stop. Never retry without checking the account first. **Never post the same room twice.**
 6. On success the ledger shows PUBLISHED with URLs. Commit and push the ledger.
+7. Story (since 2026-10-26, user asked for stories): `python3 -I kit/story.py NNN $BASE` shares the reel as a 24-hour story and records `story_id` in the ledger (skips if one exists). Commit and push the ledger again. A story failure doesn't fail the room: note it in the status and move on.
 
 ## 6. Comment replies
 Run `python3 -I kit/comments.py`. It replies only to comments with a 4-digit guess on recent posts (congrats if right, otherwise how many digits are in place; never the answer) and skips anything already answered. If it errors, note it in the status and carry on; it never blocks publishing.
