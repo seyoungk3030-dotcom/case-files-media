@@ -453,6 +453,14 @@
    "reel_url": "https://www.instagram.com/reel/De86--6ARc6/",
    "published_at": "2026-10-26T09:06:53.255124+00:00",
    "story_id": "18131048731700247"
+  },
+  {
+   "room": 46,
+   "title": "페인트에 담근 블록",
+   "mechanic": "painted_block_unpainted_inner_cubes_3d",
+   "answer": "3418",
+   "date": "2026-10-26",
+   "status": "READY"
   }
  ],
  "extra": [
