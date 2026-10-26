@@ -37,11 +37,11 @@ Use `kit/style3d.py`: `card(room, date, n, 7, title, sub)`, `sprite`, `put`, `pa
 Korean text, lines under about 900 px, nothing overlapping or clipped, no emoji in images. **Open every card PNG with Read and look at it**, then fix and re-render. Quality matters more than speed.
 
 ## 3b. Reel (`short3d.json` → `reel.mp4`)
-- Write `rooms/room-NNN/short3d.json` (see the `kit/short3d.py` docstring and ROOM 029): room, two hook lines (the question on screen from frame one), two rule lines, the puzzle `layout` (or `stack`), legend, values, answer, `count` 10, cta, and four narrations (hook, rule, answer, cta) with numbers as Korean words. The answer narration names the legend items in order.
-- Run `python3 -I kit/short3d.py /abs/path/rooms/room-NNN`, then Read `.build-short/qa-hook.png`, `qa-count.png`, `qa-answer.png`, `qa-cta.png`. Aim for 30–40 seconds.
+- Write `rooms/room-NNN/short3d.json` (see the `kit/short3d.py` docstring and ROOM 029): room, two hook lines (the question on screen from frame one), two rule lines, the puzzle `layout` (or `stack`), legend, values, answer, `count` 5, cta, and four narrations (hook, rule, answer, cta) with numbers as Korean words. The answer narration names the legend items in order. Since 2026-10-26 (weekly check: viewers watched 7.9 s of 40–45 s reels on average, so most left before the answer): keep each narration to one short sentence, the hook says "오 초 드릴게요", and the cta narration ends with "팔로우하면 다음 문제도 볼 수 있어요".
+- Run `python3 -I kit/short3d.py /abs/path/rooms/room-NNN`, then Read `.build-short/qa-hook.png`, `qa-count.png`, `qa-answer.png`, `qa-cta.png`. Aim for 25–32 seconds; if longer, shorten the narrations.
 
 ## 4. Captions
-`notes/caption-carousel.txt` and `notes/caption-reel.txt`. Copy the format of `rooms/room-011/notes/` exactly: the first line is `[ROOM NNN · 제목] YYYY.MM.DD <one emoji>`. The reel caption keeps the line about synthetic narration and the BGM we made, and says the answer is at the end of the video (10-second countdown). ROOM 029's captions show the current wording. Hashtags (since ROOM 029): `#퇴근후사건파일 #두뇌게임 #퍼즐 #퀴즈 #방탈출 #추리게임 #수수께끼 #IQ테스트` (niche puzzle tags reach people who look for puzzles; generic #팔로우 #좋아요 were dropped).
+`notes/caption-carousel.txt` and `notes/caption-reel.txt`. Copy the format of `rooms/room-011/notes/` exactly: the first line is `[ROOM NNN · 제목] YYYY.MM.DD <one emoji>`. The reel caption keeps the line about synthetic narration and the BGM we made, and says the answer is at the end of the video (5-second countdown: write "5초 안에 풀어 보고"). ROOM 029's captions show the current wording. Hashtags (since ROOM 029): `#퇴근후사건파일 #두뇌게임 #퍼즐 #퀴즈 #방탈출 #추리게임 #수수께끼 #IQ테스트` (niche puzzle tags reach people who look for puzzles; generic #팔로우 #좋아요 were dropped).
 
 ## 5. Host, publish, record
 1. Add the room to `kit/ledger.json` (room, title, mechanic, answer, date) with status READY.
