@@ -4,7 +4,7 @@ Usage: python3 publish.py <episode_dir> <video_base_url> [<image_base_url>]
   public_base_url must serve <base>/cards/card-NN.png and <base>/reel.mp4 publicly.
 Needs env IG_ACCESS_TOKEN. Never prints the token.
 Safe to re-run: anything already on the account (matched by caption prefix "[ROOM NNN") is skipped.
-Reels go to the Reels tab only (share_to_feed=false).
+Reels are also shared to the feed (share_to_feed=true, user's choice 2026-10-26).
 """
 import glob, json, os, sys, time, urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timezone
@@ -101,7 +101,7 @@ def main(ep_dir, base, img_base=None):
     if not m:
         # Instagram's video fetch from the CDN sometimes fails transiently (HTTP 500); retry a fresh container.
         for attempt in range(3):
-            cid = call('/me/media', {'media_type': 'REELS', 'video_url': f'{base}/reel.mp4', 'caption': cap_r, 'share_to_feed': 'false'})['id']
+            cid = call('/me/media', {'media_type': 'REELS', 'video_url': f'{base}/reel.mp4', 'caption': cap_r, 'share_to_feed': 'true'})['id']
             try:
                 wait(cid); break
             except RuntimeError as e:

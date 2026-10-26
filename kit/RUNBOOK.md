@@ -1,6 +1,6 @@
 # 퇴근 후 사건파일: one scheduled run = one new room
 
-Each run makes **one** new original puzzle and posts it to Instagram @case_files_after_work as a 7-card carousel plus a short narrated reel, both in the 3D style. The reel goes to the Reels tab only (`share_to_feed=false`). There are three runs a day, starting around 11:30, 17:30 and 20:30 KST, until 2026-12-31.
+Each run makes **one** new original puzzle and posts it to Instagram @case_files_after_work as a 7-card carousel plus a short narrated reel, both in the 3D style. The reel is also shared to the feed (`share_to_feed=true`, user's choice 2026-10-26; before that Reels tab only). There are three runs a day, starting around 11:30, 17:30 and 20:30 KST, until 2026-12-31.
 
 Everything lives in this repo (public). `kit/` holds the tools, `kit/ledger.json` is the source of truth, and `rooms/room-NNN/` is each episode. The repo is public so Instagram can fetch the media, so **never commit secrets**. The token is env `IG_ACCESS_TOKEN` and must never be printed or written anywhere.
 
