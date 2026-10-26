@@ -441,6 +441,14 @@
    "carousel_url": "https://www.instagram.com/p/De8QSwvlLO2/",
    "reel_url": "https://www.instagram.com/reel/De8QV2IjMfu/",
    "published_at": "2026-10-26T02:54:17.475347+00:00"
+  },
+  {
+   "room": 45,
+   "title": "톱니바퀴 화살표",
+   "mechanic": "gear_row_quarter_turn_arrow_dial_3d",
+   "answer": "3241",
+   "date": "2026-10-26",
+   "status": "READY"
   }
  ],
  "extra": [
