@@ -465,6 +465,14 @@
    "reel_url": "https://www.instagram.com/reel/De9PbK0CUZ2/",
    "published_at": "2026-10-26T12:05:31.879390+00:00",
    "story_id": "18132671146693021"
+  },
+  {
+   "room": 47,
+   "title": "별의 반대편",
+   "mechanic": "cube_net_fold_opposite_face_3d",
+   "answer": "7259",
+   "date": "2026.10.27",
+   "status": "READY"
   }
  ],
  "extra": [

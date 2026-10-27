@@ -2,7 +2,7 @@
 
 Episode folder needs sprites in .build-3d/ and short3d.json. The puzzle area (y 330..1380) is either
  "layout": [{"sprite": "stack-A", "answer_sprite": "xray-A", "x": 290, "y": 600, "w": 440, "label": "A", "key": "A"}, ...]
-   (free placement; "key" puts that legend value's badge on the sprite's top centre during the answer; or
+   (free placement; optional "lpos": [dx, dy] moves the letter label from the sprite top-left; "key" puts that legend value's badge on the sprite's top centre during the answer; or
    "marks": "<json name>" with "tags": {key: "text"} to pin text pills and answer badges to points in one big sprite), or
  "stack": ["scale1", ...], "stack_labels": ["저울 1", ...]  (full-width rows; <name>.json from b3d.project places badges).
 Other fields: {"hook": ["line 1", "line 2"], "rule": ["line", "line"], "legend": ["c", "t", "s", "r"]
@@ -53,7 +53,7 @@ class Scene:
                     tags = [(pill(it['tags'][p['key']], 30, (16, 28, 44), (244, 246, 250, 245)),
                              p['x'] * sc, p['y'] * sc) for p in pts if p['key'] in it.get('tags', {})]
                 self.items.append({'im': im, 'ans': ans, 'cx': it['x'], 'cy': it['y'], 'label': it.get('label'),
-                                   'lpos': (14, 22), 'marks': marks, 'tags': tags})
+                                   'lpos': tuple(it.get('lpos', (14, 22))), 'marks': marks, 'tags': tags})
         else:
             for i, (name, lab) in enumerate(zip(sh['stack'], sh['stack_labels'])):
                 im = Image.open(f'{B}/{name}.png').convert('RGBA')
