@@ -34,6 +34,8 @@ Use `kit/style3d.py`: `card(room, date, n, 7, title, sub)`, `sprite`, `put`, `pa
 6. `정답 공개 · NNNN` with the answer renders and 1–2 reasoning lines
 7. Answer renders, the big code (`text_layer(' '.join(code), 160, MINT, glow=MINT)`), `맞혔다면 좋아요 · 다음 방은 팔로우!`
 
+**Card background (user's choice 2026-10-27):** run `kit/stock.py` (§3b) before the cards and render them with `CARD_BG=/abs/path/rooms/room-NNN/.build-short/bg.jpg python3 -I rooms/room-NNN/source/render.py`, so the cards sit on a blurred still of the same clip as the reel.
+
 Korean text, lines under about 900 px, nothing overlapping or clipped, no emoji in images. **Open every card PNG with Read and look at it**, then fix and re-render. Quality matters more than speed.
 
 ## 3b. Reel (`short3d.json` → `reel.mp4`)
