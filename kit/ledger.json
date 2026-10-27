@@ -477,6 +477,14 @@
    "reel_url": "https://www.instagram.com/reel/De-1mgvDqeQ/",
    "published_at": "2026-10-27T02:58:22.178268+00:00",
    "story_id": "17966326862984229"
+  },
+  {
+   "room": 48,
+   "title": "거울 속 시계",
+   "mechanic": "mirror_clock_real_time_3d",
+   "answer": "1037",
+   "date": "2026.10.27",
+   "status": "READY"
   }
  ],
  "extra": [
