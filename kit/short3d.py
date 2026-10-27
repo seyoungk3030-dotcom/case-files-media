@@ -7,7 +7,7 @@ Episode folder needs sprites in .build-3d/ and short3d.json. The puzzle area (y 
  "stack": ["scale1", ...], "stack_labels": ["저울 1", ...]  (full-width rows; <name>.json from b3d.project places badges).
 Other fields: {"hook": ["line 1", "line 2"], "rule": ["line", "line"], "legend": ["c", "t", "s", "r"]
  (icon-<k>.png if present, else a letter pill coloured by optional "legend_colors"), "values": {"c": 1, ...},
- "answer": "1325", "count": 10, "cta": "one line",
+ "answer": "1325", "count": 10, "cta": "one line", optional "bg_video": "<file in the episode dir>" (+ "bg_video_mix" 0..1),
  "narration": {"hook": "...", "rule": "...", "answer": "...", "cta": "..."}}   (numbers in narration as Korean words)
 Tease reel ("tease": true): hook, rule, countdown, then "정답은 다음 릴스에서" (narration "tease") instead of the answer; with
  "prev": {"room": 43, "answer": "2435"} it ends on the previous room's answer (narration "prev").
@@ -32,6 +32,11 @@ class Scene:
     def __init__(self, ep_dir, sh, room, segs):
         B = f'{ep_dir}/.build-3d'; self.sh, self.segs = sh, segs
         self.bg, self.bok = background(room)
+        self.vid, self.vf, self.vi = None, None, -1
+        if sh.get('bg_video'):
+            self.vid = subprocess.Popen(['ffmpeg', '-loglevel', 'error', '-stream_loop', '-1', '-i', f'{ep_dir}/{sh["bg_video"]}', '-vf',
+                f'scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},gblur=sigma=10,eq=brightness=-0.08:saturation=0.85,fps={FPS}',
+                '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], stdout=subprocess.PIPE)
         self.items = []                      # sprite, answer sprite, centre, label, badge marks relative to the sprite's top-left
         if 'layout' in sh:
             for it in sh['layout']:
@@ -108,8 +113,18 @@ class Scene:
             elif not show_vals or t < self.reveal[i]:
                 put(fr, self.qmark, x + 60, y - 58)
 
+    def bg_frame(self, t):
+        """Optional "bg_video": a stock clip, blurred and darkened, under the navy background (looped)."""
+        if not self.vid: return self.bg.copy()
+        i = int(round(t * FPS))
+        while self.vi < i or self.vf is None:
+            raw = self.vid.stdout.read(W * H * 3)
+            if len(raw) < W * H * 3: break
+            self.vf = Image.frombuffer('RGB', (W, H), raw).convert('RGBA'); self.vi += 1
+        return Image.blend(self.bg, self.vf, self.sh.get('bg_video_mix', 0.55)) if self.vf else self.bg.copy()
+
     def draw(self, t, phase, pt):
-        fr = self.bg.copy()
+        fr = self.bg_frame(t)
         off = int(t * 22) % H; fr.alpha_composite(self.bok.crop((0, off, W, off + H)))
         put(fr, self.brand, W / 2, 86)
         answer = phase in ('answer', 'cta')
@@ -244,6 +259,7 @@ def build(ep_dir):
         fr = sc.draw(t, k, t - st); ff.stdin.write(fr.tobytes())
         if abs(t - qa[k]) < 0.5 / FPS: fr.save(f'{T}/qa-{k}.png')
     ff.stdin.close(); assert ff.wait() == 0
+    if sc.vid: sc.vid.stdout.close(); sc.vid.kill()
     print(f'short ok {total:.1f}s')
 
 
