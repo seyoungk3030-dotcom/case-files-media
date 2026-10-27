@@ -1,8 +1,8 @@
 """3D-look design helpers shared by carousel cards (1080x1350) and kit/short3d.py reels (1080x1920):
 gradient background with glow and bokeh, shadowed text layers, pills, number badges, glass panels."""
-import math
+import math, os
 import numpy as np
-from PIL import Image, ImageDraw, ImageFilter
+from PIL import Image, ImageDraw, ImageFilter, ImageEnhance
 from style import F, MINT, YEL, WHITE, GRAY, CORAL, BG
 
 INK = (16, 28, 44); SOFT = (200, 212, 226)
@@ -113,6 +113,12 @@ def card(room, date, n, total, title, sub, subcol=MINT, seed=None):
     """Blank 1080x1350 card. Content area about y=300..1150; cta() sits at y=1190."""
     W, H = 1080, 1350
     bg, bok = background(seed if seed is not None else room * 10 + n, W, H, 0.45)
+    if os.environ.get('CARD_BG'):    # stock still (kit/stock.py), blurred and dimmed under the navy background
+        ph = Image.open(os.environ['CARD_BG']).convert('RGB'); k = max(W / ph.width, H / ph.height)
+        ph = ph.resize((round(ph.width * k), round(ph.height * k)), Image.LANCZOS)
+        ph = ph.crop(((ph.width - W) // 2, (ph.height - H) // 2, (ph.width + W) // 2, (ph.height + H) // 2))
+        ph = ImageEnhance.Color(ph.filter(ImageFilter.GaussianBlur(14))).enhance(0.85)
+        bg = Image.blend(bg, ImageEnhance.Brightness(ph).enhance(0.92).convert('RGBA'), 0.55)
     fr = bg.copy(); fr.alpha_composite(bok.crop((0, (n * 377) % H, W, (n * 377) % H + H)))
     put(fr, pill(f'퇴근 후 사건파일  ·  ROOM {room:03d}', 26, SOFT, (255, 255, 255, 26)), 250, 70)
     pg = pill(f'{n:02d} / {total:02d}', 26, SOFT, (255, 255, 255, 26)); put(fr, pg, W - 66 - pg.width / 2, 70)
