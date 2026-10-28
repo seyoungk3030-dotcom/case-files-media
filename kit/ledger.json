@@ -501,6 +501,14 @@
    "reel_url": "https://www.instagram.com/reel/De_zsrjD8kz/",
    "published_at": "2026-10-27T12:00:56.630591+00:00",
    "story_id": "17979709613916015"
+  },
+  {
+   "room": 50,
+   "title": "정사각형 세기",
+   "mechanic": "matchstick_count_all_squares_3d",
+   "answer": "3859",
+   "date": "2026.10.28",
+   "status": "READY"
   }
  ],
  "extra": [

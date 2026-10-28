@@ -1,0 +1,26 @@
+{
+ "room": 50,
+ "hook": ["성냥으로 만든 정사각형", "모두 몇 개일까?"],
+ "rule": ["크고 작은 정사각형 전부", "A B C D 개수가 암호"],
+ "layout": [
+  {"sprite": "fA", "answer_sprite": "xA", "x": 290, "y": 640, "w": 300, "label": "A", "key": "A", "lpos": [-6, -30]},
+  {"sprite": "fB", "answer_sprite": "xB", "x": 790, "y": 640, "w": 410, "label": "B", "key": "B", "lpos": [-6, -30]},
+  {"sprite": "fC", "answer_sprite": "xC", "x": 290, "y": 1080, "w": 410, "label": "C", "key": "C", "lpos": [-6, -30]},
+  {"sprite": "fD", "answer_sprite": "xD", "x": 790, "y": 1080, "w": 410, "label": "D", "key": "D", "lpos": [-6, -30]}
+ ],
+ "legend": ["A", "B", "C", "D"],
+ "legend_colors": {"A": [244, 246, 250], "B": [244, 246, 250], "C": [244, 246, 250], "D": [244, 246, 250]},
+ "values": {"A": 3, "B": 8, "C": 5, "D": 9},
+ "answer": "3859",
+ "count": 5,
+ "cta": "작은 것만 세면 함정!",
+ "tease": true,
+ "prev": {"room": 49, "answer": "4613"},
+ "bg_video": ".build-short/bg.mp4",
+ "narration": {
+  "hook": "성냥으로 만든 그림에 정사각형은 모두 몇 개일까요? 큰 것도 세야 해요. 오 초 드릴게요.",
+  "rule": "에이부터 디까지 개수를 차례로 쓰면 암호예요.",
+  "tease": "정답은 다음 릴스에서 공개해요. 팔로우하고 확인하세요!",
+  "prev": "지난 문제 엉킨 파이프의 정답은 사육일삼이었어요."
+ }
+}
