@@ -1,0 +1,30 @@
+{
+ "unique_answer": "4278",
+ "combinations_tested": 2560000,
+ "lines": [
+  [
+   "A + A + A",
+   12
+  ],
+  [
+   "A + B",
+   6
+  ],
+  [
+   "B + C + C",
+   16
+  ],
+  [
+   "D + C × A",
+   36
+  ]
+ ],
+ "trap_left_to_right": "4272",
+ "solutions_without_each_line": [
+  3,
+  9,
+  10,
+  40
+ ],
+ "why": "A+A+A=12 → A=4 · 4+B=6 → B=2 · 2+C+C=16 → C=7 · D+7×4=36 → D+28=36 → D=8"
+}

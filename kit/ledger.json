@@ -513,6 +513,14 @@
    "reel_url": "https://www.instagram.com/reel/DfBaoebDqVe/",
    "published_at": "2026-10-28T03:00:24.725120+00:00",
    "story_id": "18152568163554305"
+  },
+  {
+   "room": 51,
+   "title": "그림 수식",
+   "mechanic": "picture_equations_multiply_first_3d",
+   "answer": "4278",
+   "date": "2026.10.28",
+   "status": "READY"
   }
  ],
  "extra": [
