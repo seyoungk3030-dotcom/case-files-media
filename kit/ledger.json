@@ -525,6 +525,14 @@
    "reel_url": "https://www.instagram.com/reel/DfCD2U3DOLo/",
    "published_at": "2026-10-28T09:00:34.283083+00:00",
    "story_id": "18112808726158516"
+  },
+  {
+   "room": 52,
+   "title": "숫자 블록 피라미드",
+   "mechanic": "number_block_pyramid_sums_3d",
+   "answer": "5486",
+   "date": "2026.10.28",
+   "status": "READY"
   }
  ],
  "extra": [
