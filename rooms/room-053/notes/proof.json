@@ -1,0 +1,27 @@
+{
+ "unique_answer": "5749",
+ "weights_tested": 27000,
+ "fitting_weight_sets": 6,
+ "refs": [
+  [
+   "s",
+   "ccc"
+  ],
+  [
+   "r",
+   "scc"
+  ]
+ ],
+ "ask": {
+  "A": "r",
+  "B": "ssc",
+  "C": "sc",
+  "D": "rsc"
+ },
+ "trap_object_count": "1323",
+ "ratios_without_each_ref": [
+  138,
+  187
+ ],
+ "why": "상자 = 공 3 · 별 = 상자 + 공 2 = 공 5 → A 5 · B 3+3+1 = 7 · C 3+1 = 4 · D 5+3+1 = 9"
+}
