@@ -549,6 +549,14 @@
    "reel_url": "https://www.instagram.com/reel/DfEPxfzCdhq/",
    "published_at": "2026-10-29T05:23:15.094395+00:00",
    "story_id": "18223857244341685"
+  },
+  {
+   "room": 54,
+   "title": "주사위 굴리기",
+   "mechanic": "rolling_dice_paths_3d",
+   "answer": "2654",
+   "date": "2026.11.02",
+   "status": "READY"
   }
  ],
  "extra": [
