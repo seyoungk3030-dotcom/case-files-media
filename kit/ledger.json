@@ -561,6 +561,14 @@
    "reel_url": "https://www.instagram.com/reel/DfOR9PLirFD/",
    "published_at": "2026-11-02T02:54:46.543928+00:00",
    "story_id": "18353798053280501"
+  },
+  {
+   "room": 55,
+   "title": "구슬 갈림길",
+   "mechanic": "marble_toggle_tree_3d",
+   "answer": "4132",
+   "date": "2026.11.02",
+   "status": "READY"
   }
  ],
  "extra": [
