@@ -585,6 +585,14 @@
    "reel_url": "https://www.instagram.com/reel/DfPQEddgO67/",
    "published_at": "2026-11-02T11:57:22.146895+00:00",
    "story_id": "18389321005227236"
+  },
+  {
+   "room": 57,
+   "title": "롤러 위 판자",
+   "mechanic": "plank_on_rollers_double_distance_3d",
+   "answer": "2648",
+   "date": "2026.11.03",
+   "status": "READY"
   }
  ],
  "extra": [
