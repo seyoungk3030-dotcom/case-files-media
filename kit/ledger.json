@@ -609,6 +609,14 @@
    "reel_url": "https://www.instagram.com/reel/DfRgWz_CuhT/",
    "published_at": "2026-11-03T08:58:17.454624+00:00",
    "story_id": "18116484233177083"
+  },
+  {
+   "room": 59,
+   "title": "도르래",
+   "mechanic": "pulley_rope_segments_box_rise_3d",
+   "answer": "3427",
+   "date": "2026.11.03",
+   "status": "READY"
   }
  ],
  "extra": [
