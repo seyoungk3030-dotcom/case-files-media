@@ -645,6 +645,14 @@
    "reel_url": "https://www.instagram.com/reel/DfUE1qcknZR/",
    "published_at": "2026-11-04T08:55:29.395121+00:00",
    "story_id": "18636181906031850"
+  },
+  {
+   "room": 62,
+   "title": "열쇠 맞추기",
+   "mechanic": "pin_tumbler_key_shear_line_3d",
+   "answer": "7294",
+   "date": "2026.11.04",
+   "status": "READY"
   }
  ],
  "extra": [
