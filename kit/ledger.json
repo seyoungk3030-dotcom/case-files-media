@@ -633,6 +633,14 @@
    "reel_url": "https://www.instagram.com/reel/DfTsNvIgv0j/",
    "published_at": "2026-11-04T05:20:29.602108+00:00",
    "story_id": "18171774565487296"
+  },
+  {
+   "room": 61,
+   "title": "투명 필름 겹치기",
+   "mechanic": "transparent_film_flip_overlay_digit_3d",
+   "answer": "6829",
+   "date": "2026.11.04",
+   "status": "READY"
   }
  ],
  "extra": [
