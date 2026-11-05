@@ -1,0 +1,12 @@
+{
+ "unique_answer": "6473",
+ "codes_checked": 10000,
+ "rows_left_end_pole": {
+  "A": "NSSNNSNS",
+  "B": "NNNNSSNS",
+  "C": "NSNSNSNN",
+  "D": "NNNSSSNN"
+ },
+ "trap_rule_swapped": "3526",
+ "why": "맞닿은 끝이 N-S면 붙고, N-N이나 S-S면 밀어낸다. 밀어내는 곳마다 조각이 하나씩 늘어난다."
+}

@@ -669,6 +669,14 @@
    "reel_url": "https://www.instagram.com/reel/DfWAZWnIV0V/",
    "published_at": "2026-11-05T02:55:11.904431+00:00",
    "story_id": "18154436437529003"
+  },
+  {
+   "room": 64,
+   "title": "자석 붙이기",
+   "mechanic": "bar_magnets_row_poles_pieces_3d",
+   "answer": "6473",
+   "date": "2026.11.06",
+   "status": "READY"
   }
  ],
  "extra": [
