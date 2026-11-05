@@ -681,6 +681,15 @@
    "reel_url": "https://www.instagram.com/reel/DfYPDS0DxkR/",
    "published_at": "2026-11-05T23:41:45.687600+00:00",
    "story_id": "18083339333348067"
+  },
+  {
+   "room": 65,
+   "title": "진자 흔들기",
+   "mechanic": "pendulum_length_swing_count_3d",
+   "answer": "4632",
+   "date": "2026.11.06",
+   "status": "QUEUED",
+   "post_at": "2026-11-05T23:45:08Z"
   }
  ],
  "extra": [

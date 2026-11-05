@@ -37,14 +37,14 @@ def row(fr, pre, y, w, vals=None):
 
 
 fr = card(ROOM, DATE, 1, 7, '대부분 여기서 틀려요', '왼쪽이 그만큼 흔들릴 때 오른쪽은 몇 번?')
-row(fr, 'p', 720, 240)
+grid(fr, 'p', 500, 400, 390, dx=480)
 cta(fr, '도전 → 4장까지  ·  정답 → 6~7장'); save(fr, 1)
 
 fr = card(ROOM, DATE, 2, 7, '규칙은 세 가지', '두 진자를 같은 순간에 놓는다')
 fr.alpha_composite(panel(960, 230), (60, 290))
 text_lines(fr, 100, 322, ['1. 줄 길이는 구슬로 센 칸 수', '2. 왼쪽 진자가 적힌 횟수만큼 왕복하는 동안',
                           ('3. 오른쪽 진자는 몇 번 왕복할까?', YEL)], 34)
-spr(fr, 'pB', 540, 820, 330, tag=False)
+spr(fr, 'pB', 540, 820, 560, tag=False)
 cta(fr, CTA4); save(fr, 2)
 
 fr = card(ROOM, DATE, 3, 7, '암호 읽는 법', 'A → B → C → D 오른쪽 진자가 흔들린 횟수')
@@ -56,26 +56,26 @@ text_lines(fr, 540, 735, ['예: A 1번 · B 5번 · C 8번 · D 2번이면', ('�
 cta(fr, CTA4); save(fr, 3)
 
 fr = card(ROOM, DATE, 4, 7, '네 자리 암호는?', '규칙과 그림은 이것이 전부')
-row(fr, 'p', 610, 230)
-fr.alpha_composite(panel(960, 110), (60, 925))
-text_lines(fr, 540, 943, ['왼쪽이 적힌 횟수만큼 흔들리는 동안', ('암호 = 오른쪽이 흔들린 횟수 A B C D', YEL)], 30, center=True)
+grid(fr, 'p', 450, 340, 330, dx=480)
+fr.alpha_composite(panel(960, 110), (60, 1010))
+text_lines(fr, 540, 1028, ['왼쪽이 적힌 횟수만큼 흔들리는 동안', ('암호 = 오른쪽이 흔들린 횟수 A B C D', YEL)], 30, center=True)
 cta(fr, CTA4); save(fr, 4)
 
 fr = card(ROOM, DATE, 5, 7, '함정 주의', f'둘이 똑같이 흔들린다고 하면 {PROOF["trap_same_count"]}', CORAL)
 fr.alpha_composite(panel(960, 330), (60, 300))
 text_lines(fr, 100, 330, [('추의 무게는 상관없어요. 줄 길이만!', WHITE), '줄이 4배 길면 2배 느리고,', '9배 길면 3배 느려요.',
                           ('길이의 제곱근만큼 느려져요', YEL)], 35)
-spr(fr, 'pC', 540, 880, 290, tag=False)
+spr(fr, 'pC', 540, 880, 480, tag=False)
 cta(fr, '다음 장부터 정답 · 먼저 멈춰서 풀어보세요', CORAL); save(fr, 5)
 
 fr = card(ROOM, DATE, 6, 7, f'정답 공개 · {CODE}', '줄 길이 4배 → 2배 느림 · 9배 → 3배 느림')
 fr.alpha_composite(panel(960, 160), (60, 280))
 text_lines(fr, 540, 300, ['A 8÷2=4 · B 3×2=6', ('C 9÷3=3 · D 4÷2=2', YEL)], 31, center=True)
-row(fr, 'a', 770, 230, list(CODE))
+grid(fr, 'a', 600, 340, 320, list(CODE), dx=480)
 cta(fr, '맞혔다면 댓글로 인증해 주세요'); save(fr, 6)
 
 fr = card(ROOM, DATE, 7, 7, '탈출 성공', 'A 4 · B 6 · C 3 · D 2')
-row(fr, 'a', 600, 200, list(CODE))
+grid(fr, 'a', 430, 300, 280, list(CODE), dx=400)
 put(fr, text_layer('암호', 44, SOFT, 'Bold'), 540, 975)
 put(fr, text_layer(' '.join(CODE), 150, MINT, glow=MINT), 540, 1080)
 cta(fr, '맞혔다면 좋아요 · 다음 방은 팔로우!'); save(fr, 7)

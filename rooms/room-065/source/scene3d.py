@@ -8,7 +8,7 @@ import b3d
 from verify import BOARDS, res
 OUT = os.path.join(HERE, '..', '.build-3d'); os.makedirs(OUT, exist_ok=True)
 FONT = os.path.join(HERE, '../../../kit/fonts/P-Black.otf')
-S, TOP = 0.3, 5.0
+S, TOP = 0.19, 3.4
 
 
 def label(s, x, z, size, m):
@@ -26,8 +26,8 @@ def pend(x, L, r, m, txt, tm, M, tilt):
         bpy.context.object.data.materials.append(M['bead'])
     bpy.ops.mesh.primitive_uv_sphere_add(radius=r, location=(bx, 0, bz - r * 0.9), segments=48, ring_count=24)
     bpy.context.object.data.materials.append(m)
-    label(txt, bx, bz - 2 * r - 0.35, 0.42, tm)
-    label(f'줄 {L}칸', x + (0.62 if x > 0 else -0.62), TOP - 0.35, 0.24, M['soft'])
+    label(txt, bx + (0.62 if x < 0 else -0.62), bz - r, 0.5, tm)
+    label(f'줄 {L}칸', x, TOP + 0.55, 0.3, M['soft'])
 
 
 def scene(k, after):
@@ -41,10 +41,10 @@ def scene(k, after):
         q = p.node_tree.nodes['Principled BSDF']; q.inputs['Emission Color'].default_value = q.inputs['Base Color'].default_value
         q.inputs['Emission Strength'].default_value = 0.6
     bpy.ops.mesh.primitive_cube_add(size=1, location=(0, 0, TOP + 0.12)); o = bpy.context.object
-    o.scale = (2.9, 0.4, 0.24); o.data.materials.append(wood); b3d.bevel(o, 0.04, 3)
-    pend(-0.75, a, 0.17, mint, f'{n}번', mint, M, 10)
-    pend(0.75, b, 0.32, coral, f'{res[k]}번' if after else '?번', amber if after else white, M, -10)
-    b3d.stack_camera((0, 0, 2.2), 6.6, az=0.0, el=4.0)
+    o.scale = (3.6, 0.4, 0.24); o.data.materials.append(wood); b3d.bevel(o, 0.04, 3)
+    pend(-0.95, a, 0.17, mint, f'{n}번', mint, M, 0)
+    pend(0.95, b, 0.32, coral, f'{res[k]}번' if after else '?번', amber if after else white, M, 0)
+    b3d.stack_camera((0, 0, 1.4), 5.6, az=0.0, el=4.0)
     b3d.floor().location.z = -3.0
 
 
@@ -53,5 +53,5 @@ for k in 'ABCD':
     for after in (False, True):
         name = ('a' if after else 'p') + k
         if only and name not in only: continue
-        b3d.reset((560, 1000), 40); b3d.lights(7)
+        b3d.reset((800, 900), 40); b3d.lights(7)
         t = time.time(); scene(k, after); b3d.render(f'{OUT}/{name}.png'); print(name, round(time.time() - t, 1), flush=True)
