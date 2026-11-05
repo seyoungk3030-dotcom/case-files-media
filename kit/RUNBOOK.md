@@ -10,6 +10,7 @@ Setup: `python3 -m pip install -q edge-tts numpy pillow bpy` (ffmpeg is preinsta
 
 ## 0. Guard
 - If today (KST) is after 2026-12-31, do nothing and stop.
+- Queued rooms (status QUEUED, see §7) are posted by GitHub Actions, not by this run. If a QUEUED room's `post_at` is within 3 hours of now, this slot is covered: do nothing and stop. A QUEUED room whose `post_at` is more than 3 hours in the past was missed by GitHub: publish it now (§5) instead of making a new room. QUEUED rooms do not block making a new room.
 - Read `kit/ledger.json`. If a room has status READY or FAILED, finish it first: re-run publish, which skips anything already posted. Then stop.
 - Run `python3 -I -c "import sys; sys.path.insert(0,'kit'); import publish; [print(m['timestamp'], (m.get('caption') or '')[:30]) for m in publish.recent(6)]"`. If a `[ROOM` post exists from the last 90 minutes, this slot is already covered, so stop. (Slots are 3+ hours apart; a manual post earlier in the day does not count as this slot.)
 - The next room is the highest `room` in the ledger + 1, and the date is today in KST (`YYYY.MM.DD`).
@@ -65,3 +66,7 @@ Korean text, lines under about 900 px, nothing overlapping or clipped, no emoji 
 Run `python3 -I kit/comments.py`. It replies only to comments with a 4-digit guess on recent posts (congrats if right, otherwise how many digits are in place; never the answer) and skips anything already answered. If it errors, note it in the status and carry on; it never blocks publishing.
 
 Finish with a one-line summary: room, title, answer, and both URLs.
+
+## 7. Queued posting without credits (GitHub Actions, user 2026-11-06)
+When Claude credits may run out, build several rooms ahead (§1–4 as usual, commit and push them), and instead of publishing, set each ledger entry to `"status": "QUEUED"` with `"post_at"` = its slot in UTC (`02:30Z`, `08:30Z`, `11:30Z` = 11:30, 17:30, 20:30 KST), one room per slot, in room order. `.github/workflows/queued-post.yml` runs at those times, and `kit/queue_post.py` posts the earliest due QUEUED room (carousel, reel, story) and commits the ledger. It needs the repository secret `IG_ACCESS_TOKEN` (set by the user). Each queued room's `prev` must be the room before it.
+
