@@ -657,6 +657,14 @@
    "reel_url": "https://www.instagram.com/reel/DfUZnK-CUCb/",
    "published_at": "2026-11-04T11:57:01.917207+00:00",
    "story_id": "18119315378020667"
+  },
+  {
+   "room": 63,
+   "title": "구멍 원판",
+   "mechanic": "hole_discs_rotate_align_light_3d",
+   "answer": "3842",
+   "date": "2026.11.05",
+   "status": "READY"
   }
  ],
  "extra": [
