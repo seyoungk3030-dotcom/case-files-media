@@ -10,10 +10,10 @@ Setup: `python3 -m pip install -q edge-tts numpy pillow bpy` (ffmpeg is preinsta
 
 ## 0. Guard
 - If today (KST) is after 2026-12-31, do nothing and stop.
-- Queued rooms (status QUEUED, see §7) are posted by GitHub Actions, not by this run. If a QUEUED room's `post_at` is within 3 hours of now, this slot is covered: do nothing and stop. A QUEUED room whose `post_at` is more than 3 hours in the past was missed by GitHub: publish it now (§5) instead of making a new room. QUEUED rooms do not block making a new room.
+- **Queue-ahead mode (user 2026-11-06): Claude never publishes directly any more.** Every run builds rooms (§1–4) and queues them for GitHub Actions (§7). Run `python3 -I kit/next_slot.py`: it prints the next free slot after the last QUEUED room (or now), or `FULL` when the queue already reaches 30 days ahead or 2026-12-31. If `FULL`, stop. Otherwise build one room, queue it at that slot, commit and push, and repeat while time allows.
+- Exception: a QUEUED room whose `post_at` is more than 3 hours in the past was missed by GitHub. Post it with `python3 -I kit/queue_post.py $(git rev-parse HEAD)`, commit the ledger, then continue.
 - Read `kit/ledger.json`. If a room has status READY or FAILED, finish it first: re-run publish, which skips anything already posted. Then stop.
-- Run `python3 -I -c "import sys; sys.path.insert(0,'kit'); import publish; [print(m['timestamp'], (m.get('caption') or '')[:30]) for m in publish.recent(6)]"`. If a `[ROOM` post exists from the last 90 minutes, this slot is already covered, so stop. (Slots are 3+ hours apart; a manual post earlier in the day does not count as this slot.)
-- The next room is the highest `room` in the ledger + 1, and the date is today in KST (`YYYY.MM.DD`).
+- The next room is the highest `room` in the ledger + 1, and its `date` is its `post_at` slot in KST (`YYYY.MM.DD`). Queued rooms' answers sit in the public repo before posting; that is accepted.
 
 ## 1. Design the puzzle
 - Use a mechanic that isn't among the last 10 ledger entries, and never repeat a puzzle.
