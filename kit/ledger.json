@@ -1386,6 +1386,15 @@
    "date": "2026.12.01",
    "status": "QUEUED",
    "post_at": "2026-12-01T02:30:00Z"
+  },
+  {
+   "room": 142,
+   "title": "뱀 사다리",
+   "mechanic": "snakes_ladders_min_rolls_3d",
+   "answer": "3524",
+   "date": "2026.12.01",
+   "status": "QUEUED",
+   "post_at": "2026-12-01T08:30:00Z"
   }
  ],
  "extra": [
