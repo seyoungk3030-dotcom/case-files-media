@@ -986,6 +986,15 @@
    "date": "2026.11.16",
    "status": "QUEUED",
    "post_at": "2026-11-16T08:30:00Z"
+  },
+  {
+   "room": 98,
+   "title": "전구 회로",
+   "mechanic": "bulb_circuit_shorts_open_switch_lit_count_3d",
+   "answer": "4251",
+   "date": "2026.11.16",
+   "status": "QUEUED",
+   "post_at": "2026-11-16T11:30:00Z"
   }
  ],
  "extra": [
