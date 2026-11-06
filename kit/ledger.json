@@ -923,6 +923,15 @@
    "date": "2026.11.14",
    "status": "QUEUED",
    "post_at": "2026-11-14T02:30:00Z"
+  },
+  {
+   "room": 91,
+   "title": "창고 상자 밀기",
+   "mechanic": "warehouse_push_box_min_pushes_walls_3d",
+   "answer": "3856",
+   "date": "2026.11.14",
+   "status": "QUEUED",
+   "post_at": "2026-11-14T08:30:00Z"
   }
  ],
  "extra": [
