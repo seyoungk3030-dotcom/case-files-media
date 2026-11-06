@@ -1512,6 +1512,15 @@
    "date": "2026.12.05",
    "status": "QUEUED",
    "post_at": "2026-12-05T11:30:00Z"
+  },
+  {
+   "room": 156,
+   "title": "컬링 점수",
+   "mechanic": "curling_end_score_closest_stones_3d",
+   "answer": "1324",
+   "date": "2026.12.06",
+   "status": "QUEUED",
+   "post_at": "2026-12-06T02:30:00Z"
   }
  ],
  "extra": [
