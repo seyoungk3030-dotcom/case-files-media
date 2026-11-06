@@ -865,6 +865,15 @@
    "date": "2026.11.12",
    "status": "QUEUED",
    "post_at": "2026-11-12T02:30:00Z"
+  },
+  {
+   "room": 85,
+   "title": "물리 직감 4문제",
+   "mechanic": "physics_intuition_bus_balloon_bike_boat_3d",
+   "answer": "2314",
+   "date": "2026.11.12",
+   "status": "QUEUED",
+   "post_at": "2026-11-12T08:30:00Z"
   }
  ],
  "extra": [
