@@ -1031,6 +1031,15 @@
    "date": "2026.11.18",
    "status": "QUEUED",
    "post_at": "2026-11-18T02:30:00Z"
+  },
+  {
+   "room": 103,
+   "title": "블록 탑 빼기",
+   "mechanic": "block_tower_pull_one_safe_layer_support_3d",
+   "answer": "3142",
+   "date": "2026.11.18",
+   "status": "QUEUED",
+   "post_at": "2026-11-18T08:30:00Z"
   }
  ],
  "extra": [

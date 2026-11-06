@@ -24,8 +24,8 @@ def text(s, loc, size, m, rot):
 
 def scene(k, after):
     b = BOARDS[k]; lab = {v: n for n, v in b['num'].items()}; win = b['num'][RES[k][0]]
-    woods = [b3d.mat(f'w{i}', c, rough=0.6, coat=0.1) for i, c in enumerate([(0.78, 0.55, 0.30), (0.70, 0.47, 0.24)])]
-    tag = b3d.mat('tag', (0.95, 0.62, 0.12), rough=0.5, coat=0.1); ink = b3d.mat('ink', (0.05, 0.06, 0.1), rough=0.6, coat=0)
+    woods = [b3d.mat(f'w{i}', c, rough=0.6, coat=0.1) for i, c in enumerate([(0.50, 0.32, 0.16), (0.44, 0.27, 0.13)])]
+    tag = b3d.mat('tag', (0.85, 0.42, 0.06), rough=0.5, coat=0.1); ink = b3d.mat('ink', (0.05, 0.06, 0.1), rough=0.6, coat=0)
     mint = b3d.mat('mint', (0.15, 0.85, 0.6), rough=0.4, coat=0); glow(mint, (0.15, 0.85, 0.6), 0.8)
     base = b3d.mat('base', (0.10, 0.12, 0.18), rough=0.7, coat=0)
     bpy.ops.mesh.primitive_cylinder_add(radius=1.5, depth=0.1, location=(0, 0, -0.05), vertices=96); bpy.context.object.data.materials.append(base)
@@ -34,16 +34,16 @@ def scene(k, after):
         for p, c in enumerate(row):
             if c != '#': continue
             off = (p - 1) * 0.5; along_x = li % 2 == 0
-            pulled = after and (li, p) == win; out = 0.85 if pulled else 0
+            pulled = after and (li, p) == win; out = 1.05 if pulled else 0
             loc = (out, off, z) if along_x else (off, -out, z)
             m = mint if pulled else (tag if (li, p) in lab else woods[(li + p) % 2])
             bpy.ops.mesh.primitive_cube_add(size=1, location=loc); o = bpy.context.object
-            o.scale = (L, W, T * 0.96) if along_x else (W, L, T * 0.96); o.data.materials.append(m); b3d.bevel(o, 0.025)
+            o.scale = (L, W, T * 0.92) if along_x else (W, L, T * 0.92); o.data.materials.append(m); b3d.bevel(o, 0.025)
             if (li, p) in lab:
                 n = str(lab[(li, p)])
-                if along_x: text(n, (loc[0] + L / 2 + 0.002, off, z), 0.26, ink, (math.radians(90), 0, math.radians(90)))
-                else: text(n, (off, loc[1] - L / 2 - 0.002, z), 0.26, ink, (math.radians(90), 0, 0))
-    b3d.stack_camera((0.25, -0.2, 0.95), 3.6, az=38.0, el=20.0)
+                if along_x: text(n, (loc[0] + L / 2 + 0.002, off, z), 0.32, ink, (math.radians(90), 0, math.radians(90)))
+                else: text(n, (off, loc[1] - L / 2 - 0.002, z), 0.32, ink, (math.radians(90), 0, 0))
+    b3d.stack_camera((0.2, -0.2, 0.85), 4.5, az=38.0, el=20.0)
 
 
 only = sys.argv[1:]
