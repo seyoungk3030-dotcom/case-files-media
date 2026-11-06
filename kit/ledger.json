@@ -1067,6 +1067,15 @@
    "date": "2026.11.19",
    "status": "QUEUED",
    "post_at": "2026-11-19T08:30:00Z"
+  },
+  {
+   "room": 107,
+   "title": "달의 자리",
+   "mechanic": "moon_phase_orbit_position_seen_from_earth_3d",
+   "answer": "4625",
+   "date": "2026.11.19",
+   "status": "QUEUED",
+   "post_at": "2026-11-19T11:30:00Z"
   }
  ],
  "extra": [

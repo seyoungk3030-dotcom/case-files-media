@@ -3,7 +3,7 @@ four numbered shapes. Exactly one numbered shape is the reference turned in spac
 its mirror image (turned too), which no rotation can produce because the reference is chiral; two have one cube
 moved. Each digit is the number of the turned copy. All 10^4 codes are compared; exactly one matches. Picking the
 mirror image (the trap) gives another code. Shapes are built from a seed and every claim is re-checked here."""
-import itertools, json, os, random
+import itertools, json, math, os, random
 
 def rots():
     out = []
@@ -46,6 +46,23 @@ def walk(arms):
     assert len(set(out)) == len(out); return out
 
 
+AZ, EL = math.radians(35), math.radians(28)
+RIGHT = (math.cos(AZ), math.sin(AZ), 0); UP = (-math.sin(AZ) * math.sin(EL), math.cos(AZ) * math.sin(EL), math.cos(EL))
+
+
+def gap(s):
+    q = [(sum(a * b for a, b in zip(p, RIGHT)), sum(a * b for a, b in zip(p, UP))) for p in s]
+    return min(math.dist(a, b) for a, b in itertools.combinations(q, 2))
+
+
+def visible(s): return gap(s) >= 0.6
+
+
+def turn(rng, s):
+    ts = [norm([app(m, p) for p in s]) for m in ROTS]; best = max(gap(t) for t in ts)
+    ok = [t for t in ts if gap(t) >= min(0.85, best) - 1e-9]; return rng.choice(ok)
+
+
 def board(k, seed):
     rng = random.Random(seed); ref = walk(ARMS[k]); assert canon(ref) != canon(mirror(ref))
     shapes = []; decoy_i = 0
@@ -55,8 +72,10 @@ def board(k, seed):
         else:
             arms = [list(a) for a in ARMS[k]]; j = [1, 2][decoy_i]; decoy_i += 1
             arms[j][1] += 1 if arms[j][1] > 0 else -1; s = walk([tuple(a) for a in arms])
-        m = rng.choice(ROTS[1:]); shapes.append(norm([app(m, p) for p in s]))
-    return norm(ref), shapes
+        shapes.append(turn(rng, s))
+    shown = turn(rng, ref)
+    assert all(c != shown for c in shapes)
+    return shown, shapes
 
 
 SEEDS = {'A': 81, 'B': 82, 'C': 83, 'D': 84}
@@ -66,8 +85,7 @@ B = {k: board(k, SEEDS[k]) for k in 'ABCD'}
 def judge(k):
     ref, shapes = B[k]; same = [i + 1 for i, s in enumerate(shapes) if canon(s) == canon(ref)]
     mir = [i + 1 for i, s in enumerate(shapes) if canon(s) == canon(mirror(ref))]
-    for i, s in enumerate(shapes):
-        assert s != ref, 'a candidate may not be shown unturned'
+    assert all(visible(s) for s in shapes + [ref])
     return same, mir
 
 

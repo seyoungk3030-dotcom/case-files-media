@@ -32,7 +32,7 @@ def one(fr, name, cx, cy, w, tag=True, val=None):
     if val: put(fr, badge(val, 44), x0 + im.width - 14, y0 + im.height - 60)
 
 
-POS = [(282, 470), (798, 470), (282, 860), (798, 860)]
+POS = [(282, 500), (798, 500), (282, 895), (798, 895)]
 
 
 def four(fr, pre, w=470, vals=None):
