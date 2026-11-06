@@ -33,8 +33,8 @@ def scene(k, after):
     b = BOARDS[k]
     floor = b3d.mat('floor', (0.07, 0.09, 0.15), rough=0.7, coat=0); coaster = b3d.mat('coaster', (0.35, 0.22, 0.12), rough=0.6, coat=0.1)
     tick = b3d.mat('tick', (0.8, 0.83, 0.9), rough=0.5, coat=0); glow(tick, (0.8, 0.83, 0.9), 1.5)
-    pole = b3d.mat('pole', (0.03, 0.035, 0.05), rough=0.6, coat=0); grey = b3d.mat('grey', (0.6, 0.62, 0.7), rough=0.5, coat=0); glow(grey, (0.6, 0.62, 0.7), 1.0)
-    mint = b3d.mat('mint', (0.15, 0.85, 0.6), rough=0.4, coat=0); glow(mint, (0.15, 0.85, 0.6), 2.5)
+    pole = b3d.mat('pole', (0.03, 0.035, 0.05), rough=0.6, coat=0); grey = b3d.mat('grey', (0.6, 0.62, 0.7), rough=0.5, coat=0); glow(grey, (0.6, 0.62, 0.7), 0.3)
+    mint = b3d.mat('mint', (0.15, 0.85, 0.6), rough=0.4, coat=0); glow(mint, (0.15, 0.85, 0.6), 0.9)
     glass = b3d.mat('glass', (0.8, 0.9, 1.0), rough=0.3, coat=0); glass.node_tree.nodes['Principled BSDF'].inputs['Alpha'].default_value = 0.12
     water = b3d.mat('water', (0.08, 0.35, 0.85), rough=0.3, coat=0); water.node_tree.nodes['Principled BSDF'].inputs['Alpha'].default_value = 0.6
     ice = b3d.mat('ice', (0.75, 0.9, 1.0), rough=0.15, coat=0.5); ice.node_tree.nodes['Principled BSDF'].inputs['Alpha'].default_value = 0.4
@@ -55,7 +55,7 @@ def scene(k, after):
         for p in o.data.polygons: p.use_smooth = True
     if after:
         box(grey, (-0.05, -R - 0.05, Z0 + b['level'] * U), (2 * R + 0.5, 0.02, 0.02), 0.0)
-        box(mint, (-0.3, -R - 0.08, Z0 + FIN[k] * U), (2 * R + 1.0, 0.02, 0.035), 0.0)
+        box(mint, (-0.3, -R - 0.08, Z0 + FIN[k] * U), (2 * R + 1.0, 0.03, 0.07), 0.0)
     rack = False; xs = [-0.35, 0.4] if len(b['items']) > 1 else [0.0]
     for it, x in zip(b['items'], xs if len(b['items']) > 1 else [0.0]):
         s = side(it['ice'])

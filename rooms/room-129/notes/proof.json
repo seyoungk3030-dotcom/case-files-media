@@ -1,0 +1,24 @@
+{
+ "unique_answer": "8362",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "left": 1,
+   "right": 4
+  },
+  "B": {
+   "left": 3,
+   "right": 1
+  },
+  "C": {
+   "left": 0,
+   "right": 1
+  },
+  "D": {
+   "left": 3,
+   "right": 0
+  }
+ },
+ "trap_rolls_down": "2748",
+ "why": "거품은 물보다 가벼워서 높은 쪽으로 올라가요. 구슬과 반대로 움직여요"
+}

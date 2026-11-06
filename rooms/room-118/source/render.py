@@ -6,7 +6,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, '../../../kit')); sys.path.insert(0, HERE)
 from style3d import *
 B = os.path.join(HERE, '..', '.build-3d'); OUT = os.path.join(HERE, '..', 'cards')
-ROOM, DATE = 118, '2026.11.22'
+ROOM, DATE = 118, '2026.11.23'
 PROOF = json.load(open(os.path.join(HERE, '..', 'notes', 'proof.json')))
 CODE = PROOF['unique_answer']; TRAP = PROOF['trap_count_real_too']
 ims = {f'{s}{k}': Image.open(f'{B}/{s}{k}.png').convert('RGBA') for s in 'pa' for k in 'ABCD'}
@@ -65,7 +65,7 @@ text_lines(fr, 100, 330, [('360 ÷ 각도 = 둘레를 채우는 칸 수', WHITE)
 one(fr, 'qB', 540, 900, 560, tag=False)
 cta(fr, '다음 장부터 정답 · 먼저 멈춰서 풀어보세요', CORAL); save(fr, 5)
 
-fr = card(ROOM, DATE, 6, 7, f'정답 공개 · {CODE}', '진짜 거울로 바꾸면 이렇게 보여요')
+fr = card(ROOM, DATE, 6, 7, f'정답 공개 · {CODE}', '민트 = 거울 속에 보이는 장난감')
 four(fr, 'r', 470, vals=list(CODE))
 cta(fr, '맞혔다면 댓글로 인증해 주세요'); save(fr, 6)
 

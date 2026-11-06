@@ -1,0 +1,32 @@
+{
+ "unique_answer": "6548",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "start": 9,
+   "q": 2,
+   "turns": 6,
+   "dir": -1
+  },
+  "B": {
+   "start": 7,
+   "q": 3,
+   "turns": 6,
+   "dir": -1
+  },
+  "C": {
+   "start": 1,
+   "q": 2,
+   "turns": 6,
+   "dir": 1
+  },
+  "D": {
+   "start": 9,
+   "q": 3,
+   "turns": 3,
+   "dir": -1
+  }
+ },
+ "trap_one_turn_one_step": "3176",
+ "why": "너트는 한 바퀴에 나사산 한 칸만 움직여요. 눈금 한 칸에 나사산이 2개면 두 바퀴에 한 칸이에요"
+}

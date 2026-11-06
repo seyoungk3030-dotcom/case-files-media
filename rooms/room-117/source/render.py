@@ -6,7 +6,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, '../../../kit')); sys.path.insert(0, HERE)
 from style3d import *
 B = os.path.join(HERE, '..', '.build-3d'); OUT = os.path.join(HERE, '..', 'cards')
-ROOM, DATE = 117, '2026.11.22'
+ROOM, DATE = 117, '2026.11.23'
 PROOF = json.load(open(os.path.join(HERE, '..', 'notes', 'proof.json')))
 CODE = PROOF['unique_answer']; TRAP = PROOF['trap_always_rises']
 ims = {f'{s}{k}': Image.open(f'{B}/{s}{k}.png').convert('RGBA') for s in 'pa' for k in 'ABCD'}
@@ -30,7 +30,7 @@ def one(fr, name, cx, cy, w, tag=True, val=None):
     if val: put(fr, badge(val, 44), x0 + im.width - 40, y0 + 40)
 
 
-POS = [(292, 530), (788, 530), (292, 930), (788, 930)]
+POS = [(292, 520), (788, 520), (292, 935), (788, 935)]
 
 
 def four(fr, pre, w=470, vals=None):
@@ -43,7 +43,7 @@ def save(fr, n): fr.convert('RGB').save(f'{OUT}/card-{n:02d}.png')
 CTA4 = '4장까지 풀고 댓글에 암호를 남겨주세요'
 
 fr = card(ROOM, DATE, 1, 7, '얼음이 다 녹으면?', '물의 높이는 몇 눈금이 될까요?')
-four(fr, 'q', 470)
+four(fr, 'q', 440)
 cta(fr, '도전 → 4장까지  ·  정답 → 6~7장'); save(fr, 1)
 
 fr = card(ROOM, DATE, 2, 7, '얼음 규칙', '얼음 1 g이 녹으면 물 1 cm³')
@@ -61,7 +61,7 @@ text_lines(fr, 540, 735, ['예: 눈금이 2 · 9 · 4 · 0이면', ('암호 2940
 cta(fr, CTA4); save(fr, 3)
 
 fr = card(ROOM, DATE, 4, 7, '네 자리 암호는?', '떠 있는 얼음은 이미 무엇을 하고 있을까요?')
-four(fr, 'q', 470)
+four(fr, 'q', 440)
 cta(fr, CTA4); save(fr, 4)
 
 fr = card(ROOM, DATE, 5, 7, '힌트', '떠 있는 얼음은 자기 무게만큼 물을 밀어내요', CORAL)
@@ -72,7 +72,7 @@ one(fr, 'qC', 540, 900, 560, tag=False)
 cta(fr, '다음 장부터 정답 · 먼저 멈춰서 풀어보세요', CORAL); save(fr, 5)
 
 fr = card(ROOM, DATE, 6, 7, f'정답 공개 · {CODE}', '민트 선 = 다 녹은 뒤 · 회색 선 = 처음')
-four(fr, 'r', 470, vals=list(CODE))
+four(fr, 'r', 440, vals=list(CODE))
 cta(fr, '맞혔다면 댓글로 인증해 주세요'); save(fr, 6)
 
 fr = card(ROOM, DATE, 7, 7, '탈출 성공', f"함정 답은 {TRAP}")

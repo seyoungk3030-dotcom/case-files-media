@@ -1,0 +1,70 @@
+{
+ "unique_answer": "3961",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "sign": "flag",
+   "downwind": "E",
+   "labels": [
+    5,
+    2,
+    8,
+    7,
+    0,
+    4,
+    3,
+    1
+   ]
+  },
+  "B": {
+   "sign": "smoke",
+   "downwind": "W",
+   "labels": [
+    7,
+    4,
+    9,
+    1,
+    5,
+    2,
+    8,
+    6
+   ]
+  },
+  "C": {
+   "sign": "sock",
+   "downwind": "N",
+   "labels": [
+    4,
+    8,
+    2,
+    3,
+    6,
+    7,
+    1,
+    0
+   ]
+  },
+  "D": {
+   "sign": "car",
+   "downwind": "W",
+   "labels": [
+    3,
+    6,
+    1,
+    5,
+    9,
+    8,
+    7,
+    2
+   ]
+  }
+ },
+ "vane_points": {
+  "A": "W",
+  "B": "E",
+  "C": "S",
+  "D": "E"
+ },
+ "trap_downwind": "8847",
+ "why": "풍향계는 넓은 꼬리가 바람에 밀려서 화살촉이 바람이 불어오는 쪽을 가리켜요"
+}

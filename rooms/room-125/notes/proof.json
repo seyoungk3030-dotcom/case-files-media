@@ -1,0 +1,28 @@
+{
+ "unique_answer": "3754",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "kind": "pulleys",
+   "W": 3
+  },
+  "B": {
+   "kind": "wall",
+   "W": 7
+  },
+  "C": {
+   "kind": "chain",
+   "a": 3,
+   "b": 2,
+   "ask": "X"
+  },
+  "D": {
+   "kind": "chain",
+   "a": 1,
+   "b": 4,
+   "ask": "Y"
+  }
+ },
+ "trap_naive": "6035",
+ "why": "저울은 줄이 당기는 힘 하나를 재요. 양쪽에서 같은 힘으로 당겨야 멈춰 있으니, 한쪽 힘만큼만 읽어요"
+}

@@ -1,7 +1,7 @@
 """ROOM 118 3D sprites: two mirror panels standing on a dark round table, hinged at the back and opening toward the
 viewer at the board's angle; a coral toy pawn stands on the middle line; an amber tag in front shows the angle and
 an amber arc marks it at the hinge. p*: the mirror faces are drawn matte (no reflections, so nothing is given away).
-a*: the mirrors become real mirrors and the reflected toys appear."""
+a*: the mirrors turn see-through and the mirror images appear as numbered mint toys around the hinge."""
 import math, os, sys, time
 import bpy
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -27,8 +27,10 @@ def scene(k, after):
     T = BOARDS[k]['angle']; sc = bpy.context.scene
     sc.cycles.max_bounces = 32; sc.cycles.glossy_bounces = 32; sc.cycles.transparent_max_bounces = 16
     table = b3d.mat('table', (0.035, 0.045, 0.075), rough=0.6, coat=0.1)
-    face = b3d.mat('mirror', (0.95, 0.96, 0.98), rough=0.0, metal=1.0, coat=0) if after else b3d.mat('matte', (0.55, 0.6, 0.68), rough=0.55, metal=0.3, coat=0)
+    face = b3d.mat('matte', (0.55, 0.6, 0.68), rough=0.55, metal=0.3, coat=0)
+    if after: face.node_tree.nodes['Principled BSDF'].inputs['Alpha'].default_value = 0.22
     frame = b3d.mat('frame', (0.05, 0.06, 0.09), rough=0.5, coat=0.1)
+    if after: frame.node_tree.nodes['Principled BSDF'].inputs['Alpha'].default_value = 0.25
     toy = b3d.mat('toy', (0.95, 0.35, 0.3), rough=0.35, coat=0.4); amber = b3d.mat('amber', (0.92, 0.5, 0.06), rough=0.5, coat=0.1)
     ink = b3d.mat('ink', (0.04, 0.05, 0.08), rough=0.6, coat=0)
     bpy.ops.mesh.primitive_cylinder_add(radius=2.5, depth=0.12, location=(0, -0.3, -0.06), vertices=96); bpy.context.object.data.materials.append(table)
@@ -52,6 +54,15 @@ def scene(k, after):
     bpy.ops.mesh.primitive_cone_add(radius1=0.16, radius2=0.07, depth=0.42, location=(0, ty, 0.21), vertices=32); bpy.context.object.data.materials.append(toy)
     bpy.ops.mesh.primitive_uv_sphere_add(radius=0.12, location=(0, ty, 0.5)); o = bpy.context.object; o.data.materials.append(toy)
     for p in o.data.polygons: p.use_smooth = True
+    if after:
+        mint = b3d.mat('mint', (0.15, 0.85, 0.6), rough=0.4, coat=0); glow(mint, (0.15, 0.85, 0.6), 0.8)
+        mint.node_tree.nodes['Principled BSDF'].inputs['Alpha'].default_value = 0.75
+        for j in range(1, round(360 / T)):
+            a = math.radians(-90 + j * T); gx, gy = 1.15 * math.cos(a), HY + 1.15 * math.sin(a)
+            bpy.ops.mesh.primitive_cone_add(radius1=0.16, radius2=0.07, depth=0.42, location=(gx, gy, 0.21), vertices=32); bpy.context.object.data.materials.append(mint)
+            bpy.ops.mesh.primitive_uv_sphere_add(radius=0.12, location=(gx, gy, 0.5)); o = bpy.context.object; o.data.materials.append(mint)
+            for p in o.data.polygons: p.use_smooth = True
+            text(str(j), (gx, gy - 0.05, 0.92), 0.3, mint, (math.radians(52), 0, 0))
     # angle tag in front
     bpy.ops.mesh.primitive_cube_add(size=1, location=(0, -2.45, 0.3)); o = bpy.context.object; o.scale = (1.1, 0.08, 0.55); o.rotation_euler = (math.radians(-20), 0, 0)
     o.data.materials.append(amber); b3d.bevel(o, 0.08)
