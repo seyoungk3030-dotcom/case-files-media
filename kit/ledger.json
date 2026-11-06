@@ -1040,6 +1040,15 @@
    "date": "2026.11.18",
    "status": "QUEUED",
    "post_at": "2026-11-18T08:30:00Z"
+  },
+  {
+   "room": 104,
+   "title": "이기는 줄",
+   "mechanic": "drop_disc_four_in_row_gravity_winning_column_3d",
+   "answer": "5274",
+   "date": "2026.11.18",
+   "status": "QUEUED",
+   "post_at": "2026-11-18T11:30:00Z"
   }
  ],
  "extra": [
