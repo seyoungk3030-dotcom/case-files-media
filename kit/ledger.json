@@ -1004,6 +1004,15 @@
    "date": "2026.11.17",
    "status": "QUEUED",
    "post_at": "2026-11-17T02:30:00Z"
+  },
+  {
+   "room": 100,
+   "title": "매듭",
+   "mechanic": "rope_knot_or_not_over_under_jones_3d",
+   "answer": "2102",
+   "date": "2026.11.17",
+   "status": "QUEUED",
+   "post_at": "2026-11-17T08:30:00Z"
   }
  ],
  "extra": [
