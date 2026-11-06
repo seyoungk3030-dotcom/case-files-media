@@ -15,8 +15,8 @@ BOX = (min(b[0] for b in bb) - 10, min(b[1] for b in bb) - 10, max(b[2] for b in
 for n, im in ims.items():
     c = im.crop(BOX); c.putpixel((0, 0), (255, 255, 255, 44)); c.putpixel((c.width - 1, c.height - 1), (255, 255, 255, 44))
     bd = PROOF['boards'][n[1]]; f = c.width / 470
-    put(c, pill(f"① {bd['first']}번 10분 켰다 끄기", round(24 * f), INK, (246, 200, 70, 255), (round(12 * f), round(4 * f))), 0.25 * c.width, 0.09 * c.height)
-    put(c, pill(f"② {bd['second']}번 켜기", round(24 * f), INK, (130, 230, 190, 255), (round(12 * f), round(4 * f))), 0.25 * c.width, 0.09 * c.height + 40 * f)
+    put(c, pill(f"① {bd['first']}번 10분 켰다 끄기", round(24 * f), INK, (246, 200, 70, 255), (round(12 * f), round(4 * f))), 0.56 * c.width, 0.07 * c.height)
+    put(c, pill(f"② {bd['second']}번 켜기", round(24 * f), INK, (130, 230, 190, 255), (round(12 * f), round(4 * f))), 0.56 * c.width, 0.07 * c.height + 40 * f)
     c.save(f'{B}/{"q" if n[0] == "p" else "r"}{n[1]}.png')
 
 

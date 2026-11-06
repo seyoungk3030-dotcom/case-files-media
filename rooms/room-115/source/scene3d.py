@@ -28,7 +28,7 @@ def box(m, c, s, bev=0.04):
 
 def scene(k, after):
     b = BOARDS[k]; L = float(LV[k])
-    wall = b3d.mat('wall', (0.05, 0.06, 0.1), rough=0.8, coat=0); base = b3d.mat('base', (0.14, 0.16, 0.22), rough=0.5, coat=0.1)
+    wall = b3d.mat('wall', (0.012, 0.016, 0.03), rough=0.8, coat=0); base = b3d.mat('base', (0.14, 0.16, 0.22), rough=0.5, coat=0.1)
     tick = b3d.mat('tick', (0.8, 0.83, 0.9), rough=0.5, coat=0); glow(tick, (0.8, 0.83, 0.9), 1.5)
     faint = b3d.mat('faint', (0.3, 0.33, 0.4), rough=0.6, coat=0); glow(faint, (0.3, 0.33, 0.4), 0.5)
     mint = b3d.mat('mint', (0.15, 0.85, 0.6), rough=0.4, coat=0); glow(mint, (0.15, 0.85, 0.6), 2.5)
@@ -44,7 +44,7 @@ def scene(k, after):
     for n in range(10):
         z = Z0 + n * U
         box(faint, ((span[0] + span[1]) / 2 + 0.45, 0.68, z), (span[1] - span[0], 0.01, 0.015), 0.0)
-        box(tick, (span[0] + 0.25, -0.05, z), (0.14, 0.02, 0.025), 0.0); text(str(n), (span[0] - 0.05, -0.05, z), 0.22, tick)
+        box(tick, (span[0] + 0.25, -0.05, z), (0.14, 0.02, 0.025), 0.0); text(str(n), (span[0] - 0.12, -0.05, z), 0.34, tick)
     box(base, (span[0] + 0.1, 0.1, Z0 + 4.5 * U), (0.08, 0.3, 9.6 * U), 0.01)
     # pipe and valves between tanks
     bpy.ops.mesh.primitive_cylinder_add(radius=0.09, depth=xs[-1] - xs[0], location=((xs[0] + xs[-1]) / 2, 0.15, Z0 + 0.12), rotation=(0, math.radians(90), 0), vertices=24)
@@ -58,7 +58,7 @@ def scene(k, after):
         lv = L if after else h
         if lv > 0:
             o = box(water, (xc, 0.15, Z0 + lv * U / 2), (w - 0.06, 0.74, lv * U), 0.01); o.visible_shadow = False
-        box(amber, (xc, -0.62, Z0 / 2), (min(0.95, w * 0.9), 0.05, 0.36), 0.05); text(f'폭 {wn}', (xc, -0.66, Z0 / 2), 0.22, ink)
+        box(amber, (xc, -0.62, Z0 / 2), (min(1.1, max(0.6, w * 0.95)), 0.05, 0.46), 0.05); text(f'폭 {wn}', (xc, -0.66, Z0 / 2), 0.3, ink)
     if after: box(mint, ((span[0] + span[1]) / 2 + 0.45, -0.3, Z0 + L * U), (span[1] - span[0] + 0.2, 0.02, 0.03), 0.0)
     b3d.stack_camera((0.2, 0, 2.3), 5.6, az=0.0, el=5.0)
 

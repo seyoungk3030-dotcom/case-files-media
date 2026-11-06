@@ -71,7 +71,6 @@ def scene(k, after):
     pts.append((xl + 1.3, Y - 0.28, 0.06))
     tube(pts, 0.05, mint if after else track)
     for x in (XT + 0.3, XT + 1.2, XT + 2.0): z = zt - SLOPE * (x - XT); box(leg, (x, Y + 0.25, z / 2), (0.06, 0.06, z), 0.01)
-    box(leg, (xl, Y + 0.25, r), (0.06, 0.06, 2 * r), 0.01)
     for n in range(1, 10):
         z = n * U; x = ramp_x(z) - 0.38
         box(mint if (after and n == ans) else amber, (x, Y - 0.25, z), (0.36, 0.05, 0.3), 0.05); text(str(n), (x, Y - 0.29, z), 0.22, ink)
@@ -81,7 +80,7 @@ def scene(k, after):
     sx = ramp_x(sz) + 0.12
     o = box(coral, (sx, Y, sz + 0.2), (0.34, 0.24, 0.16), 0.05); o.rotation_euler = (0, math.atan(SLOPE), 0)
     if after: dashed_h(ramp_x(1.25 * D), xl + r + 0.3, 1.25 * D + 0.06, 0.02, mint)
-    b3d.stack_camera((-0.6, 0, 1.8), 6.0, az=0.0, el=6.0)
+    b3d.stack_camera((-0.95, 0, 1.85), 7.2, az=0.0, el=6.0)
 
 
 only = sys.argv[1:]
