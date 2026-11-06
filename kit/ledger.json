@@ -959,6 +959,15 @@
    "date": "2026.11.15",
    "status": "QUEUED",
    "post_at": "2026-11-15T08:30:00Z"
+  },
+  {
+   "room": 95,
+   "title": "물통 계량",
+   "mechanic": "water_jugs_measure_target_min_actions_3d",
+   "answer": "6848",
+   "date": "2026.11.15",
+   "status": "QUEUED",
+   "post_at": "2026-11-15T11:30:00Z"
   }
  ],
  "extra": [
