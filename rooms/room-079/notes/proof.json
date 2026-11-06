@@ -1,0 +1,23 @@
+{
+ "unique_answer": "7520",
+ "codes_checked": 10000,
+ "cards_filter_blue_segments": {
+  "A": [
+   "red",
+   "abc"
+  ],
+  "B": [
+   "blue",
+   "be"
+  ],
+  "C": [
+   "red",
+   "abged"
+  ],
+  "D": [
+   "blue",
+   "g"
+  ]
+ },
+ "why": "빨간 셀로판으로 보면 빨간 잉크는 종이처럼 밝아져 사라지고 파란 잉크만 검게 보여요. 파란 셀로판은 반대"
+}

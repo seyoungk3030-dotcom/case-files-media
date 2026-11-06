@@ -811,6 +811,15 @@
    "date": "2026.11.10",
    "status": "QUEUED",
    "post_at": "2026-11-10T02:30:00Z"
+  },
+  {
+   "room": 79,
+   "title": "셀로판 해독",
+   "mechanic": "color_filter_decoder_seven_segment_3d",
+   "answer": "7520",
+   "date": "2026.11.10",
+   "status": "QUEUED",
+   "post_at": "2026-11-10T08:30:00Z"
   }
  ],
  "extra": [
