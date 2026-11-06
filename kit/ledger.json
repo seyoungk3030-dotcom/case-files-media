@@ -1521,6 +1521,15 @@
    "date": "2026.12.06",
    "status": "QUEUED",
    "post_at": "2026-12-06T02:30:00Z"
+  },
+  {
+   "room": 157,
+   "title": "종이 띠 접기",
+   "mechanic": "paper_strip_fold_order_top_number_3d",
+   "answer": "5273",
+   "date": "2026.12.06",
+   "status": "QUEUED",
+   "post_at": "2026-12-06T08:30:00Z"
   }
  ],
  "extra": [
