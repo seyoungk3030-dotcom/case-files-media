@@ -1,0 +1,34 @@
+{
+ "unique_answer": "4381",
+ "codes_checked": 10000,
+ "boards_thin_thick": {
+  "A": [
+   6,
+   7
+  ],
+  "B": [
+   9,
+   3
+  ],
+  "C": [
+   2,
+   9
+  ],
+  "D": [
+   9,
+   4
+  ]
+ },
+ "speed_per_hour": {
+  "thin": 2,
+  "thick": 1
+ },
+ "first_out": {
+  "A": "thin",
+  "B": "thick",
+  "C": "thin",
+  "D": "thick"
+ },
+ "trap_same_speed": "1675",
+ "why": "얇은 초는 1시간에 2칸, 굵은 초는 1칸. A 얇은 6칸 3시간에 꺼짐 → 굵은 7-3=4 · B 굵은 3칸 3시간 → 얇은 9-6=3 · C 얇은 2칸 1시간 → 굵은 9-1=8 · D 굵은 4칸 4시간 → 얇은 9-8=1"
+}
