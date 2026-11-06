@@ -766,6 +766,15 @@
    "date": "2026.11.08",
    "status": "QUEUED",
    "post_at": "2026-11-08T08:30:00Z"
+  },
+  {
+   "room": 74,
+   "title": "숫자 세기",
+   "mechanic": "desk_digit_count_9s_3d",
+   "answer": "6432",
+   "date": "2026.11.08",
+   "status": "QUEUED",
+   "post_at": "2026-11-08T11:30:00Z"
   }
  ],
  "extra": [

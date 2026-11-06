@@ -1,0 +1,26 @@
+{
+ "unique_answer": "6432",
+ "codes_checked": 10000,
+ "items": {
+  "clock": "11:59",
+  "calc": "9696",
+  "calendar": "29",
+  "tag": "8,990원",
+  "bus": "6610",
+  "note": "88"
+ },
+ "digits": {
+  "A": "9",
+  "B": "6",
+  "C": "8",
+  "D": "0"
+ },
+ "counts": {
+  "A": 6,
+  "B": 4,
+  "C": 3,
+  "D": 2
+ },
+ "trap_objects_with_digit": "4222",
+ "why": "숫자 하나하나를 셈. 한 화면에 두 번 나오면 두 개"
+}
