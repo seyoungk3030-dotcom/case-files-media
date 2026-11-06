@@ -1296,6 +1296,15 @@
    "date": "2026.11.27",
    "status": "QUEUED",
    "post_at": "2026-11-27T11:30:00Z"
+  },
+  {
+   "room": 132,
+   "title": "풍향계",
+   "mechanic": "weather_vane_points_into_wind_3d",
+   "answer": "3961",
+   "date": "2026.11.28",
+   "status": "QUEUED",
+   "post_at": "2026-11-28T02:30:00Z"
   }
  ],
  "extra": [
