@@ -1413,6 +1413,15 @@
    "date": "2026.12.02",
    "status": "QUEUED",
    "post_at": "2026-12-02T02:30:00Z"
+  },
+  {
+   "room": 145,
+   "title": "바둑 따내기",
+   "mechanic": "baduk_capture_group_liberties_3d",
+   "answer": "7495",
+   "date": "2026.12.02",
+   "status": "QUEUED",
+   "post_at": "2026-12-02T08:30:00Z"
   }
  ],
  "extra": [
