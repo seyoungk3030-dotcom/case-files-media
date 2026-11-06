@@ -1013,6 +1013,15 @@
    "date": "2026.11.17",
    "status": "QUEUED",
    "post_at": "2026-11-17T08:30:00Z"
+  },
+  {
+   "room": 101,
+   "title": "그림자 숫자",
+   "mechanic": "shadow_wall_parallel_light_depth_decoy_digit_3d",
+   "answer": "1534",
+   "date": "2026.11.17",
+   "status": "QUEUED",
+   "post_at": "2026-11-17T11:30:00Z"
   }
  ],
  "extra": [
