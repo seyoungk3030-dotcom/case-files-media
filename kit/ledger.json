@@ -1112,6 +1112,15 @@
    "date": "2026.11.21",
    "status": "QUEUED",
    "post_at": "2026-11-21T02:30:00Z"
+  },
+  {
+   "room": 112,
+   "title": "물컵 저울",
+   "mechanic": "scale_reading_dip_hung_vs_float_vs_sunk_3d",
+   "answer": "3482",
+   "date": "2026.11.21",
+   "status": "QUEUED",
+   "post_at": "2026-11-21T08:30:00Z"
   }
  ],
  "extra": [
