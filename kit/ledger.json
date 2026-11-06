@@ -1467,6 +1467,15 @@
    "date": "2026.12.04",
    "status": "QUEUED",
    "post_at": "2026-12-04T02:30:00Z"
+  },
+  {
+   "room": 151,
+   "title": "카드 뒤집기",
+   "mechanic": "wason_selection_cards_to_turn_3d",
+   "answer": "4265",
+   "date": "2026.12.04",
+   "status": "QUEUED",
+   "post_at": "2026-12-04T08:30:00Z"
   }
  ],
  "extra": [
