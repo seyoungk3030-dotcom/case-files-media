@@ -905,6 +905,15 @@
    "date": "2026.11.13",
    "status": "QUEUED",
    "post_at": "2026-11-13T08:30:00Z"
+  },
+  {
+   "room": 89,
+   "title": "하노이 탑",
+   "mechanic": "hanoi_tower_position_min_moves_to_flag_peg_3d",
+   "answer": "5296",
+   "date": "2026.11.13",
+   "status": "QUEUED",
+   "post_at": "2026-11-13T11:30:00Z"
   }
  ],
  "extra": [
