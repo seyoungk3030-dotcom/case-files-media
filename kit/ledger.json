@@ -1278,6 +1278,15 @@
    "date": "2026.11.27",
    "status": "QUEUED",
    "post_at": "2026-11-27T02:30:00Z"
+  },
+  {
+   "room": 130,
+   "title": "액체 층",
+   "mechanic": "density_layers_ball_stops_3d",
+   "answer": "4637",
+   "date": "2026.11.27",
+   "status": "QUEUED",
+   "post_at": "2026-11-27T08:30:00Z"
   }
  ],
  "extra": [
