@@ -1530,6 +1530,15 @@
    "date": "2026.12.06",
    "status": "QUEUED",
    "post_at": "2026-12-06T08:30:00Z"
+  },
+  {
+   "room": 158,
+   "title": "도화선",
+   "mechanic": "fuse_two_flames_meet_post_thick_slow_3d",
+   "answer": "8476",
+   "date": "2026.12.06",
+   "status": "QUEUED",
+   "post_at": "2026-12-06T11:30:00Z"
   }
  ],
  "extra": [
