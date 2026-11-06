@@ -1260,6 +1260,15 @@
    "date": "2026.11.26",
    "status": "QUEUED",
    "post_at": "2026-11-26T08:30:00Z"
+  },
+  {
+   "room": 128,
+   "title": "체인 잇기",
+   "mechanic": "chain_pieces_open_links_min_necklace_3d",
+   "answer": "3542",
+   "date": "2026.11.26",
+   "status": "QUEUED",
+   "post_at": "2026-11-26T11:30:00Z"
   }
  ],
  "extra": [
