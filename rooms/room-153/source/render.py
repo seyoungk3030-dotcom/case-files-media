@@ -6,7 +6,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, '../../../kit')); sys.path.insert(0, HERE)
 from style3d import *
 B = os.path.join(HERE, '..', '.build-3d'); OUT = os.path.join(HERE, '..', 'cards')
-ROOM, DATE = 148, '2026.12.03'
+ROOM, DATE = 153, '2026.12.05'
 PROOF = json.load(open(os.path.join(HERE, '..', 'notes', 'proof.json')))
 CODE = PROOF['unique_answer']; TRAP = PROOF['trap_own_distance']
 ims = {f'{s}{k}': Image.open(f'{B}/{s}{k}.png').convert('RGBA') for s in 'pa' for k in 'ABCD'}
