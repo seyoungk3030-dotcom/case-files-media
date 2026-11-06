@@ -995,6 +995,15 @@
    "date": "2026.11.16",
    "status": "QUEUED",
    "post_at": "2026-11-16T11:30:00Z"
+  },
+  {
+   "room": 99,
+   "title": "종이 고리 자르기",
+   "mechanic": "paper_loop_half_twists_cut_lanes_loop_count_3d",
+   "answer": "1423",
+   "date": "2026.11.17",
+   "status": "QUEUED",
+   "post_at": "2026-11-17T02:30:00Z"
   }
  ],
  "extra": [
