@@ -1395,6 +1395,15 @@
    "date": "2026.12.01",
    "status": "QUEUED",
    "post_at": "2026-12-01T08:30:00Z"
+  },
+  {
+   "room": 143,
+   "title": "오델로",
+   "mechanic": "othello_flip_count_eight_directions_3d",
+   "answer": "6395",
+   "date": "2026.12.01",
+   "status": "QUEUED",
+   "post_at": "2026-12-01T11:30:00Z"
   }
  ],
  "extra": [
