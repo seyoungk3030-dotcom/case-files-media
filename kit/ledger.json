@@ -748,6 +748,15 @@
    "date": "2026.11.07",
    "status": "QUEUED",
    "post_at": "2026-11-07T11:30:00Z"
+  },
+  {
+   "room": 72,
+   "title": "블록 떨어뜨리기",
+   "mechanic": "block_well_drop_piece_clear_rows_3d",
+   "answer": "7248",
+   "date": "2026.11.08",
+   "status": "QUEUED",
+   "post_at": "2026-11-08T02:30:00Z"
   }
  ],
  "extra": [
