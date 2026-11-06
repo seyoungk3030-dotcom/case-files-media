@@ -37,10 +37,10 @@ def scene(k, after):
     b = BOARDS[k]; g = b['glass']; wet = {r for r in range(2) if r >= 2 - b['water']}
     wall = b3d.mat('wall', (0.015, 0.02, 0.035), rough=0.8, coat=0); paper = b3d.mat('paper', (0.5, 0.52, 0.5), rough=0.7, coat=0)
     ink = b3d.mat('ink', (0.04, 0.05, 0.08), rough=0.6, coat=0); table = b3d.mat('table', (0.30, 0.20, 0.12), rough=0.6, coat=0.1)
-    mint = b3d.mat('mint', (0.1, 0.75, 0.5), rough=0.4, coat=0); glow(mint, (0.12, 0.8, 0.55), 2.0)
+    mint = b3d.mat('mint', (0.0, 0.45, 0.3), rough=0.4, coat=0); glow(mint, (0.0, 0.5, 0.32), 0.6)
     ring = b3d.mat('ring', (0.15, 0.85, 0.6), rough=0.4, coat=0); glow(ring, (0.15, 0.85, 0.6), 3.0)
-    glass = b3d.mat('glass', (0.8, 0.9, 1.0), rough=0.3, coat=0); gn = glass.node_tree.nodes['Principled BSDF']; gn.inputs['Alpha'].default_value = 0.08
-    water = b3d.mat('water', (0.25, 0.55, 0.95), rough=0.3, coat=0); water.node_tree.nodes['Principled BSDF'].inputs['Alpha'].default_value = 0.2
+    glass = b3d.mat('glass', (0.8, 0.9, 1.0), rough=0.3, coat=0); gn = glass.node_tree.nodes['Principled BSDF']; gn.inputs['Alpha'].default_value = 0.04
+    water = b3d.mat('water', (0.25, 0.55, 0.95), rough=0.3, coat=0); water.node_tree.nodes['Principled BSDF'].inputs['Alpha'].default_value = 0.1
     box(wall, (0, 1.05, 1.9), (5.2, 0.1, 3.6), 0.0)
     box(paper, (0, 0.97, 1.83), (3.9, 0.04, 2.2), 0.03)
     for r in range(2):

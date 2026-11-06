@@ -1094,6 +1094,15 @@
    "date": "2026.11.20",
    "status": "QUEUED",
    "post_at": "2026-11-20T08:30:00Z"
+  },
+  {
+   "room": 110,
+   "title": "도미노 덮기",
+   "mechanic": "domino_tiling_remove_one_numbered_square_3d",
+   "answer": "4231",
+   "date": "2026.11.20",
+   "status": "QUEUED",
+   "post_at": "2026-11-20T11:30:00Z"
   }
  ],
  "extra": [

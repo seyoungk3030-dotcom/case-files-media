@@ -1,0 +1,20 @@
+{
+ "unique_answer": "5374",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "angle": 60
+  },
+  "B": {
+   "angle": 90
+  },
+  "C": {
+   "angle": 45
+  },
+  "D": {
+   "angle": 72
+  }
+ },
+ "trap_count_real_too": "6485",
+ "why": "거울 사이 각도로 360을 나눈 수만큼 칸이 생기고, 그중 한 칸은 진짜 장난감이에요"
+}

@@ -1,0 +1,56 @@
+{
+ "unique_answer": "5743",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "level": 5,
+   "items": [
+    {
+     "kind": "float",
+     "ice": 400
+    }
+   ]
+  },
+  "B": {
+   "level": 4,
+   "items": [
+    {
+     "kind": "rack",
+     "ice": 300
+    }
+   ]
+  },
+  "C": {
+   "level": 6,
+   "items": [
+    {
+     "kind": "stone",
+     "ice": 200,
+     "stone_g": 300,
+     "stone_cc": 100
+    }
+   ]
+  },
+  "D": {
+   "level": 2,
+   "items": [
+    {
+     "kind": "float",
+     "ice": 200
+    },
+    {
+     "kind": "rack",
+     "ice": 100
+    }
+   ]
+  }
+ },
+ "final": {
+  "A": 5.0,
+  "B": 7.0,
+  "C": 4.0,
+  "D": 3.0
+ },
+ "trap_always_rises": "9785",
+ "why": "떠 있는 얼음은 이미 자기 무게만큼 물을 밀어내고 있어서 녹아도 수위가 그대로예요"
+}
