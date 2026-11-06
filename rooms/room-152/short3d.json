@@ -12,36 +12,36 @@
   {
    "sprite": "qA",
    "answer_sprite": "rA",
-   "x": 282,
-   "y": 610,
-   "w": 470,
+   "x": 540,
+   "y": 540,
+   "w": 760,
    "label": "A",
    "key": "A"
   },
   {
    "sprite": "qB",
    "answer_sprite": "rB",
-   "x": 798,
-   "y": 610,
-   "w": 470,
+   "x": 540,
+   "y": 770,
+   "w": 760,
    "label": "B",
    "key": "B"
   },
   {
    "sprite": "qC",
    "answer_sprite": "rC",
-   "x": 282,
-   "y": 1080,
-   "w": 470,
+   "x": 540,
+   "y": 1000,
+   "w": 760,
    "label": "C",
    "key": "C"
   },
   {
    "sprite": "qD",
    "answer_sprite": "rD",
-   "x": 798,
-   "y": 1080,
-   "w": 470,
+   "x": 540,
+   "y": 1230,
+   "w": 760,
    "label": "D",
    "key": "D"
   }
