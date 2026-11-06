@@ -54,7 +54,7 @@ def scene(k, after):
         bpy.ops.mesh.primitive_cylinder_add(radius=0.05, depth=0.06, location=(cx, cy, 0.25)); bpy.context.object.data.materials.append(rim)
     else:
         text('?', (cx, cy, 0.19), 0.42, grey)
-    b3d.stack_camera((0, 0, 0), 5.9, az=0.0, el=90.0 - 1e-3)
+    b3d.stack_camera((0, 0, 0), 6.9, az=0.0, el=90.0 - 1e-3)
 
 
 only = sys.argv[1:]

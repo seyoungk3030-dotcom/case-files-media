@@ -1206,6 +1206,15 @@
    "date": "2026.11.24",
    "status": "QUEUED",
    "post_at": "2026-11-24T08:30:00Z"
+  },
+  {
+   "room": 122,
+   "title": "나침반",
+   "mechanic": "compass_needle_near_bar_magnet_pole_direction_3d",
+   "answer": "8275",
+   "date": "2026.11.24",
+   "status": "QUEUED",
+   "post_at": "2026-11-24T11:30:00Z"
   }
  ],
  "extra": [

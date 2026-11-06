@@ -1,4 +1,4 @@
-"""ROOM 142 cards in the 3D style (kit/style3d.py), from the Connect Four sprites made by scene3d.py. All sprites are
+"""ROOM 142 cards in the 3D style (kit/style3d.py), from the snakes-and-ladders sprites made by scene3d.py. All sprites are
 cropped to one shared box (q*/r*.png)."""
 import json, os, sys
 from PIL import Image
@@ -8,7 +8,7 @@ from style3d import *
 B = os.path.join(HERE, '..', '.build-3d'); OUT = os.path.join(HERE, '..', 'cards')
 ROOM, DATE = 142, '2026.12.01'
 PROOF = json.load(open(os.path.join(HERE, '..', 'notes', 'proof.json')))
-CODE = PROOF['unique_answer']; TRAP = PROOF['trap_floating_gap']
+CODE = PROOF['unique_answer']; TRAP = PROOF['trap_always_six']
 ims = {f'{s}{k}': Image.open(f'{B}/{s}{k}.png').convert('RGBA') for s in 'pa' for k in 'ABCD'}
 bb = [im.getchannel('A').getbbox() for im in ims.values()]
 BOX = (min(b[0] for b in bb) - 10, min(b[1] for b in bb) - 10, max(b[2] for b in bb) + 10, max(b[3] for b in bb) + 10)
@@ -36,43 +36,43 @@ def save(fr, n): fr.convert('RGB').save(f'{OUT}/card-{n:02d}.png')
 
 CTA4 = '4장까지 풀고 댓글에 암호를 남겨주세요'
 
-fr = card(ROOM, DATE, 1, 7, '노랑이 한 번에 이기려면?', '몇 번 줄에 원판을 넣어야 할까요?')
+fr = card(ROOM, DATE, 1, 7, '최소 몇 번 굴려야 25칸 도착?', '주사위 눈을 마음대로 고를 수 있다면')
 four(fr, 'q', 470)
 cta(fr, '도전 → 4장까지  ·  정답 → 6~7장'); save(fr, 1)
 
-fr = card(ROOM, DATE, 2, 7, '사목 규칙', '원판은 위에서 넣으면 아래로 떨어져요')
+fr = card(ROOM, DATE, 2, 7, '뱀 사다리 규칙', '빨간 말은 1번 칸에서 출발')
 fr.alpha_composite(panel(960, 300), (60, 290))
-text_lines(fr, 100, 322, ['노란 원판 차례, 딱 한 개만 넣어요', '가로 · 세로 · 대각선으로 4개가 이어지면 승리',
-                          '이기는 줄은 판마다 딱 하나!', ('그 줄의 번호(1~7)가 숫자예요', YEL)], 33)
+text_lines(fr, 100, 322, ['한 번 굴릴 때 1~6 중 원하는 눈이 나와요', '사다리 아래 칸에 서면 꼭대기로 올라가요',
+                          '뱀 머리 칸에 서면 꼬리로 미끄러져요 · 25를 넘으면 제자리', ('25칸까지 최소 굴린 횟수가 숫자예요', YEL)], 30)
 one(fr, 'qA', 540, 900, 560, tag=False)
 cta(fr, CTA4); save(fr, 2)
 
-fr = card(ROOM, DATE, 3, 7, '암호 읽는 법', 'A B C D 순서로 이기는 줄 번호')
+fr = card(ROOM, DATE, 3, 7, '암호 읽는 법', 'A B C D 순서로 최소 굴린 횟수')
 for n, k in enumerate('ABCD'):
     cx = 165 + n * 250; put(fr, pill(k, 40, INK, (244, 246, 250, 250), (26, 10)), cx, 470); put(fr, badge('?', 46), cx, 580)
 fr.alpha_composite(panel(960, 300), (60, 700))
-text_lines(fr, 540, 735, ['예: 2 · 6 · 1 · 3번 줄이면', ('암호 2613', YEL), '', ('어릴 때 한 번쯤 해 본 그 게임', SOFT)], 36, center=True)
+text_lines(fr, 540, 735, ['예: 2 · 6 · 1 · 3번이면', ('암호 2613', YEL), '', ('어릴 때 하던 그 뱀 사다리 게임', SOFT)], 36, center=True)
 cta(fr, CTA4); save(fr, 3)
 
-fr = card(ROOM, DATE, 4, 7, '네 자리 암호는?', '원판이 실제로 멈추는 칸을 봐요')
+fr = card(ROOM, DATE, 4, 7, '네 자리 암호는?', '무조건 6이 좋을까요?')
 four(fr, 'q', 470)
 cta(fr, CTA4); save(fr, 4)
 
-fr = card(ROOM, DATE, 5, 7, '힌트', '공중에 뜬 빈칸에는 못 멈춰요', CORAL)
+fr = card(ROOM, DATE, 5, 7, '힌트', '작게 굴려서 사다리에 올라타요', CORAL)
 fr.alpha_composite(panel(960, 300), (60, 300))
-text_lines(fr, 100, 330, [('A: 4번 줄에 노랑이 세 개 쌓여 있어요', WHITE), '빈칸 바로 아래가 비어 있으면',
-                          '원판은 그 아래까지 떨어져요', ('빈 틈만 보고 고르면 함정!', YEL)], 33)
-one(fr, 'qD', 540, 900, 560, tag=False)
+text_lines(fr, 100, 330, [('A: 1을 굴려 2번 → 사다리로 16번', WHITE), '4를 굴려 20번, 5를 굴려 25번 = 3번',
+                          '6만 굴리면 뱀에 물려 돌아가요', ('매번 6을 굴리면 함정!', YEL)], 33)
+one(fr, 'qC', 540, 900, 560, tag=False)
 cta(fr, '다음 장부터 정답 · 먼저 멈춰서 풀어보세요', CORAL); save(fr, 5)
 
-fr = card(ROOM, DATE, 6, 7, f'정답 공개 · {CODE}', '민트 고리 = 이어진 노란 네 개')
+fr = card(ROOM, DATE, 6, 7, f'정답 공개 · {CODE}', '민트 고리 = 굴린 뒤 도착한 칸 (숫자 = 몇 번째)')
 four(fr, 'r', 470, vals=list(CODE))
 cta(fr, '맞혔다면 댓글로 인증해 주세요'); save(fr, 6)
 
 fr = card(ROOM, DATE, 7, 7, '탈출 성공', f"함정 답은 {TRAP}")
-one(fr, 'qD', 300, 520, 450, tag=False); one(fr, 'rD', 790, 520, 450, tag=False)
+one(fr, 'qB', 300, 520, 450, tag=False); one(fr, 'rB', 790, 520, 450, tag=False)
 fr.alpha_composite(panel(960, 230), (60, 830))
-text_lines(fr, 100, 860, ['D: 4번 줄 빈 틈은 공중이라 못 멈춰요 (맨 아래로 뚝)', '6번 줄에 넣으면 세로 네 개 완성!'], 31)
+text_lines(fr, 100, 860, ['B: 사다리가 없어도 순서가 중요해요', '먼저 1을 굴려 19번 뱀 머리를 피하면 5번!'], 31)
 put(fr, text_layer(' '.join(CODE), 96, MINT, glow=MINT), 540, 1135)
 cta(fr, '맞혔다면 좋아요 · 다음 방은 팔로우!'); save(fr, 7)
 print('cards ok')

@@ -1,69 +1,44 @@
-"""ROOM 146 proof: bulbs, switches and a battery wired as a ladder. The battery sits between the top-left and
-bottom-left corners. The top rail runs over columns 1-3 (each piece: W wire or L bulb); the bottom rail is plain wire.
-Each column has a rung from top to bottom made of pieces in series (L bulb, S closed switch, O open switch). All bulbs
-are identical. A bulb lights when current flows through it, i.e. there is a voltage across it. Node voltages are
-solved exactly (wires and closed switches join nodes; bulbs are equal resistors). Digit = number of lit bulbs. All 10^4
-codes compared; exactly one matches. The trap: counting every bulb whose own wire has no open switch - forgetting
-that a closed switch on its own is a short cut that steals all the current."""
+"""ROOM 146 proof: the two-balloon paradox. Identical rubber balloons, blown up to different sizes, hang on one air pipe;
+each has its own tap. Rubber pressure as a function of stretch L = r / r0 follows the standard thin-rubber law
+P(L) = C (1/L - 1/L^7): it RISES while a balloon is small and FALLS once it passes L = 7^(1/6) ~ 1.38, so a bigger
+balloon has LOWER pressure. Every balloon here starts beyond the peak. When the open taps are opened, air flows from
+high to low pressure; the flow is integrated numerically (air volume kept) until it settles. Digit = the label of the
+one balloon that ends up BIGGER than it started (balloons behind a closed tap do not take part). All 10^4 codes
+compared; exactly one matches. The trap: 'air flows from big to small until they are even' - the smallest open
+balloon would grow."""
 import itertools, json, os
-from fractions import Fraction as F
-BOARDS = {'A': {'top': 'WLW', 'rungs': ['LL', 'LL', 'S']},
-          'B': {'top': 'LWW', 'rungs': ['S', 'LL', 'LL']},
-          'C': {'top': 'LWL', 'rungs': ['LL', 'LL', 'SO']},
-          'D': {'top': 'WLL', 'rungs': ['L', 'S', 'LL']}}
+PEAK = 7 ** (1 / 6)
+# label -> (start stretch L, tap open?)
+BOARDS = {'A': {1: (1.6, True), 4: (2.2, True), 7: (1.8, True)},
+          'B': {2: (2.4, False), 5: (1.7, True), 8: (2.0, True), 3: (1.5, True)},
+          'C': {6: (1.9, True), 9: (1.6, True), 1: (2.5, False)},
+          'D': {3: (1.6, True), 7: (2.1, True), 2: (1.8, True), 5: (1.5, True)}}
 
 
-def build(b):
-    """edges (a, b, kind, label); bulbs labelled ('top', i) or ('rung', j, t)."""
-    E = []
-    for i, e in enumerate(b['top']): E.append((f'T{i}', f'T{i + 1}', e, ('top', i)))
-    for i in range(3): E.append((f'B{i}', f'B{i + 1}', 'W', None))
-    for j, r in enumerate(b['rungs'], 1):
-        prev = f'T{j}'
-        for t, e in enumerate(r):
-            nxt = f'B{j}' if t == len(r) - 1 else f'R{j}{t}'; E.append((prev, nxt, e, ('rung', j, t))); prev = nxt
-    return E
+def P(L): return 1 / L - 1 / L ** 7
 
 
-def solve(b):
-    E = build(b); par = {}
-    def f(x):
-        par.setdefault(x, x)
-        while par[x] != x: x = par[x]
-        return x
-    for a, c, e, _ in E:
-        f(a); f(c)
-        if e in 'WS': par[f(a)] = f(c)
-    P, M = f('T0'), f('B0'); assert P != M, 'battery shorted'
-    nodes = sorted({f(x) for x in par}); free = [n for n in nodes if n not in (P, M)]
-    R = [(f(a), f(c)) for a, c, e, _ in E if e == 'L' and f(a) != f(c)]
-    # Gauss elimination with fractions on the free nodes (V(P)=1, V(M)=0); a node with no bulb link is left at 0 (no current)
-    V = {P: F(1), M: F(0)}; idx = {n: i for i, n in enumerate(free)}; m = len(free)
-    A = [[F(0)] * m for _ in range(m)]; y = [F(0)] * m
-    for a, c in R:
-        for u, v in ((a, c), (c, a)):
-            if u in idx:
-                A[idx[u]][idx[u]] += 1
-                if v in idx: A[idx[u]][idx[v]] -= 1
-                else: y[idx[u]] += V[v]
-    for i in range(m):
-        if A[i][i] == 0: A[i][i] = F(1)  # isolated node
-    for i in range(m):
-        p = next(r for r in range(i, m) if A[r][i] != 0); A[i], A[p] = A[p], A[i]; y[i], y[p] = y[p], y[i]
-        for r in range(m):
-            if r != i and A[r][i] != 0:
-                k = A[r][i] / A[i][i]; A[r] = [x - k * z for x, z in zip(A[r], A[i])]; y[r] -= k * y[i]
-    for n, i in idx.items(): V[n] = y[i] / A[i][i]
-    return {lab: V[f(a)] != V[f(c)] for a, c, e, lab in E if e == 'L'}
+def settle(b):
+    open_ = [k for k, (L, o) in b.items() if o]; V = {k: b[k][0] ** 3 for k in open_}
+    for _ in range(200000):
+        L = {k: v ** (1 / 3) for k, v in V.items()}; pm = sum(P(L[k]) for k in open_) / len(open_)
+        dV = {k: 0.02 * (P(L[k]) - pm) for k in open_}  # flow out of high pressure into the shared pipe, back into low
+        for k in open_: V[k] = max(V[k] - dV[k], 1.0001)
+        if max(abs(x) for x in dV.values()) < 1e-9: break
+    return {k: V[k] ** (1 / 3) for k in open_}
 
 
-LIT = {k: solve(b) for k, b in BOARDS.items()}
-code = ''.join(str(sum(LIT[k].values())) for k in 'ABCD')
-trap = ''.join(str(b['top'].count('L') + sum(r.count('L') for r in b['rungs'] if 'O' not in r)) for k, b in BOARDS.items())
+for b in BOARDS.values(): assert all(L > PEAK for L, _ in b.values())
+END = {k: settle(b) for k, b in BOARDS.items()}
+GROW = {k: [lab for lab, L in END[k].items() if L > BOARDS[k][lab][0] + 1e-3] for k in BOARDS}
+for k in BOARDS: assert len(GROW[k]) == 1 and GROW[k][0] == max((L, lab) for lab, (L, o) in BOARDS[k].items() if o)[1], k
+code = ''.join(str(GROW[k][0]) for k in 'ABCD')
+trap = ''.join(str(min((L, lab) for lab, (L, o) in BOARDS[k].items() if o)[1]) for k in 'ABCD')
 sols = [c for c in map(''.join, itertools.product('0123456789', repeat=4)) if c == code]
-print('answer', code, 'trap', trap, {k: [lab for lab, on in v.items() if on] for k, v in LIT.items()})
-assert sols == ['3152'] and trap != code
+print('answer', code, 'trap', trap, {k: {l: round(v, 2) for l, v in e.items()} for k, e in END.items()})
+assert sols == ['4867'] and trap != code
 if __name__ == '__main__':
-    json.dump({'unique_answer': code, 'codes_checked': 10000, 'boards': BOARDS, 'lit': {k: [list(l) for l, on in v.items() if on] for k, v in LIT.items()},
-               'trap_ignore_short': trap, 'why': '닫힌 스위치만 있는 줄은 저항이 없는 지름길이라 전류가 전부 그쪽으로 빠져요. 그 너머 전구는 꺼져요'},
+    json.dump({'unique_answer': code, 'codes_checked': 10000, 'boards': {k: {str(l): v for l, v in b.items()} for k, b in BOARDS.items()},
+               'end_stretch': {k: {str(l): round(v, 3) for l, v in e.items()} for k, e in END.items()}, 'trap_smallest_grows': trap,
+               'why': '작은 풍선일수록 고무가 더 세게 조여서 압력이 높아요. 그래서 공기가 작은 풍선에서 큰 풍선으로 넘어가요'},
               open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'notes', 'proof.json'), 'w'), ensure_ascii=False, indent=1)
