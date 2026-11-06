@@ -784,6 +784,15 @@
    "date": "2026.11.09",
    "status": "QUEUED",
    "post_at": "2026-11-09T02:30:00Z"
+  },
+  {
+   "room": 76,
+   "title": "직감 함정 4문제",
+   "mechanic": "intuition_trap_riddles_parallel_rates_3d",
+   "answer": "1562",
+   "date": "2026.11.09",
+   "status": "QUEUED",
+   "post_at": "2026-11-09T08:30:00Z"
   }
  ],
  "extra": [
