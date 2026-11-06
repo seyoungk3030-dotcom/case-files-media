@@ -694,6 +694,15 @@
    "reel_url": "https://www.instagram.com/reel/DfYQQteDFyC/",
    "published_at": "2026-11-05T23:52:16.751398+00:00",
    "story_id": "18134612074689699"
+  },
+  {
+   "room": 66,
+   "title": "실패 굴리기",
+   "mechanic": "spool_thread_under_over_axle_roll_distance_3d",
+   "answer": "6482",
+   "date": "2026.11.06",
+   "status": "QUEUED",
+   "post_at": "2026-11-06T02:30:00Z"
   }
  ],
  "extra": [

@@ -1,0 +1,34 @@
+{
+ "unique_answer": "6482",
+ "codes_checked": 10000,
+ "wheel_axle_radius": [
+  2,
+  1
+ ],
+ "boards_side_pulled": {
+  "A": [
+   "bottom",
+   3
+  ],
+  "B": [
+   "top",
+   6
+  ],
+  "C": [
+   "bottom",
+   4
+  ],
+  "D": [
+   "top",
+   3
+  ]
+ },
+ "rolled": {
+  "A": 6,
+  "B": 4,
+  "C": 8,
+  "D": 2
+ },
+ "trap_same_as_pulled": "3643",
+ "why": "바닥 닿은 점은 정지, 축 아래쪽은 실패 속도의 1/2, 위쪽은 3/2로 움직임. 아래 실: 당긴 길이×2, 위 실: ×2/3. A 3×2=6 · B 6×2/3=4 · C 4×2=8 · D 3×2/3=2"
+}
