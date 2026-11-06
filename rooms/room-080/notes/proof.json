@@ -1,0 +1,12 @@
+{
+ "unique_answer": "6315",
+ "codes_checked": 10000,
+ "contacts": {
+  "A": "UOUOU",
+  "B": "UOO",
+  "C": "OUO",
+  "D": "UOUOOU"
+ },
+ "trap_all_move": "6447",
+ "why": "아래에서 받친 끝은 올라갈 때만, 위에 얹힌 끝은 내려갈 때만 다음 시소를 움직여요. 반대로 움직이면 떨어지고 멈춰요"
+}
