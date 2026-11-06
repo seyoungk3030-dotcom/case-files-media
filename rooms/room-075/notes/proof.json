@@ -1,0 +1,28 @@
+{
+ "unique_answer": "3294",
+ "codes_checked": 10000,
+ "boards_doors_left_right": {
+  "A": [
+   false,
+   3,
+   8
+  ],
+  "B": [
+   true,
+   5,
+   2
+  ],
+  "C": [
+   true,
+   1,
+   9
+  ],
+  "D": [
+   false,
+   4,
+   6
+  ]
+ },
+ "trap_opposite": "8516",
+ "why": "한국 버스는 오른쪽 차선, 문은 오른쪽 옆면에. 문이 보이면 오른쪽 옆면 → 오른쪽으로 감, 문이 안 보이면 왼쪽 옆면 → 왼쪽으로 감"
+}

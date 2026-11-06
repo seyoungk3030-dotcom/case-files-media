@@ -775,6 +775,15 @@
    "date": "2026.11.08",
    "status": "QUEUED",
    "post_at": "2026-11-08T11:30:00Z"
+  },
+  {
+   "room": 75,
+   "title": "버스 방향",
+   "mechanic": "bus_side_doors_direction_3d",
+   "answer": "3294",
+   "date": "2026.11.09",
+   "status": "QUEUED",
+   "post_at": "2026-11-09T02:30:00Z"
   }
  ],
  "extra": [
