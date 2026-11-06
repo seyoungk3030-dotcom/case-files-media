@@ -1287,6 +1287,15 @@
    "date": "2026.11.27",
    "status": "QUEUED",
    "post_at": "2026-11-27T08:30:00Z"
+  },
+  {
+   "room": 131,
+   "title": "편광판 겹치기",
+   "mechanic": "polarizer_stack_45_degree_light_through_3d",
+   "answer": "7296",
+   "date": "2026.11.27",
+   "status": "QUEUED",
+   "post_at": "2026-11-27T11:30:00Z"
   }
  ],
  "extra": [
