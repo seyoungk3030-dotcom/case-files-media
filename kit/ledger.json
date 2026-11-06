@@ -1440,6 +1440,15 @@
    "date": "2026.12.03",
    "status": "QUEUED",
    "post_at": "2026-12-03T02:30:00Z"
+  },
+  {
+   "room": 148,
+   "title": "모래 무너짐",
+   "mechanic": "abelian_sandpile_topple_count_3d",
+   "answer": "6948",
+   "date": "2026.12.03",
+   "status": "QUEUED",
+   "post_at": "2026-12-03T08:30:00Z"
   }
  ],
  "extra": [
