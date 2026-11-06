@@ -1166,6 +1166,15 @@
    "date": "2026.11.23",
    "status": "QUEUED",
    "post_at": "2026-11-23T02:30:00Z"
+  },
+  {
+   "room": 118,
+   "title": "꺾인 거울",
+   "mechanic": "hinged_mirrors_angle_image_count_3d",
+   "answer": "5374",
+   "date": "2026.11.23",
+   "status": "QUEUED",
+   "post_at": "2026-11-23T08:30:00Z"
   }
  ],
  "extra": [
