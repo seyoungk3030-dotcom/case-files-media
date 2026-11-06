@@ -1431,6 +1431,15 @@
    "date": "2026.12.02",
    "status": "QUEUED",
    "post_at": "2026-12-02T11:30:00Z"
+  },
+  {
+   "room": 147,
+   "title": "뗏목 걷기",
+   "mechanic": "raft_walk_center_of_mass_shift_3d",
+   "answer": "5647",
+   "date": "2026.12.03",
+   "status": "QUEUED",
+   "post_at": "2026-12-03T02:30:00Z"
   }
  ],
  "extra": [

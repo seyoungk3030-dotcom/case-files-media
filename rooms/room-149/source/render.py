@@ -23,7 +23,7 @@ def one(fr, name, cx, cy, w, tag=True, val=None):
     im = Image.open(f'{B}/{name}.png'); sc = w / im.width; im = im.resize((round(im.width * sc), round(im.height * sc)), Image.LANCZOS)
     x0, y0 = cx - im.width / 2, cy - im.height / 2; fr.alpha_composite(im, (int(x0), int(y0)))
     if tag: put(fr, pill(name[1], 32, INK, (244, 246, 250, 245), (16, 5)), x0 + 22, y0 + 34)
-    if val: put(fr, badge(val, 44), x0 + im.width - 40, y0 + 40)
+    if val: put(fr, badge(val, 44), x0 + im.width - 40, y0 + 115)
 
 
 POS = [(292, 530), (788, 530), (292, 930), (788, 930)]
@@ -64,7 +64,7 @@ fr = card(ROOM, DATE, 5, 7, '힌트', '닮은 삼각형 두 개를 찾아요', C
 fr.alpha_composite(panel(960, 300), (60, 300))
 text_lines(fr, 100, 330, [('A: 가로등 6, 막대 2 → 막대는 3분의 1 높이', WHITE), '그림자 끝까지의 3분의 2 지점에 막대가 있어요',
                           '막대가 2번이면 그림자 끝은 3번', ('그림자 = 막대 길이라고 보면 함정!', YEL)], 31)
-one(fr, 'qC', 540, 900, 600, tag=False)
+one(fr, 'qA', 540, 900, 600, tag=False)
 cta(fr, '다음 장부터 정답 · 먼저 멈춰서 풀어보세요', CORAL); save(fr, 5)
 
 fr = card(ROOM, DATE, 6, 7, f'정답 공개 · {CODE}', '민트 선 = 전구에서 막대 꼭대기를 지나는 빛')
