@@ -61,8 +61,8 @@ def scene(k, after):
     for n, xc in b['coins'].items():
         bpy.ops.mesh.primitive_cylinder_add(radius=0.17, depth=0.1, location=(xc, -0.1, 0.05), vertices=40)
         bpy.context.object.data.materials.append(gold)
-        bpy.ops.mesh.primitive_cylinder_add(radius=0.2, depth=0.04, location=(xc, -D / 2 - 0.02, -0.3), rotation=(math.radians(90), 0, 0), vertices=40)
-        bpy.context.object.data.materials.append(amber); text(str(n), (xc, -D / 2 - 0.05, -0.3), 0.3, ink)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.27, depth=0.04, location=(xc, -D / 2 - 0.02, -0.3), rotation=(math.radians(90), 0, 0), vertices=40)
+        bpy.context.object.data.materials.append(amber); text(str(n), (xc, -D / 2 - 0.05, -0.3), 0.42, ink)
         if after and n == new:
             bpy.ops.mesh.primitive_torus_add(location=(xc, -0.1, 0.06), major_radius=0.24, minor_radius=0.035); bpy.context.object.data.materials.append(mint)
     # the eye, looking at the near rim

@@ -1,0 +1,70 @@
+{
+ "unique_answer": "3517",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "rows": [
+    "URLU",
+    "LLLL"
+   ],
+   "glass": [
+    1,
+    2
+   ],
+   "water": 1
+  },
+  "B": {
+   "rows": [
+    "RLUR",
+    "RRRR"
+   ],
+   "glass": [
+    1,
+    2
+   ],
+   "water": 2
+  },
+  "C": {
+   "rows": [
+    "ULUL",
+    "RULR"
+   ],
+   "glass": [
+    0,
+    1
+   ],
+   "water": 1
+  },
+  "D": {
+   "rows": [
+    "LLLR",
+    "RLLR"
+   ],
+   "glass": [
+    1,
+    2
+   ],
+   "water": 2
+  }
+ },
+ "seen": {
+  "A": [
+   "URLU",
+   "LRRL"
+  ],
+  "B": [
+   "RURR",
+   "RLLR"
+  ],
+  "C": [
+   "ULUL",
+   "ULLR"
+  ],
+  "D": [
+   "LRRR",
+   "RRRR"
+  ]
+ },
+ "trap_before_water": "1623",
+ "why": "물이 든 둥근 컵은 볼록렌즈처럼 뒤의 그림을 좌우로 뒤집어 보여줘요"
+}

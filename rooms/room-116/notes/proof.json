@@ -1,0 +1,68 @@
+{
+ "unique_answer": "3195",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "switches": [
+    3,
+    7,
+    5
+   ],
+   "first": 3,
+   "second": 7,
+   "bulbs": [
+    "cold",
+    "lit",
+    "warm"
+   ],
+   "ask": 2
+  },
+  "B": {
+   "switches": [
+    8,
+    1,
+    6
+   ],
+   "first": 6,
+   "second": 8,
+   "bulbs": [
+    "warm",
+    "cold",
+    "lit"
+   ],
+   "ask": 1
+  },
+  "C": {
+   "switches": [
+    4,
+    9,
+    2
+   ],
+   "first": 9,
+   "second": 2,
+   "bulbs": [
+    "lit",
+    "warm",
+    "cold"
+   ],
+   "ask": 1
+  },
+  "D": {
+   "switches": [
+    5,
+    4,
+    8
+   ],
+   "first": 5,
+   "second": 8,
+   "bulbs": [
+    "cold",
+    "lit",
+    "warm"
+   ],
+   "ask": 2
+  }
+ },
+ "trap_warm_cold_swapped": "5644",
+ "why": "켜져 있는 건 두 번째, 꺼졌지만 따뜻한 건 먼저 켰다 끈 것, 차가운 건 안 건드린 스위치"
+}

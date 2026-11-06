@@ -1085,6 +1085,15 @@
    "date": "2026.11.20",
    "status": "QUEUED",
    "post_at": "2026-11-20T02:30:00Z"
+  },
+  {
+   "room": 109,
+   "title": "밀물 사다리",
+   "mechanic": "tide_rise_ladder_boat_vs_pier_rungs_3d",
+   "answer": "5726",
+   "date": "2026.11.20",
+   "status": "QUEUED",
+   "post_at": "2026-11-20T08:30:00Z"
   }
  ],
  "extra": [
