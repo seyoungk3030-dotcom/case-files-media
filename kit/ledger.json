@@ -1076,6 +1076,15 @@
    "date": "2026.11.19",
    "status": "QUEUED",
    "post_at": "2026-11-19T11:30:00Z"
+  },
+  {
+   "room": 108,
+   "title": "돌린 블록",
+   "mechanic": "shepard_metzler_rotation_not_mirror_3d",
+   "answer": "3214",
+   "date": "2026.11.20",
+   "status": "QUEUED",
+   "post_at": "2026-11-20T02:30:00Z"
   }
  ],
  "extra": [

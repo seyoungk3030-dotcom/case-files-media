@@ -20,11 +20,11 @@ for n, im in ims.items():
 def one(fr, name, cx, cy, w, tag=True, val=None):
     im = Image.open(f'{B}/{name}.png'); sc = w / im.width; im = im.resize((round(im.width * sc), round(im.height * sc)), Image.LANCZOS)
     x0, y0 = cx - im.width / 2, cy - im.height / 2; fr.alpha_composite(im, (int(x0), int(y0)))
-    if tag: put(fr, pill(name[1], 32, INK, (244, 246, 250, 245), (16, 5)), x0 + 22, y0 + 24)
+    if tag: put(fr, pill(name[1], 32, INK, (244, 246, 250, 245), (16, 5)), x0 + 22, y0 + 34)
     if val: put(fr, badge(val, 44), x0 + im.width - 40, y0 + 40)
 
 
-POS = [(292, 495), (788, 495), (292, 905), (788, 905)]
+POS = [(292, 530), (788, 530), (292, 930), (788, 930)]
 
 
 def four(fr, pre, w=470, vals=None):
