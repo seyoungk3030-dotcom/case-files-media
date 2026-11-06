@@ -727,8 +727,12 @@
    "mechanic": "tilt_tray_ball_slides_to_wall_3d",
    "answer": "5729",
    "date": "2026.11.06",
-   "status": "QUEUED",
-   "post_at": "2026-11-06T11:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-06T11:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DfZmOTgkVVm/",
+   "reel_url": "https://www.instagram.com/reel/DfZmQZmiXo6/",
+   "published_at": "2026-11-06T12:23:44.223737+00:00",
+   "story_id": "18119807467787959"
   },
   {
    "room": 69,
