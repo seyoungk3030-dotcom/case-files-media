@@ -1148,6 +1148,15 @@
    "date": "2026.11.22",
    "status": "QUEUED",
    "post_at": "2026-11-22T08:30:00Z"
+  },
+  {
+   "room": 116,
+   "title": "전구 스위치",
+   "mechanic": "switch_bulb_heat_three_states_3d",
+   "answer": "3195",
+   "date": "2026.11.22",
+   "status": "QUEUED",
+   "post_at": "2026-11-22T11:30:00Z"
   }
  ],
  "extra": [
