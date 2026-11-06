@@ -1341,6 +1341,15 @@
    "date": "2026.11.29",
    "status": "QUEUED",
    "post_at": "2026-11-29T08:30:00Z"
+  },
+  {
+   "room": 137,
+   "title": "바이메탈 스위치",
+   "mechanic": "bimetal_strip_bends_which_lamp_3d",
+   "answer": "6491",
+   "date": "2026.11.29",
+   "status": "QUEUED",
+   "post_at": "2026-11-29T11:30:00Z"
   }
  ],
  "extra": [
