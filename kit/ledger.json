@@ -701,8 +701,12 @@
    "mechanic": "spool_thread_under_over_axle_roll_distance_3d",
    "answer": "6482",
    "date": "2026.11.06",
-   "status": "QUEUED",
-   "post_at": "2026-11-06T02:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-06T02:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DfYl4VJFOBC/",
+   "reel_url": "https://www.instagram.com/reel/DfYl7TACVV3/",
+   "published_at": "2026-11-06T03:01:35.573899+00:00",
+   "story_id": "18155631202534415"
   },
   {
    "room": 67,
