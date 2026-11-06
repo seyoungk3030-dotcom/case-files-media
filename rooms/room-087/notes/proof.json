@@ -1,0 +1,23 @@
+{
+ "unique_answer": "2033",
+ "codes_checked": 10000,
+ "boards_cups_flip_k": {
+  "A": [
+   "DUDDUD",
+   2
+  ],
+  "B": [
+   "UDUDD",
+   2
+  ],
+  "C": [
+   "DDUDDD",
+   3
+  ],
+  "D": [
+   "UUDUU",
+   3
+  ]
+ },
+ "why": "2개씩 뒤집으면 엎어진 컵 수의 홀짝이 안 바뀌어요. 홀수면 영원히 불가능(0)"
+}
