@@ -1368,6 +1368,15 @@
    "date": "2026.11.30",
    "status": "QUEUED",
    "post_at": "2026-11-30T08:30:00Z"
+  },
+  {
+   "room": 140,
+   "title": "페그 점프",
+   "mechanic": "peg_solitaire_triangle_last_peg_hole_3d",
+   "answer": "8264",
+   "date": "2026.11.30",
+   "status": "QUEUED",
+   "post_at": "2026-11-30T11:30:00Z"
   }
  ],
  "extra": [
