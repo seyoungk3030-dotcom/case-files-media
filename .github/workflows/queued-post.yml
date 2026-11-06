@@ -4,6 +4,9 @@ name: queued-post
 on:
   schedule:
     - cron: '30 2,8,11 * * *'
+    # retries: GitHub often delays or drops scheduled runs; a retry posts only a room that is still QUEUED and due
+    - cron: '55 2,8,11 * * *'
+    - cron: '25 3,9,12 * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -15,13 +18,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # latest ledger, so a queued retry never re-posts a room an earlier run just posted
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Post the earliest due room
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-        run: python3 -I kit/queue_post.py "$GITHUB_SHA"
+        run: python3 -I kit/queue_post.py "$(git rev-parse HEAD)"
       - name: Save the ledger
         run: |
           git config user.name github-actions
