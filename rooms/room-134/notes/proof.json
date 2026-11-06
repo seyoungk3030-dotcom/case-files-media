@@ -1,0 +1,48 @@
+{
+ "unique_answer": "6184",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "exit": 90,
+   "dir": 1,
+   "pins": {
+    "tangent": 6,
+    "inward": 2,
+    "outward": 9,
+    "radial": 4
+   }
+  },
+  "B": {
+   "exit": 0,
+   "dir": -1,
+   "pins": {
+    "tangent": 1,
+    "inward": 8,
+    "outward": 3,
+    "radial": 7
+   }
+  },
+  "C": {
+   "exit": 225,
+   "dir": 1,
+   "pins": {
+    "tangent": 8,
+    "inward": 5,
+    "outward": 0,
+    "radial": 2
+   }
+  },
+  "D": {
+   "exit": 135,
+   "dir": -1,
+   "pins": {
+    "tangent": 4,
+    "inward": 9,
+    "outward": 6,
+    "radial": 1
+   }
+  }
+ },
+ "trap_radial": "4721",
+ "why": "틈으로 나간 공은 더 이상 휘게 하는 벽이 없어서, 나간 순간의 방향(접선)으로 곧게 굴러가요"
+}

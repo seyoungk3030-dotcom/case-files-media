@@ -1,0 +1,62 @@
+{
+ "unique_answer": "8197",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "shape": "double_cone",
+   "s": [
+    0.25,
+    1.15
+   ],
+   "low": 3,
+   "high": 8
+  },
+  "B": {
+   "shape": "cylinder",
+   "s": [
+    0.25,
+    1.15
+   ],
+   "low": 1,
+   "high": 6
+  },
+  "C": {
+   "shape": "hourglass",
+   "s": [
+    0.25,
+    1.15
+   ],
+   "low": 9,
+   "high": 2
+  },
+  "D": {
+   "shape": "double_cone",
+   "s": [
+    1.15,
+    0.25
+   ],
+   "low": 7,
+   "high": 4
+  }
+ },
+ "axis_height_low_high": {
+  "A": [
+   0.58,
+   0.388
+  ],
+  "B": [
+   0.42,
+   0.66
+  ],
+  "C": [
+   0.26,
+   0.788
+  ],
+  "D": [
+   0.148,
+   0.82
+  ]
+ },
+ "trap_always_downhill": "3197",
+ "why": "굴러가는 물체는 무게중심이 낮아지는 쪽으로 가요. 레일이 벌어지면 쌍뿔은 레일 사이로 쑥 내려앉아요"
+}

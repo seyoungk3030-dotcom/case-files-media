@@ -1,0 +1,46 @@
+{
+ "unique_answer": "6491",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "brass": "L",
+   "temp": "hot",
+   "lamps": {
+    "L": 2,
+    "R": 6
+   }
+  },
+  "B": {
+   "brass": "R",
+   "temp": "cold",
+   "lamps": {
+    "L": 7,
+    "R": 4
+   }
+  },
+  "C": {
+   "brass": "R",
+   "temp": "hot",
+   "lamps": {
+    "L": 9,
+    "R": 3
+   }
+  },
+  "D": {
+   "brass": "L",
+   "temp": "cold",
+   "lamps": {
+    "L": 1,
+    "R": 8
+   }
+  }
+ },
+ "bends_to": {
+  "A": "R",
+  "B": "R",
+  "C": "L",
+  "D": "L"
+ },
+ "trap_other_lamp": "2738",
+ "why": "데우면 놋쇠 쪽이 더 길어져서 바깥으로 둥글게, 즉 철 쪽으로 휘어요. 식히면 반대예요"
+}

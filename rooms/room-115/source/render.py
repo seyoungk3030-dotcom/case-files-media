@@ -24,7 +24,7 @@ def one(fr, name, cx, cy, w, tag=True, val=None):
     if val: put(fr, badge(val, 44), x0 + im.width - 40, y0 + 40)
 
 
-POS = [(292, 530), (788, 530), (292, 930), (788, 930)]
+POS = [(292, 505), (788, 505), (292, 920), (788, 920)]
 
 
 def four(fr, pre, w=470, vals=None):
@@ -37,7 +37,7 @@ def save(fr, n): fr.convert('RGB').save(f'{OUT}/card-{n:02d}.png')
 CTA4 = '4장까지 풀고 댓글에 암호를 남겨주세요'
 
 fr = card(ROOM, DATE, 1, 7, '밸브를 열면 수위는?', '물통이 바닥 관으로 이어져 있어요')
-four(fr, 'q', 470)
+four(fr, 'q', 400)
 cta(fr, '도전 → 4장까지  ·  정답 → 6~7장'); save(fr, 1)
 
 fr = card(ROOM, DATE, 2, 7, '물통 규칙', '빨간 밸브를 모두 열어요')
@@ -54,7 +54,7 @@ text_lines(fr, 540, 735, ['예: 수위가 3 · 5 · 0 · 8이면', ('암호 3508
 cta(fr, CTA4); save(fr, 3)
 
 fr = card(ROOM, DATE, 4, 7, '네 자리 암호는?', '넓은 통과 좁은 통, 누가 더 많이 줄까요?')
-four(fr, 'q', 470)
+four(fr, 'q', 400)
 cta(fr, CTA4); save(fr, 4)
 
 fr = card(ROOM, DATE, 5, 7, '힌트', '물의 양 = 폭 × 높이를 모두 더하기', CORAL)
@@ -64,7 +64,7 @@ one(fr, 'qA', 540, 900, 600, tag=False)
 cta(fr, '다음 장부터 정답 · 먼저 멈춰서 풀어보세요', CORAL); save(fr, 5)
 
 fr = card(ROOM, DATE, 6, 7, f'정답 공개 · {CODE}', '밸브를 연 뒤 모든 통의 수위가 같아져요')
-four(fr, 'r', 470, vals=list(CODE))
+four(fr, 'r', 400, vals=list(CODE))
 cta(fr, '맞혔다면 댓글로 인증해 주세요'); save(fr, 6)
 
 fr = card(ROOM, DATE, 7, 7, '탈출 성공', f"함정 답은 {TRAP}")
