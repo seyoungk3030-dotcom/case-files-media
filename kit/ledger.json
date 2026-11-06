@@ -1422,6 +1422,15 @@
    "date": "2026.12.02",
    "status": "QUEUED",
    "post_at": "2026-12-02T08:30:00Z"
+  },
+  {
+   "room": 146,
+   "title": "풍선 두 개",
+   "mechanic": "two_balloon_paradox_small_empties_into_big_3d",
+   "answer": "4867",
+   "date": "2026.12.02",
+   "status": "QUEUED",
+   "post_at": "2026-12-02T11:30:00Z"
   }
  ],
  "extra": [
