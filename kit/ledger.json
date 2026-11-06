@@ -714,8 +714,12 @@
    "mechanic": "springs_series_parallel_stretch_3d",
    "answer": "6293",
    "date": "2026.11.06",
-   "status": "QUEUED",
-   "post_at": "2026-11-06T08:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-06T08:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DfZSE6FlWWZ/",
+   "reel_url": "https://www.instagram.com/reel/DfZSIgdlV03/",
+   "published_at": "2026-11-06T09:27:51.045833+00:00",
+   "story_id": "18090599381679416"
   },
   {
    "room": 68,
