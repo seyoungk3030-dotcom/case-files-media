@@ -1485,6 +1485,15 @@
    "date": "2026.12.04",
    "status": "QUEUED",
    "post_at": "2026-12-04T11:30:00Z"
+  },
+  {
+   "room": 153,
+   "title": "개미 막대",
+   "mechanic": "ants_on_stick_bounce_red_ant_fall_time_3d",
+   "answer": "7395",
+   "date": "2026.12.05",
+   "status": "QUEUED",
+   "post_at": "2026-12-05T02:30:00Z"
   }
  ],
  "extra": [
