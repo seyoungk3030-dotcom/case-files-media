@@ -977,6 +977,15 @@
    "date": "2026.11.16",
    "status": "QUEUED",
    "post_at": "2026-11-16T02:30:00Z"
+  },
+  {
+   "room": 97,
+   "title": "케이크 자르기",
+   "mechanic": "cake_chord_cuts_pieces_horizontal_layer_3d",
+   "answer": "6978",
+   "date": "2026.11.16",
+   "status": "QUEUED",
+   "post_at": "2026-11-16T08:30:00Z"
   }
  ],
  "extra": [
