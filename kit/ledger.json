@@ -1175,6 +1175,15 @@
    "date": "2026.11.23",
    "status": "QUEUED",
    "post_at": "2026-11-23T08:30:00Z"
+  },
+  {
+   "room": 119,
+   "title": "진자 줄 자르기",
+   "mechanic": "pendulum_string_cut_projectile_landing_slot_3d",
+   "answer": "8643",
+   "date": "2026.11.23",
+   "status": "QUEUED",
+   "post_at": "2026-11-23T11:30:00Z"
   }
  ],
  "extra": [
