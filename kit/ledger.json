@@ -1242,6 +1242,15 @@
    "date": "2026.11.25",
    "status": "QUEUED",
    "post_at": "2026-11-25T11:30:00Z"
+  },
+  {
+   "room": 126,
+   "title": "너트 돌리기",
+   "mechanic": "bolt_nut_turns_thread_pitch_arrow_scale_3d",
+   "answer": "6548",
+   "date": "2026.11.26",
+   "status": "QUEUED",
+   "post_at": "2026-11-26T02:30:00Z"
   }
  ],
  "extra": [
