@@ -793,6 +793,15 @@
    "date": "2026.11.09",
    "status": "QUEUED",
    "post_at": "2026-11-09T08:30:00Z"
+  },
+  {
+   "room": 77,
+   "title": "관람차",
+   "mechanic": "ferris_wheel_turn_steps_top_cabin_3d",
+   "answer": "8012",
+   "date": "2026.11.09",
+   "status": "QUEUED",
+   "post_at": "2026-11-09T11:30:00Z"
   }
  ],
  "extra": [
