@@ -1494,6 +1494,15 @@
    "date": "2026.12.05",
    "status": "QUEUED",
    "post_at": "2026-12-05T02:30:00Z"
+  },
+  {
+   "room": 154,
+   "title": "불 끄기 버튼",
+   "mechanic": "lights_out_3x3_min_presses_3d",
+   "answer": "4253",
+   "date": "2026.12.05",
+   "status": "QUEUED",
+   "post_at": "2026-12-05T08:30:00Z"
   }
  ],
  "extra": [
