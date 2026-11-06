@@ -712,6 +712,15 @@
    "date": "2026.11.06",
    "status": "QUEUED",
    "post_at": "2026-11-06T08:30:00Z"
+  },
+  {
+   "room": 68,
+   "title": "기울이기 미로",
+   "mechanic": "tilt_tray_ball_slides_to_wall_3d",
+   "answer": "5729",
+   "date": "2026.11.06",
+   "status": "QUEUED",
+   "post_at": "2026-11-06T11:30:00Z"
   }
  ],
  "extra": [
