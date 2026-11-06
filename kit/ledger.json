@@ -1269,6 +1269,15 @@
    "date": "2026.11.26",
    "status": "QUEUED",
    "post_at": "2026-11-26T11:30:00Z"
+  },
+  {
+   "room": 129,
+   "title": "수평계 거품",
+   "mechanic": "spirit_level_bubble_moves_uphill_3d",
+   "answer": "8362",
+   "date": "2026.11.27",
+   "status": "QUEUED",
+   "post_at": "2026-11-27T02:30:00Z"
   }
  ],
  "extra": [
