@@ -63,7 +63,7 @@ def scene(k, after):
         z = PZ - 0.25
         while z > PZ - 3.4:
             box(mint, (0, -0.2, z - 0.09), (0.03, 0.02, 0.18), 0.0); z -= 0.3
-    b3d.stack_camera((0, 0, PZ - 0.3), 6.2, az=0.0, el=0.0)
+    b3d.stack_camera((0, 0, PZ - 0.3), 4.3, az=0.0, el=0.0)
 
 
 only = sys.argv[1:]

@@ -1184,6 +1184,15 @@
    "date": "2026.11.23",
    "status": "QUEUED",
    "post_at": "2026-11-23T11:30:00Z"
+  },
+  {
+   "room": 120,
+   "title": "루프 트랙",
+   "mechanic": "loop_the_loop_min_start_height_sled_3d",
+   "answer": "4837",
+   "date": "2026.11.24",
+   "status": "QUEUED",
+   "post_at": "2026-11-24T02:30:00Z"
   }
  ],
  "extra": [
