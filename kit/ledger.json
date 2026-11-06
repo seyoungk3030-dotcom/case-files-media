@@ -1476,6 +1476,15 @@
    "date": "2026.12.04",
    "status": "QUEUED",
    "post_at": "2026-12-04T08:30:00Z"
+  },
+  {
+   "room": 152,
+   "title": "만칼라",
+   "mechanic": "mancala_sow_capture_store_count_3d",
+   "answer": "5376",
+   "date": "2026.12.04",
+   "status": "QUEUED",
+   "post_at": "2026-12-04T11:30:00Z"
   }
  ],
  "extra": [
