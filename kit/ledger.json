@@ -950,6 +950,15 @@
    "date": "2026.11.15",
    "status": "QUEUED",
    "post_at": "2026-11-15T02:30:00Z"
+  },
+  {
+   "room": 94,
+   "title": "당구 쿠션",
+   "mechanic": "billiard_45_degree_cushion_bounce_count_3d",
+   "answer": "6534",
+   "date": "2026.11.15",
+   "status": "QUEUED",
+   "post_at": "2026-11-15T08:30:00Z"
   }
  ],
  "extra": [
