@@ -1503,6 +1503,15 @@
    "date": "2026.12.05",
    "status": "QUEUED",
    "post_at": "2026-12-05T08:30:00Z"
+  },
+  {
+   "room": 155,
+   "title": "샴페인 탑",
+   "mechanic": "champagne_tower_overflow_full_glasses_3d",
+   "answer": "6384",
+   "date": "2026.12.05",
+   "status": "QUEUED",
+   "post_at": "2026-12-05T11:30:00Z"
   }
  ],
  "extra": [
