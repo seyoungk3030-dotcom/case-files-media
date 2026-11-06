@@ -730,6 +730,15 @@
    "date": "2026.11.07",
    "status": "QUEUED",
    "post_at": "2026-11-07T02:30:00Z"
+  },
+  {
+   "room": 70,
+   "title": "슬라이딩 타일",
+   "mechanic": "sliding_tiles_push_order_star_cell_3d",
+   "answer": "3176",
+   "date": "2026.11.07",
+   "status": "QUEUED",
+   "post_at": "2026-11-07T08:30:00Z"
   }
  ],
  "extra": [
