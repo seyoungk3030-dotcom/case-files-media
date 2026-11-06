@@ -1049,6 +1049,15 @@
    "date": "2026.11.18",
    "status": "QUEUED",
    "post_at": "2026-11-18T11:30:00Z"
+  },
+  {
+   "room": 105,
+   "title": "나이트 두 번 뛰기",
+   "mechanic": "chess_knight_exact_two_jumps_pawn_blocked_3d",
+   "answer": "2413",
+   "date": "2026.11.19",
+   "status": "QUEUED",
+   "post_at": "2026-11-19T02:30:00Z"
   }
  ],
  "extra": [

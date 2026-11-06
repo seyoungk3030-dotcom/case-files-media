@@ -39,20 +39,11 @@ def pawn(cell, m):
 
 
 def knight(cell, m):
-    before = set(bpy.data.objects); _knight(m)
-    e = bpy.data.objects.new('k', None); bpy.context.collection.objects.link(e)
-    for o in set(bpy.data.objects) - before - {e}: o.parent = e
-    e.location = P(cell); e.scale = (1.3, 1.3, 1.3); e.rotation_euler = (0, 0, math.radians(-90))
-
-
-def _knight(m):
-    p = Vector((0, 0, 0)); cyl(0.36, 0.14, p + Vector((0, 0, 0.07)), m); cyl(0.27, 0.1, p + Vector((0, 0, 0.18)), m)
-    bpy.ops.mesh.primitive_cube_add(size=1, location=p + Vector((0, 0.04, 0.55))); o = bpy.context.object; o.scale = (0.28, 0.42, 0.62)
-    o.rotation_euler = (math.radians(-12), 0, 0); o.data.materials.append(m); b3d.bevel(o, 0.08)
-    bpy.ops.mesh.primitive_cube_add(size=1, location=p + Vector((0, -0.2, 0.8))); o = bpy.context.object; o.scale = (0.26, 0.5, 0.26)
-    o.rotation_euler = (math.radians(-28), 0, 0); o.data.materials.append(m); b3d.bevel(o, 0.07)
-    for sx in (-0.08, 0.08):
-        bpy.ops.mesh.primitive_cone_add(radius1=0.06, depth=0.18, location=p + Vector((sx, 0.12, 0.98)), vertices=16); bpy.context.object.data.materials.append(m)
+    p = P(cell); cyl(0.36, 0.14, p + Vector((0, 0, 0.07)), m)
+    bpy.ops.object.text_add(location=p + Vector((0, 0, 0.78)), rotation=(math.radians(90), 0, 0)); t = bpy.context.object
+    t.data.body = '\u265e'; t.data.font = bpy.data.fonts.load('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf')
+    t.data.size = 2.1; t.data.align_x = 'CENTER'; t.data.align_y = 'CENTER'; t.data.extrude = 0.13; t.data.bevel_depth = 0.02
+    t.data.materials.append(m)
 
 
 def arc(a, b, m, h=0.9):
@@ -83,7 +74,7 @@ def scene(k, after):
         mid = next(m for m in jumps(b['knight'], block) if win in jumps(m, block))
         bpy.ops.mesh.primitive_torus_add(location=P(mid, 0.03), major_radius=0.36, minor_radius=0.05); bpy.context.object.data.materials.append(mint)
         arc(P(b['knight']), P(mid), mint); arc(P(mid), P(win), mint)
-    b3d.stack_camera((0, 0.05, 0.1), 8.1, az=10.0, el=55.0)
+    b3d.stack_camera((0, 0.1, 0.25), 8.6, az=10.0, el=50.0)
 
 
 only = sys.argv[1:]
