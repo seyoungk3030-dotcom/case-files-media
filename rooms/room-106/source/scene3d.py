@@ -60,10 +60,13 @@ def scene(k, after):
         if not after:
             bpy.ops.mesh.primitive_cylinder_add(radius=0.08, depth=0.2, location=(RB + 0.05, 0, z), rotation=(0, math.radians(90), 0), vertices=24)
             bpy.context.object.data.materials.append(amber)
-        bpy.ops.mesh.primitive_cylinder_add(radius=0.21, depth=0.05, location=(-RB - 0.3, -0.2, z), rotation=(math.radians(90), 0, 0), vertices=40)
-        bpy.context.object.data.materials.append(amber); text(str(n), (-RB - 0.3, -0.24, z), 0.3, ink)
+        tx = -RB - 0.38 - (0.62 if sorted(holes.values()).index(h) % 2 else 0)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.3, depth=0.05, location=(tx, -0.2, z), rotation=(math.radians(90), 0, 0), vertices=40)
+        bpy.context.object.data.materials.append(amber); text(str(n), (tx, -0.24, z), 0.44, ink)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.015, depth=abs(tx) - RB, location=((tx - RB) / 2, -0.15, z), rotation=(0, math.radians(90), 0), vertices=8)
+        bpy.context.object.data.materials.append(amber)
         if after: jet(S, H, h, mint if n == win else blue, 0.09 if n == win else 0.05)
-    b3d.stack_camera((2.7, 0, 2.9), 8.4, az=0.0, el=6.0)
+    b3d.stack_camera((2.4, 0, 2.9), 8.6, az=0.0, el=6.0)
 
 
 only = sys.argv[1:]

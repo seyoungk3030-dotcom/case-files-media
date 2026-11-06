@@ -13,8 +13,8 @@
    "sprite": "qA",
    "answer_sprite": "rA",
    "x": 282,
-   "y": 610,
-   "w": 500,
+   "y": 620,
+   "w": 505,
    "label": "A",
    "key": "A"
   },
@@ -22,8 +22,8 @@
    "sprite": "qB",
    "answer_sprite": "rB",
    "x": 798,
-   "y": 610,
-   "w": 500,
+   "y": 620,
+   "w": 505,
    "label": "B",
    "key": "B"
   },
@@ -31,8 +31,8 @@
    "sprite": "qC",
    "answer_sprite": "rC",
    "x": 282,
-   "y": 1075,
-   "w": 500,
+   "y": 1070,
+   "w": 505,
    "label": "C",
    "key": "C"
   },
@@ -40,8 +40,8 @@
    "sprite": "qD",
    "answer_sprite": "rD",
    "x": 798,
-   "y": 1075,
-   "w": 500,
+   "y": 1070,
+   "w": 505,
    "label": "D",
    "key": "D"
   }
