@@ -1569,6 +1569,15 @@
    "date": "2026.12.07",
    "status": "QUEUED",
    "post_at": "2026-12-07T08:30:00Z"
+  },
+  {
+   "room": 161,
+   "title": "사다리 타기",
+   "mechanic": "ladder_lottery_marble_crossbars_bin_3d",
+   "answer": "8655",
+   "date": "2026.12.07",
+   "status": "QUEUED",
+   "post_at": "2026-12-07T11:30:00Z"
   }
  ],
  "extra": [
