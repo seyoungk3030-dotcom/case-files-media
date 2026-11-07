@@ -740,8 +740,12 @@
    "mechanic": "nested_cup_stack_height_rim_3d",
    "answer": "7683",
    "date": "2026.11.07",
-   "status": "QUEUED",
-   "post_at": "2026-11-07T02:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-07T02:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DfbM4a6m6hP/",
+   "reel_url": "https://www.instagram.com/reel/DfbM6P9lbMm/",
+   "published_at": "2026-11-07T03:20:44.886900+00:00",
+   "story_id": "18095643557268453"
   },
   {
    "room": 70,
