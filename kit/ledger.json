@@ -766,8 +766,12 @@
    "mechanic": "candles_thin_thick_burn_rate_left_3d",
    "answer": "4381",
    "date": "2026.11.07",
-   "status": "QUEUED",
-   "post_at": "2026-11-07T11:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-07T11:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DfcJbTXlL1H/",
+   "reel_url": "https://www.instagram.com/reel/DfcJd85D0KC/",
+   "published_at": "2026-11-07T12:09:50.604260+00:00",
+   "story_id": "18098262542554642"
   },
   {
    "room": 72,
