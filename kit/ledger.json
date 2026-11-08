@@ -779,8 +779,12 @@
    "mechanic": "block_well_drop_piece_clear_rows_3d",
    "answer": "7248",
    "date": "2026.11.08",
-   "status": "QUEUED",
-   "post_at": "2026-11-08T02:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-08T02:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/Dfdx8FQjC-O/",
+   "reel_url": "https://www.instagram.com/reel/Dfdx-oLDWAO/",
+   "published_at": "2026-11-08T03:23:09.631113+00:00",
+   "story_id": "18001014545824828"
   },
   {
    "room": 73,
