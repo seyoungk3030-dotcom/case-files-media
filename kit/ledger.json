@@ -805,8 +805,12 @@
    "mechanic": "desk_digit_count_9s_3d",
    "answer": "6432",
    "date": "2026.11.08",
-   "status": "QUEUED",
-   "post_at": "2026-11-08T11:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-08T11:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DfeuYtGG93T/",
+   "reel_url": "https://www.instagram.com/reel/Dfeucs1HS09/",
+   "published_at": "2026-11-08T12:11:29.712691+00:00",
+   "story_id": "17961079641016376"
   },
   {
    "room": 75,
