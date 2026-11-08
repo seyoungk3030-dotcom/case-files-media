@@ -1608,6 +1608,15 @@
    "date": "2026.12.08",
    "status": "QUEUED",
    "post_at": "2026-12-08T08:30:00Z"
+  },
+  {
+   "room": 164,
+   "title": "직소 퍼즐",
+   "mechanic": "jigsaw_tab_blank_rotate_no_flip_fit_3d",
+   "answer": "8759",
+   "date": "2026.12.08",
+   "status": "QUEUED",
+   "post_at": "2026-12-08T11:30:00Z"
   }
  ],
  "extra": [

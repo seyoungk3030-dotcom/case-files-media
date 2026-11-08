@@ -1,0 +1,134 @@
+{
+ "unique_answer": "8759",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "grid": {
+    "00": "FBBF",
+    "01": "FBBT",
+    "02": "FFBT",
+    "10": "TBBF",
+    "11": "TTTT",
+    "12": "TFTB",
+    "20": "TBFF",
+    "21": "BTFT",
+    "22": "BFFB"
+   },
+   "hole": [
+    1,
+    0
+   ],
+   "loose": [
+    "BBTF",
+    "TBTF",
+    "BBFT",
+    "BTBB"
+   ],
+   "digits": [
+    5,
+    2,
+    8,
+    3
+   ],
+   "need": "TBBF"
+  },
+  "B": {
+   "grid": {
+    "00": "FTTF",
+    "01": "FTTB",
+    "02": "FFBB",
+    "10": "BBTF",
+    "11": "BTBT",
+    "12": "TFTB",
+    "20": "BTFF",
+    "21": "TBFB",
+    "22": "BFFT"
+   },
+   "hole": [
+    0,
+    1
+   ],
+   "loose": [
+    "TBFT",
+    "BTTB",
+    "TTFB",
+    "BTFB"
+   ],
+   "digits": [
+    7,
+    1,
+    4,
+    9
+   ],
+   "need": "FTTB"
+  },
+  "C": {
+   "grid": {
+    "00": "FBTF",
+    "01": "FTTT",
+    "02": "FFTB",
+    "10": "BTTF",
+    "11": "BBTB",
+    "12": "BFTT",
+    "20": "BTFF",
+    "21": "BBFB",
+    "22": "BFFT"
+   },
+   "hole": [
+    1,
+    2
+   ],
+   "loose": [
+    "TTBB",
+    "TFBT",
+    "FBTB",
+    "TTBF"
+   ],
+   "digits": [
+    6,
+    0,
+    3,
+    5
+   ],
+   "need": "BFTT"
+  },
+  "D": {
+   "grid": {
+    "00": "FBBF",
+    "01": "FBBT",
+    "02": "FFTT",
+    "10": "TTTF",
+    "11": "TTTB",
+    "12": "BFBB",
+    "20": "BBFF",
+    "21": "BBFT",
+    "22": "TFFT"
+   },
+   "hole": [
+    2,
+    1
+   ],
+   "loose": [
+    "TTBF",
+    "BFTB",
+    "FTTT",
+    "FBBT"
+   ],
+   "digits": [
+    2,
+    9,
+    4,
+    7
+   ],
+   "need": "BBFT"
+  }
+ },
+ "fit_index": {
+  "A": 2,
+  "B": 0,
+  "C": 3,
+  "D": 1
+ },
+ "trap_flipped": "5407",
+ "why": "조각은 돌릴 수만 있고 뒤집을 수는 없어요. 거울처럼 뒤집어야 맞는 조각이 함정이에요"
+}
