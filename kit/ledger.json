@@ -1595,6 +1595,15 @@
    "date": "2026.12.08",
    "status": "QUEUED",
    "post_at": "2026-12-08T02:30:00Z"
+  },
+  {
+   "room": 163,
+   "title": "양말 서랍",
+   "mechanic": "sock_drawer_blind_draw_worst_case_guarantee_3d",
+   "answer": "4957",
+   "date": "2026.12.08",
+   "status": "QUEUED",
+   "post_at": "2026-12-08T08:30:00Z"
   }
  ],
  "extra": [
