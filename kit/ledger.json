@@ -792,8 +792,12 @@
    "mechanic": "parking_numbers_upside_down_3d",
    "answer": "6707",
    "date": "2026.11.08",
-   "status": "QUEUED",
-   "post_at": "2026-11-08T08:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-08T08:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/Dfea7yLHFx_/",
+   "reel_url": "https://www.instagram.com/reel/Dfea-RpAPZX/",
+   "published_at": "2026-11-08T09:21:20.097069+00:00",
+   "story_id": "18096283583673054"
   },
   {
    "room": 74,
