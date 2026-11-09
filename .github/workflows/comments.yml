@@ -1,0 +1,24 @@
+# Replies to 4-digit answer guesses in our post comments every hour (user 2026-11-09: "수시로 댓글 달린거 보면 대댓글").
+# kit/comments.py never posts the answer and never replies to the same comment twice. Needs secret IG_ACCESS_TOKEN.
+name: comment-replies
+on:
+  schedule:
+    - cron: '7 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: comment-replies
+  cancel-in-progress: false
+jobs:
+  reply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reply to answer guesses
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: python3 -I kit/comments.py
