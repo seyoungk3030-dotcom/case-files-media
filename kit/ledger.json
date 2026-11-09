@@ -818,8 +818,12 @@
    "mechanic": "bus_side_doors_direction_3d",
    "answer": "3294",
    "date": "2026.11.09",
-   "status": "QUEUED",
-   "post_at": "2026-11-09T02:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-09T02:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DfgWhFUDTXi/",
+   "reel_url": "https://www.instagram.com/reel/DfgWi8mm7TQ/",
+   "published_at": "2026-11-09T03:21:07.835990+00:00",
+   "story_id": "18134368537688818"
   },
   {
    "room": 76,
