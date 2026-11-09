@@ -844,8 +844,12 @@
    "mechanic": "ferris_wheel_turn_steps_top_cabin_3d",
    "answer": "8012",
    "date": "2026.11.09",
-   "status": "QUEUED",
-   "post_at": "2026-11-09T11:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-09T11:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DfhVVNlGxYa/",
+   "reel_url": "https://www.instagram.com/reel/DfhVXOKGUvn/",
+   "published_at": "2026-11-09T12:30:01.129146+00:00",
+   "story_id": "18074763491606067"
   },
   {
    "room": 78,
