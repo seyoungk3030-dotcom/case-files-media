@@ -54,11 +54,12 @@ def main(dry):
         ans = r and answer(int(r.group(1)))
         if not ans:
             continue
-        cs = p.call(f"/{m['id']}/comments", {'fields': 'id,text,username,replies{username}', 'limit': 50}, 'GET')['data']
+        cs = p.call(f"/{m['id']}/comments", {'fields': 'id,text,username,parent_id,replies{username}', 'limit': 50}, 'GET')['data']
         for c in cs:
-            # the API leaves username out for other people's top-level comments and for replies, so a top-level
+            # replies inside a thread (parent_id) are skipped: a reply to them would land in the parent's thread on
+            # every run, so only top-level guesses get answers. The API leaves username out for other people's top-level comments and for replies, so a top-level
             # comment is ours only when username == me, and any reply with username me or missing counts as answered
-            if c.get('username') == me or any(x.get('username') in (me, None) for x in c.get('replies', {}).get('data', [])):
+            if c.get('parent_id') or c.get('username') == me or any(x.get('username') in (me, None) for x in c.get('replies', {}).get('data', [])):
                 continue
             g = guess(c.get('text') or '')
             if not g:
