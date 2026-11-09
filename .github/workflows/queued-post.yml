@@ -35,3 +35,8 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "queued post published"
           for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep 5; done
+      - name: Reply to 4-digit answer comments (user choice 2026-10-21, never posts the answer)
+        continue-on-error: true
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: python3 -I kit/comments.py
