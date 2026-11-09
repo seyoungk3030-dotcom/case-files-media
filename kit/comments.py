@@ -56,7 +56,8 @@ def main(dry):
             continue
         cs = p.call(f"/{m['id']}/comments", {'fields': 'id,text,username,replies{username}', 'limit': 50}, 'GET')['data']
         for c in cs:
-            if c.get('username') == me or any(x.get('username') == me for x in c.get('replies', {}).get('data', [])):
+            # the API returns username None for our own comments and replies
+            if c.get('username') in (me, None) or any(x.get('username') in (me, None) for x in c.get('replies', {}).get('data', [])):
                 continue
             g = guess(c.get('text') or '')
             if not g:
