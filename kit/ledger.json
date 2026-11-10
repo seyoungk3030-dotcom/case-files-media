@@ -883,8 +883,12 @@
    "mechanic": "seesaw_chain_under_over_contact_count_3d",
    "answer": "6315",
    "date": "2026.11.10",
-   "status": "QUEUED",
-   "post_at": "2026-11-10T11:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-10T11:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/Dfj5PN5keQU/",
+   "reel_url": "https://www.instagram.com/reel/Dfj5QhQjNsp/",
+   "published_at": "2026-11-10T12:22:13.412119+00:00",
+   "story_id": "18102777626409878"
   },
   {
    "room": 81,
