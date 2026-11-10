@@ -870,8 +870,12 @@
    "mechanic": "color_filter_decoder_seven_segment_3d",
    "answer": "7520",
    "date": "2026.11.10",
-   "status": "QUEUED",
-   "post_at": "2026-11-10T08:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-10T08:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/Dfjk3ZJkUPE/",
+   "reel_url": "https://www.instagram.com/reel/Dfjk8otFd0U/",
+   "published_at": "2026-11-10T09:25:02.175462+00:00",
+   "story_id": "18182512378446673"
   },
   {
    "room": 80,
