@@ -1673,6 +1673,15 @@
    "date": "2026.12.10",
    "status": "QUEUED",
    "post_at": "2026-12-10T02:30:00Z"
+  },
+  {
+   "room": 169,
+   "title": "터널과 기차",
+   "mechanic": "train_tunnel_bridge_pass_time_includes_train_length_3d",
+   "answer": "6943",
+   "date": "2026.12.10",
+   "status": "QUEUED",
+   "post_at": "2026-12-10T08:30:00Z"
   }
  ],
  "extra": [

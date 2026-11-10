@@ -1,0 +1,42 @@
+{
+ "unique_answer": "6943",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "kind": "tunnel",
+   "L": 40,
+   "T": 20,
+   "v": 10,
+   "ask": "pass"
+  },
+  "B": {
+   "kind": "bridge",
+   "L": 30,
+   "T": 15,
+   "v": 5,
+   "ask": "pass"
+  },
+  "C": {
+   "kind": "tunnel",
+   "L": 60,
+   "T": 20,
+   "v": 20,
+   "ask": "pass"
+  },
+  "D": {
+   "kind": "tunnel",
+   "L": 80,
+   "T": 20,
+   "v": 20,
+   "ask": "hidden"
+  }
+ },
+ "seconds": {
+  "A": 6,
+  "B": 9,
+  "C": 4,
+  "D": 3
+ },
+ "trap_no_train_length": "4634",
+ "why": "기차가 다 지나가려면 꼬리까지 나와야 해서 터널 + 기차 길이만큼 달려요. 완전히 숨는 시간은 터널 - 기차 길이예요"
+}
