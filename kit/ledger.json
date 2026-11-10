@@ -1660,6 +1660,15 @@
    "date": "2026.12.09",
    "status": "QUEUED",
    "post_at": "2026-12-09T11:30:00Z"
+  },
+  {
+   "room": 168,
+   "title": "책벌레",
+   "mechanic": "bookworm_shelf_first_page_right_edge_distance_3d",
+   "answer": "2347",
+   "date": "2026.12.10",
+   "status": "QUEUED",
+   "post_at": "2026-12-10T02:30:00Z"
   }
  ],
  "extra": [
