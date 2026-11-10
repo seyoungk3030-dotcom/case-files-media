@@ -857,8 +857,12 @@
    "mechanic": "cube_cross_section_three_points_sides_3d",
    "answer": "6354",
    "date": "2026.11.10",
-   "status": "QUEUED",
-   "post_at": "2026-11-10T02:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-10T02:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/Dfi7Lv4m-3F/",
+   "reel_url": "https://www.instagram.com/reel/Dfi7N6ZALim/",
+   "published_at": "2026-11-10T03:20:02.404413+00:00",
+   "story_id": "18129715769484848"
   },
   {
    "room": 79,
