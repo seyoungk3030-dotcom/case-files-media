@@ -896,8 +896,12 @@
    "mechanic": "puzzle_cube_one_turn_star_sticker_3d",
    "answer": "6251",
    "date": "2026.11.11",
-   "status": "QUEUED",
-   "post_at": "2026-11-11T02:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-11T02:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DflgmrVEUkH/",
+   "reel_url": "https://www.instagram.com/reel/DflgohACaMg/",
+   "published_at": "2026-11-11T03:25:28.885715+00:00",
+   "story_id": "18120060005015533"
   },
   {
    "room": 82,
