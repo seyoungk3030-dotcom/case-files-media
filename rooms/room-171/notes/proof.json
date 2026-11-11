@@ -1,0 +1,50 @@
+{
+ "unique_answer": "3791",
+ "codes_checked": 10000,
+ "boards": {
+  "A": "OO.XX...X",
+  "B": "OX...X...",
+  "C": "X....XO..",
+  "D": "..O..X.X."
+ },
+ "best_cell": {
+  "A": 3,
+  "B": 7,
+  "C": 9,
+  "D": 1
+ },
+ "results": {
+  "A": {
+   "3": "win",
+   "6": "draw",
+   "7": "lose",
+   "8": "lose"
+  },
+  "B": {
+   "3": "lose",
+   "4": "lose",
+   "5": "draw",
+   "7": "win",
+   "8": "draw",
+   "9": "lose"
+  },
+  "C": {
+   "2": "lose",
+   "3": "lose",
+   "4": "lose",
+   "5": "lose",
+   "8": "lose",
+   "9": "draw"
+  },
+  "D": {
+   "1": "win",
+   "2": "lose",
+   "4": "draw",
+   "5": "draw",
+   "7": "lose",
+   "9": "lose"
+  }
+ },
+ "trap_obvious": "6555",
+ "why": "막기보다 이기기가 먼저, 가운데보다 양쪽으로 두 줄을 동시에 만드는 칸이 이겨요"
+}

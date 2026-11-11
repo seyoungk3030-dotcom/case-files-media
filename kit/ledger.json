@@ -1699,6 +1699,15 @@
    "date": "2026.12.10",
    "status": "QUEUED",
    "post_at": "2026-12-10T11:30:00Z"
+  },
+  {
+   "room": 171,
+   "title": "틱택토 한 수",
+   "mechanic": "tic_tac_toe_o_to_move_best_cell_win_before_block_3d",
+   "answer": "3791",
+   "date": "2026.12.11",
+   "status": "QUEUED",
+   "post_at": "2026-12-11T02:30:00Z"
   }
  ],
  "extra": [
