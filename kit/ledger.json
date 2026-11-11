@@ -909,8 +909,12 @@
    "mechanic": "pegboard_rubber_band_area_squares_3d",
    "answer": "6857",
    "date": "2026.11.11",
-   "status": "QUEUED",
-   "post_at": "2026-11-11T08:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-11T08:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DfmKENEHOfE/",
+   "reel_url": "https://www.instagram.com/reel/DfmKGEBFmC9/",
+   "published_at": "2026-11-11T09:27:52.701611+00:00",
+   "story_id": "18030046241698359"
   },
   {
    "room": 83,
