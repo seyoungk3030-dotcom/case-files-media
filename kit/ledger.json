@@ -1725,6 +1725,15 @@
    "date": "2026.12.11",
    "status": "QUEUED",
    "post_at": "2026-12-11T08:30:00Z"
+  },
+  {
+   "room": 173,
+   "title": "지워진 숫자키",
+   "mechanic": "blank_keypad_calculator_vs_phone_layout_pressed_key_3d",
+   "answer": "7381",
+   "date": "2026.12.11",
+   "status": "QUEUED",
+   "post_at": "2026-12-11T11:30:00Z"
   }
  ],
  "extra": [
