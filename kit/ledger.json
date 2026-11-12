@@ -961,8 +961,12 @@
    "mechanic": "spot_difference_desk_kinds_count_3d",
    "answer": "2312",
    "date": "2026.11.12",
-   "status": "QUEUED",
-   "post_at": "2026-11-12T11:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-12T11:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DfpDV0DliOS/",
+   "reel_url": "https://www.instagram.com/reel/DfpDaFjEgZT/",
+   "published_at": "2026-11-12T12:27:22.536368+00:00",
+   "story_id": "18037594967897014"
   },
   {
    "room": 87,
