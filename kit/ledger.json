@@ -1764,6 +1764,15 @@
    "date": "2026.12.12",
    "status": "QUEUED",
    "post_at": "2026-12-12T08:30:00Z"
+  },
+  {
+   "room": 176,
+   "title": "초콜릿 쪼개기",
+   "mechanic": "chocolate_bar_snap_one_piece_count_cells_minus_one_3d",
+   "answer": "5783",
+   "date": "2026.12.12",
+   "status": "QUEUED",
+   "post_at": "2026-12-12T11:30:00Z"
   }
  ],
  "extra": [
