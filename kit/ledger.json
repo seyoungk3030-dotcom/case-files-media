@@ -948,8 +948,12 @@
    "mechanic": "physics_intuition_bus_balloon_bike_boat_3d",
    "answer": "2314",
    "date": "2026.11.12",
-   "status": "QUEUED",
-   "post_at": "2026-11-12T08:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-12T08:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DfovP9mltAt/",
+   "reel_url": "https://www.instagram.com/reel/DfovRwJjgz3/",
+   "published_at": "2026-11-12T09:31:08.040251+00:00",
+   "story_id": "18119642003279267"
   },
   {
    "room": 86,
