@@ -1,0 +1,50 @@
+{
+ "unique_answer": "7648",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "obj": "pencil",
+   "length": 13,
+   "first": 0,
+   "margin": 1,
+   "dir": 1,
+   "x0": 3,
+   "x1": 10
+  },
+  "B": {
+   "obj": "crayon",
+   "length": 8,
+   "first": 4,
+   "margin": 0,
+   "dir": 1,
+   "x0": 0,
+   "x1": 6
+  },
+  "C": {
+   "obj": "eraser",
+   "length": 7,
+   "first": 0,
+   "margin": 1,
+   "dir": 1,
+   "x0": 0,
+   "x1": 4
+  },
+  "D": {
+   "obj": "key",
+   "length": 13,
+   "first": 11,
+   "margin": 1,
+   "dir": -1,
+   "x0": 3,
+   "x1": 11
+  }
+ },
+ "lengths_cm": {
+  "A": 7,
+  "B": 6,
+  "C": 4,
+  "D": 8
+ },
+ "trap_end_mark": "9031",
+ "why": "길이는 끝 눈금이 아니라 (끝 눈금 - 시작 눈금). 부러진 자, 0 앞 여백, 거꾸로 놓인 자 모두 같아요"
+}

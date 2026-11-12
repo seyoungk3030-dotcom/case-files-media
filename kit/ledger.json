@@ -1751,6 +1751,15 @@
    "date": "2026.12.12",
    "status": "QUEUED",
    "post_at": "2026-12-12T02:30:00Z"
+  },
+  {
+   "room": 175,
+   "title": "자로 재면 몇 cm?",
+   "mechanic": "ruler_reading_offset_start_broken_margin_lefthand_length_3d",
+   "answer": "7648",
+   "date": "2026.12.12",
+   "status": "QUEUED",
+   "post_at": "2026-12-12T08:30:00Z"
   }
  ],
  "extra": [
