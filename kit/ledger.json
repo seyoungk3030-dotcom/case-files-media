@@ -1738,6 +1738,15 @@
    "date": "2026.12.11",
    "status": "QUEUED",
    "post_at": "2026-12-11T11:30:00Z"
+  },
+  {
+   "room": 174,
+   "title": "우물 속 달팽이",
+   "mechanic": "snail_well_climb_day_slide_night_escape_day_3d",
+   "answer": "4735",
+   "date": "2026.12.12",
+   "status": "QUEUED",
+   "post_at": "2026-12-12T02:30:00Z"
   }
  ],
  "extra": [
