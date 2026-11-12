@@ -935,8 +935,12 @@
    "mechanic": "hourglass_run_flip_steps_top_sand_3d",
    "answer": "3602",
    "date": "2026.11.12",
-   "status": "QUEUED",
-   "post_at": "2026-11-12T02:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-12T02:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DfoE2aZla6N/",
+   "reel_url": "https://www.instagram.com/reel/DfoE379k-0R/",
+   "published_at": "2026-11-12T03:20:37.029096+00:00",
+   "story_id": "18387280342227391"
   },
   {
    "room": 85,
