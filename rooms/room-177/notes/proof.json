@@ -1,0 +1,36 @@
+{
+ "unique_answer": "2432",
+ "codes_checked": 10000,
+ "boards": {
+  "A": [
+   "ship",
+   2,
+   60
+  ],
+  "B": [
+   "pier",
+   1,
+   90
+  ],
+  "C": [
+   "ship",
+   3,
+   30
+  ],
+  "D": [
+   "pier",
+   0,
+   60
+  ]
+ },
+ "rung_gap_cm": 30,
+ "under_after": {
+  "A": 2,
+  "B": 4,
+  "C": 3,
+  "D": 2
+ },
+ "trap_add_everywhere": "4442",
+ "trap_same_everywhere": "2130",
+ "why": "배는 물에 떠서 밀물과 함께 올라가요. 배에 매단 사다리는 그대로, 부두에 박힌 사다리만 잠겨요"
+}
