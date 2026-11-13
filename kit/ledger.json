@@ -1803,6 +1803,15 @@
    "date": "2026.12.13",
    "status": "QUEUED",
    "post_at": "2026-12-13T08:30:00Z"
+  },
+  {
+   "room": 179,
+   "title": "할인 스티커",
+   "mechanic": "price_stickers_successive_percent_not_additive_3d",
+   "answer": "6249",
+   "date": "2026.12.13",
+   "status": "QUEUED",
+   "post_at": "2026-12-13T11:30:00Z"
   }
  ],
  "extra": [
