@@ -987,8 +987,12 @@
    "mechanic": "belt_pulleys_open_crossed_direction_count_3d",
    "answer": "3243",
    "date": "2026.11.13",
-   "status": "QUEUED",
-   "post_at": "2026-11-13T08:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-13T08:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DfrT-BAFSmT/",
+   "reel_url": "https://www.instagram.com/reel/DfrT_5nFS3x/",
+   "published_at": "2026-11-13T09:30:53.002657+00:00",
+   "story_id": "18132967351832296"
   },
   {
    "room": 89,
