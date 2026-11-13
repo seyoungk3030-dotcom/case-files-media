@@ -1790,6 +1790,15 @@
    "date": "2026.12.13",
    "status": "QUEUED",
    "post_at": "2026-12-13T02:30:00Z"
+  },
+  {
+   "room": 178,
+   "title": "돌아가는 원탁",
+   "mechanic": "lazy_susan_far_rim_arrow_front_dish_after_turn_3d",
+   "answer": "7613",
+   "date": "2026.12.13",
+   "status": "QUEUED",
+   "post_at": "2026-12-13T08:30:00Z"
   }
  ],
  "extra": [
