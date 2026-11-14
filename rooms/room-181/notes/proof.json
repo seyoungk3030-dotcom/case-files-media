@@ -1,0 +1,42 @@
+{
+ "unique_answer": "3403",
+ "codes_checked": 10000,
+ "boards": {
+  "A": [
+   "JL",
+   "BR",
+   "JR",
+   "BR",
+   "BL"
+  ],
+  "B": [
+   "BR",
+   "JR",
+   "BR",
+   "JL",
+   "BL",
+   "BR"
+  ],
+  "C": [
+   "JR",
+   "BL",
+   "JR",
+   "BL"
+  ],
+  "D": [
+   "BL",
+   "JL",
+   "BR",
+   "JL",
+   "BL"
+  ]
+ },
+ "open_count": {
+  "A": 3,
+  "B": 4,
+  "C": 0,
+  "D": 3
+ },
+ "trap_arrows_ccw_from_above": "2224",
+ "why": "거꾸로 세운 병은 뚜껑 윗면이 바닥을 봐요. 위에서 시계 방향으로 보이면 뚜껑 입장에선 반시계, 열려요"
+}

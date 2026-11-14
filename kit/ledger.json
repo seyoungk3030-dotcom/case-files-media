@@ -1829,6 +1829,15 @@
    "date": "2026.12.14",
    "status": "QUEUED",
    "post_at": "2026-12-14T02:30:00Z"
+  },
+  {
+   "room": 181,
+   "title": "뚜껑 돌리기",
+   "mechanic": "jar_lid_twist_lefty_loosey_upside_down_bottle_reversed_3d",
+   "answer": "3403",
+   "date": "2026.12.14",
+   "status": "QUEUED",
+   "post_at": "2026-12-14T08:30:00Z"
   }
  ],
  "extra": [
