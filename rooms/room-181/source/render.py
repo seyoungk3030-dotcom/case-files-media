@@ -37,11 +37,6 @@ def save(fr, n): fr.convert('RGB').save(f'{OUT}/card-{n:02d}.png')
 
 CTA4 = '4장까지 풀고 댓글에 암호를 남겨주세요'
 
-fr = card(ROOM, DATE, 1, 7, '돌아가는 원탁', '내 앞에 올 접시는? 대부분 반대로 돌려요')
-four(fr, 'q', 505)
-cta(fr, '도전 → 4장까지  ·  정답 → 6~7장'); save(fr, 1)
-
-fr = card(ROOM, DATE, 2, 7, '원탁 규칙', '파란 매트가 내 자리')
 fr = card(ROOM, DATE, 1, 7, '뚜껑 돌리기', '화살표대로 돌리면 몇 개가 열릴까요?')
 four(fr, 'q', 505)
 cta(fr, '도전 → 4장까지  ·  정답 → 6~7장'); save(fr, 1)

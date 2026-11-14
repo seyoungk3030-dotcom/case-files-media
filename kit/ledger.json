@@ -1842,6 +1842,15 @@
    "date": "2026.12.14",
    "status": "QUEUED",
    "post_at": "2026-12-14T08:30:00Z"
+  },
+  {
+   "room": 182,
+   "title": "현관 신발",
+   "mechanic": "shoes_left_right_pairs_top_view_mirror_shape_3d",
+   "answer": "2310",
+   "date": "2026.12.14",
+   "status": "QUEUED",
+   "post_at": "2026-12-14T11:30:00Z"
   }
  ],
  "extra": [
