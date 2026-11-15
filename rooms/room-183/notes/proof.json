@@ -1,0 +1,117 @@
+{
+ "unique_answer": "2403",
+ "codes_checked": 10000,
+ "boards": {
+  "A": [
+   [
+    true,
+    "plate",
+    "L"
+   ],
+   [
+    false,
+    "bar",
+    "R"
+   ],
+   [
+    true,
+    "bar",
+    "R"
+   ],
+   [
+    false,
+    "bar",
+    "L"
+   ],
+   [
+    false,
+    "plate",
+    "R"
+   ]
+  ],
+  "B": [
+   [
+    true,
+    "plate",
+    "R"
+   ],
+   [
+    true,
+    "plate",
+    "L"
+   ],
+   [
+    false,
+    "bar",
+    "L"
+   ],
+   [
+    true,
+    "bar",
+    "L"
+   ],
+   [
+    true,
+    "plate",
+    "R"
+   ]
+  ],
+  "C": [
+   [
+    false,
+    "bar",
+    "L"
+   ],
+   [
+    false,
+    "bar",
+    "R"
+   ],
+   [
+    false,
+    "plate",
+    "L"
+   ],
+   [
+    false,
+    "bar",
+    "L"
+   ]
+  ],
+  "D": [
+   [
+    true,
+    "bar",
+    "L"
+   ],
+   [
+    false,
+    "plate",
+    "R"
+   ],
+   [
+    true,
+    "plate",
+    "R"
+   ],
+   [
+    false,
+    "bar",
+    "L"
+   ],
+   [
+    true,
+    "plate",
+    "L"
+   ]
+  ]
+ },
+ "pull_count": {
+  "A": 2,
+  "B": 4,
+  "C": 0,
+  "D": 3
+ },
+ "trap_count_pull_handles": "3232",
+ "why": "문은 경첩(동그란 마디)이 보이는 쪽으로 열려요. 경첩이 보이면 당기고, 안 보이면 밀어요"
+}
