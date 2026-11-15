@@ -11,6 +11,7 @@ Setup: `python3 -m pip install -q edge-tts numpy pillow bpy` (ffmpeg is preinsta
 ## 0. Guard
 - If today (KST) is after 2026-12-31, do nothing and stop.
 - **Queue-ahead mode (user 2026-11-06): Claude never publishes directly any more.** Every run builds rooms (§1–4) and queues them for GitHub Actions (§7). Run `python3 -I kit/next_slot.py`: it prints the next free slot after the last QUEUED room (or now), or `FULL` when the queue already reaches 30 days ahead or 2026-12-31. If `FULL`, stop. Otherwise build one room, queue it at that slot, commit and push, and repeat while time allows.
+- GitHub's schedule often runs hours late (2026-11-14/15: ROOM 092 posted 6 h late, 093 missed). At the start of every run, if the earliest QUEUED room's `post_at` has passed, start the workflow by hand: `gh workflow run queued-post.yml -R seyoungk3030-dotcom/case-files-media --ref main` (it posts only a due, still-QUEUED room, so it is safe).
 - Exception: a QUEUED room whose `post_at` is more than 3 hours in the past was missed by GitHub. Post it with `python3 -I kit/queue_post.py $(git rev-parse HEAD)`, commit the ledger, then continue.
 - Read `kit/ledger.json`. If a room has status READY or FAILED, finish it first: re-run publish, which skips anything already posted. Then stop.
 - The next room is the highest `room` in the ledger + 1, and its `date` is its `post_at` slot in KST (`YYYY.MM.DD`). Queued rooms' answers sit in the public repo before posting; that is accepted.
