@@ -1885,6 +1885,15 @@
    "date": "2026.12.15",
    "status": "QUEUED",
    "post_at": "2026-12-15T08:30:00Z"
+  },
+  {
+   "room": 185,
+   "title": "엘리베이터 버튼",
+   "mechanic": "elevator_missing_floor_buttons_no_zero_real_floors_climbed_3d",
+   "answer": "4526",
+   "date": "2026.12.15",
+   "status": "QUEUED",
+   "post_at": "2026-12-15T11:30:00Z"
   }
  ],
  "extra": [
