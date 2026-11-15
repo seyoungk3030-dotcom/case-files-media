@@ -1872,6 +1872,15 @@
    "date": "2026.12.15",
    "status": "QUEUED",
    "post_at": "2026-12-15T02:30:00Z"
+  },
+  {
+   "room": 184,
+   "title": "찢어진 책",
+   "mechanic": "book_torn_sheets_two_pages_per_leaf_count_sheets_3d",
+   "answer": "4321",
+   "date": "2026.12.15",
+   "status": "QUEUED",
+   "post_at": "2026-12-15T08:30:00Z"
   }
  ],
  "extra": [
