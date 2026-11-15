@@ -1078,8 +1078,12 @@
    "mechanic": "water_jugs_measure_target_min_actions_3d",
    "answer": "6848",
    "date": "2026.11.15",
-   "status": "QUEUED",
-   "post_at": "2026-11-15T11:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-15T11:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DfwsMOVFAMB/",
+   "reel_url": "https://www.instagram.com/reel/DfwsP3JHIqu/",
+   "published_at": "2026-11-15T11:38:56.707629+00:00",
+   "story_id": "17910373224665842"
   },
   {
    "room": 96,
