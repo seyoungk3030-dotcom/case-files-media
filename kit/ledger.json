@@ -1065,8 +1065,12 @@
    "mechanic": "billiard_45_degree_cushion_bounce_count_3d",
    "answer": "6534",
    "date": "2026.11.15",
-   "status": "QUEUED",
-   "post_at": "2026-11-15T08:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-15T08:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DfwX6B0m5PV/",
+   "reel_url": "https://www.instagram.com/reel/DfwX7Hckbhk/",
+   "published_at": "2026-11-15T08:41:01.765315+00:00",
+   "story_id": "18345379732275271"
   },
   {
    "room": 95,
