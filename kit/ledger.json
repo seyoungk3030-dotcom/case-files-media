@@ -1104,8 +1104,12 @@
    "mechanic": "cake_chord_cuts_pieces_horizontal_layer_3d",
    "answer": "6978",
    "date": "2026.11.16",
-   "status": "QUEUED",
-   "post_at": "2026-11-16T08:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-16T08:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/Dfy9E1dkWdA/",
+   "reel_url": "https://www.instagram.com/reel/Dfy9G6lm3qB/",
+   "published_at": "2026-11-16T08:44:48.796262+00:00",
+   "story_id": "17958402234273037"
   },
   {
    "room": 98,
