@@ -1925,6 +1925,15 @@
    "date": "2026.12.16",
    "status": "QUEUED",
    "post_at": "2026-12-16T02:30:00Z"
+  },
+  {
+   "room": 188,
+   "title": "휴지 남은 날",
+   "mechanic": "toilet_roll_days_left_area_not_diameter_3d",
+   "answer": "3564",
+   "date": "2026.12.16",
+   "status": "QUEUED",
+   "post_at": "2026-12-16T08:30:00Z"
   }
  ],
  "extra": [
