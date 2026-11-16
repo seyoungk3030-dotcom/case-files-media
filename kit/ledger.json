@@ -1091,8 +1091,12 @@
    "mechanic": "ball_race_track_shapes_fastest_brachistochrone_3d",
    "answer": "2313",
    "date": "2026.11.16",
-   "status": "QUEUED",
-   "post_at": "2026-11-16T02:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-16T02:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DfyTE0sFWqu/",
+   "reel_url": "https://www.instagram.com/reel/DfyTGFLFPI9/",
+   "published_at": "2026-11-16T02:37:36.896202+00:00",
+   "story_id": "18174369319419796"
   },
   {
    "room": 97,
