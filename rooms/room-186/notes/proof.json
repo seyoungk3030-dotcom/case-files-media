@@ -1,0 +1,48 @@
+{
+ "unique_answer": "0423",
+ "codes_checked": 10000,
+ "block_centres_bottom_up": {
+  "A": [
+   1,
+   1,
+   0,
+   -1
+  ],
+  "B": [
+   -1,
+   -1,
+   0,
+   1
+  ],
+  "C": [
+   -1,
+   0,
+   -2,
+   1,
+   4
+  ],
+  "D": [
+   -1,
+   -2,
+   1,
+   0,
+   3
+  ]
+ },
+ "iron_block_index": {
+  "A": 3,
+  "B": 3,
+  "C": 2,
+  "D": 0
+ },
+ "iron_weight": 3,
+ "block_width": 4,
+ "falls_from_level": {
+  "A": null,
+  "B": 0,
+  "C": 3,
+  "D": 2
+ },
+ "trap_equal_weights": "4055",
+ "why": "쇠 블록은 나무 블록 3개 무게라서 무게중심을 자기 쪽으로 끌어당겨요. 위 묶음의 무게중심이 받침 밖이면 그 층부터 떨어져요"
+}

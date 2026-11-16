@@ -1898,6 +1898,16 @@
    "date": "2026.12.15",
    "status": "QUEUED",
    "post_at": "2026-12-15T11:30:00Z"
+  },
+  {
+   "room": 186,
+   "title": "블록 걸치기 2",
+   "mechanic": "block_overhang_iron_x3_weighted_center_of_mass_sequel_090_3d",
+   "answer": "0423",
+   "date": "2026.11.16",
+   "status": "QUEUED",
+   "post_at": "2026-11-16T12:00:00Z",
+   "note": "extra post: sequel to viral ROOM 090 (user choice 2026-11-16), reel reveals its own answer"
   }
  ],
  "extra": [
