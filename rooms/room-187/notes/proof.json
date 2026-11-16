@@ -1,0 +1,47 @@
+{
+ "unique_answer": "2434",
+ "codes_checked": 10000,
+ "tile_cm": 20,
+ "boards": {
+  "A": {
+   "height_cm": 80,
+   "distance_m": 1.0,
+   "mirror_cm": [
+    37.2,
+    77.2
+   ]
+  },
+  "B": {
+   "height_cm": 160,
+   "distance_m": 2.0,
+   "mirror_cm": [
+    74.4,
+    154.4
+   ]
+  },
+  "C": {
+   "height_cm": 120,
+   "distance_m": 0.6,
+   "mirror_cm": [
+    55.8,
+    115.8
+   ]
+  },
+  "D": {
+   "height_cm": 160,
+   "distance_m": 0.5,
+   "mirror_cm": [
+    74.4,
+    154.4
+   ]
+  }
+ },
+ "tiles": {
+  "A": 2,
+  "B": 4,
+  "C": 3,
+  "D": 4
+ },
+ "trap_full_height": "4868",
+ "why": "머리와 발에서 온 빛은 눈 높이와의 딱 중간에서 반사돼요. 그래서 거울은 키의 절반이면 되고, 거리는 상관없어요"
+}

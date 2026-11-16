@@ -1908,6 +1908,15 @@
    "status": "QUEUED",
    "post_at": "2026-11-16T12:00:00Z",
    "note": "extra post: sequel to viral ROOM 090 (user choice 2026-11-16), reel reveals its own answer"
+  },
+  {
+   "room": 187,
+   "title": "전신 거울",
+   "mechanic": "full_body_mirror_half_height_distance_irrelevant_3d",
+   "answer": "2434",
+   "date": "2026.12.16",
+   "status": "QUEUED",
+   "post_at": "2026-12-16T02:30:00Z"
   }
  ],
  "extra": [
