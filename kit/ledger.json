@@ -1117,8 +1117,12 @@
    "mechanic": "bulb_circuit_shorts_open_switch_lit_count_3d",
    "answer": "4251",
    "date": "2026.11.16",
-   "status": "QUEUED",
-   "post_at": "2026-11-16T11:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-16T11:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/DfzRBfxIBYt/",
+   "reel_url": "https://www.instagram.com/reel/DfzRDaBCbYt/",
+   "published_at": "2026-11-16T11:38:48.851205+00:00",
+   "story_id": "18012602954779436"
   },
   {
    "room": 99,
