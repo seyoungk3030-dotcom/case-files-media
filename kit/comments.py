@@ -2,8 +2,8 @@
 
 Only comments that contain a 4-digit guess get a reply: a congratulation when it matches the
 room's answer, otherwise a short hint (how many digits sit in the right place). The answer
-itself is never written. Comments without a guess, our own comments, and comments we already
-replied to are left alone, so re-running is safe.
+itself is never written. Comments without a guess and our own comments are left alone. A thread we already answered gets a new
+reply only when a newer guess was added in it after our last reply (a second try), so re-running is safe.
 
 Usage: python3 -I kit/comments.py [--dry-run]
 """
@@ -46,6 +46,24 @@ def message(g, ans):
     return random.choice(CLOSE).format(n=n) if n else FAR
 
 
+OURS = {re.sub(r'\d', '#', t) for t in RIGHT + CLOSE + [FAR]} | {re.sub(r'\d', '#', t.format(n=0)) for t in CLOSE}
+
+
+def ours(text):
+    return re.sub(r'\d', '#', text or '') in OURS
+
+
+def followup(c):
+    """A newer guess inside a thread we already answered (e.g. a second try after our hint): the API leaves username
+    out of replies, so our replies are told apart by their text, which never holds a 4-digit number."""
+    reps = sorted(c.get('replies', {}).get('data', []), key=lambda x: x.get('timestamp', ''))
+    last_ours = max((x.get('timestamp', '') for x in reps if ours(x.get('text'))), default=None)
+    if last_ours is None:
+        return None
+    last = reps[-1]  # only when the thread ends with that guess, so a hand-written reply after it counts as answered
+    return guess(last.get('text') or '') if last.get('timestamp', '') > last_ours and not ours(last.get('text')) else None
+
+
 def main(dry):
     me = p.call('/me', {'fields': 'username'}, 'GET')['username']
     sent = 0
@@ -54,14 +72,20 @@ def main(dry):
         ans = r and answer(int(r.group(1)))
         if not ans:
             continue
-        cs = p.call(f"/{m['id']}/comments", {'fields': 'id,text,username,parent_id,replies{username}', 'limit': 50}, 'GET')['data']
+        cs = p.call(f"/{m['id']}/comments", {'fields': 'id,text,username,parent_id,replies{username,text,timestamp}', 'limit': 50}, 'GET')['data']
         for c in cs:
             # replies inside a thread (parent_id) are skipped: a reply to them would land in the parent's thread on
             # every run, so only top-level guesses get answers. The API leaves username out for other people's top-level comments and for replies, so a top-level
-            # comment is ours only when username == me, and any reply with username me or missing counts as answered
-            if c.get('parent_id') or c.get('username') == me or any(x.get('username') in (me, None) for x in c.get('replies', {}).get('data', [])):
+            # comment is ours only when username == me; see followup() for threads that already have replies
+            if c.get('parent_id') or c.get('username') == me:
                 continue
-            g = guess(c.get('text') or '')
+            reps = c.get('replies', {}).get('data', [])
+            if any(ours(x.get('text')) for x in reps):
+                g = followup(c)
+            elif reps:  # any other reply (ours by hand or someone else's) counts as answered, as before
+                continue
+            else:
+                g = guess(c.get('text') or '')
             if not g:
                 continue
             msg = message(g, ans)
