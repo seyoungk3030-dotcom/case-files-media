@@ -1,34 +1,38 @@
-"""ROOM 177 proof: tide and ladders. Each board is a ladder with rungs every 30 cm and some rungs already under water.
-A rope ladder hangs from a ship (the ship floats, so it rises with the water); a steel ladder is bolted to a stone pier
-(it stays put). The tide then rises T cm. Digit = rungs under water afterwards, simulated from rung heights.
-All 10^4 codes compared; exactly one matches. Traps: adding T/30 rungs everywhere (forgetting the ship floats), or
-keeping the count everywhere (forgetting the pier does not)."""
-import itertools, json, os
+"""ROOM 177 proof (replaces the old 밀물과 사다리, which repeated ROOM 109's mechanic): a carpet runner glued to a
+staircase covers every riser (the vertical faces) and every tread (the flat tops). Laid flat it is exactly the sum of
+all rises and all treads, so for stairs that only go up its length is total height + total depth, however many steps
+there are and however uneven they are. Digit = carpet length in metres. All 10^4
+codes compared; exactly one matches. The trap: the straight slope, sqrt(H^2 + D^2), rounded."""
+import itertools, json, math, os
+from fractions import Fraction as Fr
 
-GAP = 30
-BOARDS = {'A': ('ship', 2, 60), 'B': ('pier', 1, 90), 'C': ('ship', 3, 30), 'D': ('pier', 0, 60)}  # (holder, rungs under now, tide cm)
-
-
-def rungs(under):  # rung heights in cm relative to the water now; 'under' rungs below it, each 15 cm from the next level
-    return [-15 - GAP * i for i in range(under)][::-1] + [15 + GAP * i for i in range(8)]
-
-
-def after(holder, under, tide):
-    hs = rungs(under); water = tide
-    if holder == 'ship': hs = [h + tide for h in hs]  # the ship and its ladder float up with the water
-    return sum(h < water for h in hs)
+# profile from the bottom-left: (vertical change, horizontal run) per step, in metres
+BOARDS = {'A': [(Fr(1, 2), Fr(1, 2))] * 2,
+          'B': [(Fr(1, 5), Fr(1)), (Fr(1, 2), Fr(1)), (Fr(3, 10), Fr(1))],
+          'C': [(Fr(1, 10), Fr(1, 2)), (Fr(2, 5), Fr(1, 4)), (Fr(1, 5), Fr(1)), (Fr(3, 10), Fr(1, 4))],
+          'D': [(Fr(1, 8), Fr(1, 8))] * 8}
 
 
-GOOD = {k: after(*v) for k, v in BOARDS.items()}
-ADD = {k: u + t // GAP for k, (h, u, t) in BOARDS.items()}
-SAME = {k: u for k, (h, u, t) in BOARDS.items()}
-code = ''.join(str(GOOD[k]) for k in 'ABCD'); trap = ''.join(str(ADD[k]) for k in 'ABCD'); same = ''.join(str(SAME[k]) for k in 'ABCD')
+def carpet(p): return sum(abs(r) + t for r, t in p)
+
+
+def box(p):
+    z = 0; zs = [0]
+    for r, t in p: z += r; zs.append(z)
+    return max(zs), sum(t for _, t in p)
+
+
+GOOD = {k: carpet(v) for k, v in BOARDS.items()}
+assert all(g.denominator == 1 for g in GOOD.values())
+TRAPV = {k: round(math.hypot(*map(float, box(v)))) for k, v in BOARDS.items()}
+code = ''.join(str(GOOD[k]) for k in 'ABCD'); trap = ''.join(str(TRAPV[k]) for k in 'ABCD')
 sols = [c for c in map(''.join, itertools.product('0123456789', repeat=4)) if c == code]
-print('answer', code, 'trap_add', trap, 'trap_same', same)
-assert len(sols) == 1 and code not in (trap, same) and all(GOOD[k] < 10 for k in 'ABCD')
-assert {h for h, _, _ in BOARDS.values()} == {'ship', 'pier'}
+print('answer', code, 'trap', trap)
+assert len(sols) == 1 and all(GOOD[k] != TRAPV[k] for k in 'ABCD') and code == '2432'
 if __name__ == '__main__':
-    json.dump({'unique_answer': code, 'codes_checked': 10000, 'boards': BOARDS, 'rung_gap_cm': GAP, 'under_after': GOOD,
-               'trap_add_everywhere': trap, 'trap_same_everywhere': same,
-               'why': '배는 물에 떠서 밀물과 함께 올라가요. 배에 매단 사다리는 그대로, 부두에 박힌 사다리만 잠겨요'},
+    json.dump({'unique_answer': code, 'codes_checked': 10000,
+               'boards_rise_run_m': {k: [[str(r), str(t)] for r, t in v] for k, v in BOARDS.items()},
+               'height_depth_m': {k: [str(x) for x in box(v)] for k, v in BOARDS.items()},
+               'carpet_m': {k: int(v) for k, v in GOOD.items()}, 'trap_straight_slope': trap,
+               'why': '카펫은 계단의 세로면과 윗면을 모두 덮어요. 펼치면 높이를 다 더한 것과 깊이를 다 더한 것의 합이에요. 계단 수는 상관없어요'},
               open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'notes', 'proof.json'), 'w'), ensure_ascii=False, indent=1)

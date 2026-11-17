@@ -1828,12 +1828,13 @@
   },
   {
    "room": 177,
-   "title": "밀물과 사다리",
-   "mechanic": "tide_ladder_ship_floats_vs_pier_fixed_rungs_underwater_3d",
+   "title": "계단 카펫",
+   "mechanic": "stair_carpet_length_rise_plus_run_not_diagonal_3d",
    "answer": "2432",
    "date": "2026.12.13",
    "status": "QUEUED",
-   "post_at": "2026-12-13T02:30:00Z"
+   "post_at": "2026-12-13T02:30:00Z",
+   "note": "2026-11-17: replaced 밀물과 사다리 (repeated ROOM 109 tide-ladder mechanic); same answer so ROOM 178 prev stays valid"
   },
   {
    "room": 178,
