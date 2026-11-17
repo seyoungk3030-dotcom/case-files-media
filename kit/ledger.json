@@ -1956,6 +1956,15 @@
    "date": "2026.12.16",
    "status": "QUEUED",
    "post_at": "2026-12-16T11:30:00Z"
+  },
+  {
+   "room": 190,
+   "title": "왕복 평균 속도",
+   "mechanic": "round_trip_average_speed_harmonic_not_mean_3d",
+   "answer": "3658",
+   "date": "2026.12.17",
+   "status": "QUEUED",
+   "post_at": "2026-12-17T02:30:00Z"
   }
  ],
  "extra": [
