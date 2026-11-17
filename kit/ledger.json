@@ -1969,6 +1969,15 @@
    "date": "2026.12.17",
    "status": "QUEUED",
    "post_at": "2026-12-17T02:30:00Z"
+  },
+  {
+   "room": 191,
+   "title": "지구 밧줄",
+   "mechanic": "rope_around_ball_lift_gap_independent_of_size_3d",
+   "answer": "3518",
+   "date": "2026.12.17",
+   "status": "QUEUED",
+   "post_at": "2026-12-17T08:30:00Z"
   }
  ],
  "extra": [
