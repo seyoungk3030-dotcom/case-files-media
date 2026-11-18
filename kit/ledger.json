@@ -1995,6 +1995,15 @@
    "date": "2026.12.17",
    "status": "QUEUED",
    "post_at": "2026-12-17T11:30:00Z"
+  },
+  {
+   "room": 193,
+   "title": "마른 채소",
+   "mechanic": "produce_drying_water_percent_dry_mass_constant_weight_3d",
+   "answer": "5349",
+   "date": "2026.12.18",
+   "status": "QUEUED",
+   "post_at": "2026-12-18T02:30:00Z"
   }
  ],
  "extra": [
