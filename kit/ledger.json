@@ -2008,6 +2008,15 @@
    "date": "2026.12.18",
    "status": "QUEUED",
    "post_at": "2026-12-18T02:30:00Z"
+  },
+  {
+   "room": 194,
+   "title": "편의점 행사",
+   "mechanic": "store_deal_half_price_real_discount_over_items_taken_3d",
+   "answer": "3251",
+   "date": "2026.12.18",
+   "status": "QUEUED",
+   "post_at": "2026-12-18T08:30:00Z"
   }
  ],
  "extra": [
