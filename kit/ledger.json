@@ -1982,6 +1982,15 @@
    "date": "2026.12.17",
    "status": "QUEUED",
    "post_at": "2026-12-17T08:30:00Z"
+  },
+  {
+   "room": 192,
+   "title": "반 잘라 쌓기",
+   "mechanic": "paper_cut_half_stack_doubling_height_3d",
+   "answer": "8796",
+   "date": "2026.12.17",
+   "status": "QUEUED",
+   "post_at": "2026-12-17T11:30:00Z"
   }
  ],
  "extra": [
