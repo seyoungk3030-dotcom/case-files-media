@@ -1169,8 +1169,12 @@
    "mechanic": "bottle_pitch_blow_vs_tap_water_level_3d",
    "answer": "2341",
    "date": "2026.11.18",
-   "status": "QUEUED",
-   "post_at": "2026-11-18T02:30:00Z"
+   "status": "PUBLISHED",
+   "post_at": "2026-11-18T02:30:00Z",
+   "carousel_url": "https://www.instagram.com/p/Df3cmk4nG28/",
+   "reel_url": "https://www.instagram.com/reel/Df3cqAUDhhG/",
+   "published_at": "2026-11-18T02:37:00.700392+00:00",
+   "story_id": "18082140200399504"
   },
   {
    "room": 103,
