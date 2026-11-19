@@ -8,6 +8,7 @@ slot = subprocess.run([sys.executable, '-I', f'{KIT}/next_slot.py'], capture_out
 assert slot != 'FULL', 'queue is full'
 proof = json.load(open(f'{ROOT}/rooms/room-{room:03d}/notes/proof.json')); assert proof['unique_answer'] == ans
 L = json.load(open(f'{KIT}/ledger.json')); assert all(e['room'] != room for e in L['episodes']), 'room already in ledger'
+for c in ('carousel', 'reel'): assert open(f'{ROOT}/rooms/room-{room:03d}/notes/caption-{c}.txt').read().startswith(f'[ROOM {room:03d} · '), f'caption-{c} missing'
 assert max(e['room'] for e in L['episodes']) == room - 1
 kst = datetime.strptime(slot, '%Y-%m-%dT%H:%M:%SZ') + timedelta(hours=9)
 L['episodes'].append({'room': room, 'title': title, 'mechanic': mech, 'answer': ans, 'date': kst.strftime('%Y.%m.%d'), 'status': 'QUEUED', 'post_at': slot})
