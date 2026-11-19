@@ -2021,6 +2021,15 @@
    "date": "2026.12.18",
    "status": "QUEUED",
    "post_at": "2026-12-18T08:30:00Z"
+  },
+  {
+   "room": 195,
+   "title": "물 섞기",
+   "mechanic": "water_mixing_temperature_volume_weighted_average_3d",
+   "answer": "5374",
+   "date": "2026.12.18",
+   "status": "QUEUED",
+   "post_at": "2026-12-18T11:30:00Z"
   }
  ],
  "extra": [
