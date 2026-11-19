@@ -2034,6 +2034,15 @@
    "date": "2026.12.18",
    "status": "QUEUED",
    "post_at": "2026-12-18T11:30:00Z"
+  },
+  {
+   "room": 196,
+   "title": "기름 아끼기",
+   "mechanic": "fuel_economy_kmL_gain_vs_litres_saved_reciprocal_3d",
+   "answer": "5251",
+   "date": "2026.12.19",
+   "status": "QUEUED",
+   "post_at": "2026-12-19T02:30:00Z"
   }
  ],
  "extra": [
