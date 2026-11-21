@@ -2105,6 +2105,15 @@
    "date": "2026.12.20",
    "status": "QUEUED",
    "post_at": "2026-12-20T08:30:00Z"
+  },
+  {
+   "room": 201,
+   "title": "손전등 몇 개?",
+   "mechanic": "torch_count_inverse_square_distance_brightness_3d",
+   "answer": "4982",
+   "date": "2026.12.20",
+   "status": "QUEUED",
+   "post_at": "2026-12-20T11:30:00Z"
   }
  ],
  "extra": [
