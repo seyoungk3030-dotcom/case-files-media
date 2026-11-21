@@ -2114,6 +2114,15 @@
    "date": "2026.12.20",
    "status": "QUEUED",
    "post_at": "2026-12-20T11:30:00Z"
+  },
+  {
+   "room": 202,
+   "title": "몇 초 만에 땅에?",
+   "mechanic": "fall_time_sqrt_height_sideways_throw_and_weight_irrelevant_3d",
+   "answer": "3142",
+   "date": "2026.12.21",
+   "status": "QUEUED",
+   "post_at": "2026-12-21T02:30:00Z"
   }
  ],
  "extra": [
