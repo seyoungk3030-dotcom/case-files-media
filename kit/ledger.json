@@ -2123,6 +2123,15 @@
    "date": "2026.12.21",
    "status": "QUEUED",
    "post_at": "2026-12-21T02:30:00Z"
+  },
+  {
+   "room": 203,
+   "title": "바꿀까 말까",
+   "mechanic": "monty_hall_host_opens_goat_switch_doubles_win_rate_3d",
+   "answer": "3663",
+   "date": "2026.12.21",
+   "status": "QUEUED",
+   "post_at": "2026-12-21T08:30:00Z"
   }
  ],
  "extra": [
