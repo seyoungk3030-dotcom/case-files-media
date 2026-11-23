@@ -1260,10 +1260,12 @@
    "mechanic": "tide_rise_ladder_boat_vs_pier_rungs_3d",
    "answer": "5726",
    "date": "2026.11.20",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-20T08:30:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-20T08:30:00Z during Meta app restriction; reel only. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-20T08:30:00Z during Meta app restriction; reel only. Do not post via API.",
+   "reel_url": "https://www.instagram.com/reel/Df9Ou2sz1RK/",
+   "published_at": "2026-11-20T08:30:00Z"
   },
   {
    "room": 110,
@@ -1271,10 +1273,12 @@
    "mechanic": "domino_tiling_remove_one_numbered_square_3d",
    "answer": "4231",
    "date": "2026.11.20",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-20T11:30:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-20T11:30:00Z during Meta app restriction; reel only. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-20T11:30:00Z during Meta app restriction; reel only. Do not post via API.",
+   "reel_url": "https://www.instagram.com/reel/Df9jUQ9TIrN/",
+   "published_at": "2026-11-20T11:30:00Z"
   },
   {
    "room": 111,
@@ -1315,10 +1319,12 @@
    "mechanic": "water_glass_cylinder_lens_flips_arrows_3d",
    "answer": "3517",
    "date": "2026.11.22",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-22T02:30:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-22T02:30:00Z during Meta app restriction; reel only. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-22T02:30:00Z during Meta app restriction; reel only. Do not post via API.",
+   "reel_url": "https://www.instagram.com/reel/DgBvGAzTEE8/",
+   "published_at": "2026-11-22T02:30:00Z"
   },
   {
    "room": 115,
@@ -1326,10 +1332,12 @@
    "mechanic": "communicating_vessels_valve_equal_level_width_3d",
    "answer": "2673",
    "date": "2026.11.22",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-22T08:30:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-22T08:30:00Z during Meta app restriction; reel only. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-22T08:30:00Z during Meta app restriction; reel only. Do not post via API.",
+   "reel_url": "https://www.instagram.com/reel/DgCYVCMzDFS/",
+   "published_at": "2026-11-22T08:30:00Z"
   },
   {
    "room": 116,
@@ -1337,10 +1345,12 @@
    "mechanic": "switch_bulb_heat_three_states_3d",
    "answer": "3195",
    "date": "2026.11.22",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-22T11:30:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-22T11:30:00Z during Meta app restriction; reel only. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-22T11:30:00Z during Meta app restriction; reel only. Do not post via API.",
+   "reel_url": "https://www.instagram.com/reel/DgCs8zazXX5/",
+   "published_at": "2026-11-22T11:30:00Z"
   },
   {
    "room": 117,
