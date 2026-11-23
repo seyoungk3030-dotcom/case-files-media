@@ -1289,7 +1289,7 @@
    "status": "SCHEDULED_IG",
    "post_at": "2026-11-21T02:30:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-21T02:30:00Z during Meta app restriction; reel only. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-21T02:30:00Z during Meta app restriction; reel only. Do not post via API. | 2026-11-23: scheduled post never went live (not on profile, not in scheduled list); awaiting SY decision."
   },
   {
    "room": 112,
@@ -1300,7 +1300,7 @@
    "status": "SCHEDULED_IG",
    "post_at": "2026-11-21T08:30:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-21T08:30:00Z during Meta app restriction; reel only. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-21T08:30:00Z during Meta app restriction; reel only. Do not post via API. | 2026-11-23: scheduled post never went live (not on profile, not in scheduled list); awaiting SY decision."
   },
   {
    "room": 113,
@@ -1311,7 +1311,7 @@
    "status": "SCHEDULED_IG",
    "post_at": "2026-11-21T11:30:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-21T11:30:00Z during Meta app restriction; reel only. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-21T11:30:00Z during Meta app restriction; reel only. Do not post via API. | 2026-11-23: scheduled post never went live (not on profile, not in scheduled list); awaiting SY decision."
   },
   {
    "room": 114,
@@ -1358,10 +1358,12 @@
    "mechanic": "melting_ice_float_rack_stone_level_3d",
    "answer": "5743",
    "date": "2026.11.23",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-23T02:30:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-23T02:30:00Z during Meta app restriction; reel only. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-23T02:30:00Z during Meta app restriction; reel only. Do not post via API.",
+   "reel_url": "https://www.instagram.com/reel/DgET_afTQYk/",
+   "published_at": "2026-11-23T02:30:00Z"
   },
   {
    "room": 118,
