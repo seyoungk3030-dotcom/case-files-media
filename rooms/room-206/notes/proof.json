@@ -1,0 +1,39 @@
+{
+ "unique_answer": "3078",
+ "codes_checked": 10000,
+ "area_cm2": 400,
+ "boards": {
+  "A": {
+   "name": "돌",
+   "volume_cm3": 80,
+   "density": "5/2",
+   "mass_g": "200"
+  },
+  "B": {
+   "name": "나무토막",
+   "volume_cm3": 40,
+   "density": "3/5",
+   "mass_g": "24"
+  },
+  "C": {
+   "name": "쇠 너트",
+   "volume_cm3": 40,
+   "density": "8",
+   "mass_g": "320"
+  },
+  "D": {
+   "name": "구리 추",
+   "volume_cm3": 40,
+   "density": "9",
+   "mass_g": "360"
+  }
+ },
+ "drop_mm": {
+  "A": 3,
+  "B": 0,
+  "C": 7,
+  "D": 8
+ },
+ "trap": "물이 튀니 올라간다 / 그대로다",
+ "why": "배 위에서는 무게만큼(무거울수록 많이) 물을 밀어내고, 가라앉으면 자기 부피만큼만 밀어내요. 그래서 물이 내려가요"
+}

@@ -2160,6 +2160,15 @@
    "date": "2026.12.22",
    "status": "QUEUED",
    "post_at": "2026-12-22T02:30:00Z"
+  },
+  {
+   "room": 206,
+   "title": "배에서 돌을 던지면?",
+   "mechanic": "boat_throw_stone_overboard_water_level_drops_archimedes_3d",
+   "answer": "3078",
+   "date": "2026.12.22",
+   "status": "QUEUED",
+   "post_at": "2026-12-22T08:30:00Z"
   }
  ],
  "extra": [
