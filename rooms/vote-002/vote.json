@@ -1,0 +1,24 @@
+{
+ "room": 1002,
+ "brand": "퇴근 후 사건파일 · 1분 투표",
+ "sprite": "/home/user/case-files-media/rooms/vote-002/.build-3d/ice.png",
+ "sprite_w": 720,
+ "hook": "90%가 틀려요",
+ "question": [
+  "얼음 그릇에 소금을 뿌리면",
+  "얼음 온도는?"
+ ],
+ "caption": [
+  "처음 얼음은 0℃예요"
+ ],
+ "options": {
+  "A": "올라감",
+  "B": "내려감",
+  "C": "그대로"
+ },
+ "answer": "B",
+ "count": 4,
+ "narration": {
+  "hook": "구십 퍼센트가 틀려요. 영 도 얼음에 소금을 뿌리면, 얼음 온도는 어떻게 될까요? 에이, 비, 씨 하나만!"
+ }
+}

@@ -2215,6 +2215,16 @@
    "post_at": "2026-11-25T05:00:00Z",
    "manual_browser": true,
    "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-25T05:00:00Z during Meta app restriction. Do not post via API."
+  },
+  {
+   "id": "vote-002",
+   "kind": "vote",
+   "title": "얼음에 소금",
+   "mechanic": "salt_on_ice_temperature_drops_freezing_point_vote",
+   "answer": "B",
+   "dir": "rooms/vote-002",
+   "status": "QUEUED",
+   "post_at": "2026-11-26T05:00:00Z"
   }
  ]
 }
