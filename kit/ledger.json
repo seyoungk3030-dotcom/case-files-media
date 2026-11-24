@@ -2323,6 +2323,16 @@
    "dir": "rooms/vote-004",
    "status": "QUEUED",
    "post_at": "2026-11-28T05:00:00Z"
+  },
+  {
+   "id": "vote-005",
+   "kind": "vote",
+   "title": "컵 밑 종이 휙",
+   "mechanic": "paper_yank_under_cup_inertia_short_friction_vote",
+   "answer": "B",
+   "dir": "rooms/vote-005",
+   "status": "QUEUED",
+   "post_at": "2026-11-29T05:00:00Z"
   }
  ]
 }
