@@ -1,0 +1,24 @@
+{
+ "room": 1004,
+ "brand": "퇴근 후 사건파일 · 1분 투표",
+ "sprite": "/home/user/case-files-media/rooms/vote-004/.build-3d/glass.png",
+ "sprite_w": 560,
+ "hook": "90%가 틀려요",
+ "question": [
+  "얼음물 컵 바깥에 맺힌 물방울",
+  "어디서 왔을까?"
+ ],
+ "caption": [
+  "유리컵에는 구멍이 없어요"
+ ],
+ "options": {
+  "A": "스밈",
+  "B": "공기",
+  "C": "얼음"
+ },
+ "answer": "B",
+ "count": 4,
+ "narration": {
+  "hook": "구십 퍼센트가 틀려요. 얼음물 컵 바깥에 맺힌 물방울은 어디서 왔을까요? 에이, 비, 씨 하나만!"
+ }
+}
