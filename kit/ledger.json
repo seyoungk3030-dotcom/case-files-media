@@ -2211,8 +2211,10 @@
    "mechanic": "fridge_door_open_room_warms_heat_pump_vote",
    "answer": "C",
    "dir": "rooms/vote-001",
-   "status": "QUEUED",
-   "post_at": "2026-11-25T05:00:00Z"
+   "status": "SCHEDULED_IG",
+   "post_at": "2026-11-25T05:00:00Z",
+   "manual_browser": true,
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-25T05:00:00Z during Meta app restriction. Do not post via API."
   }
  ]
 }
