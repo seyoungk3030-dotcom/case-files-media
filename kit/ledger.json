@@ -1406,10 +1406,12 @@
    "mechanic": "loop_the_loop_min_start_height_sled_3d",
    "answer": "4837",
    "date": "2026.11.24",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-24T02:30:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-24T02:30:00Z during Meta app restriction; reel only. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-24T02:30:00Z during Meta app restriction; reel only. Do not post via API.",
+   "reel_url": "https://www.instagram.com/reel/DgG4weAT-NX/",
+   "published_at": "2026-11-24T02:30:00Z"
   },
   {
    "room": 121,
@@ -2235,8 +2237,10 @@
    "mechanic": "scissors_lever_cut_near_pivot_easier_vote",
    "answer": "B",
    "dir": "rooms/vote-003",
-   "status": "QUEUED",
-   "post_at": "2026-11-27T05:00:00Z"
+   "status": "SCHEDULED_IG",
+   "post_at": "2026-11-27T05:00:00Z",
+   "manual_browser": true,
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-27T05:00:00Z during Meta app restriction. Do not post via API."
   }
  ]
 }
