@@ -1,0 +1,24 @@
+{
+ "room": 1001,
+ "brand": "퇴근 후 사건파일 · 1분 투표",
+ "sprite": "/home/user/case-files-media/rooms/vote-001/.build-3d/fridge.png",
+ "sprite_w": 500,
+ "hook": "90%가 틀려요",
+ "question": [
+  "더운 날 방 문을 닫고",
+  "냉장고 문을 활짝 열어두면?"
+ ],
+ "caption": [
+  "냉장고는 계속 돌아가요"
+ ],
+ "options": {
+  "A": "시원",
+  "B": "그대로",
+  "C": "더워짐"
+ },
+ "answer": "C",
+ "count": 4,
+ "narration": {
+  "hook": "구십 퍼센트가 틀려요. 문 닫은 방에서 냉장고 문을 열어두면, 방은 시원해질까요? 에이, 비, 씨 하나만!"
+ }
+}

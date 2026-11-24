@@ -2203,6 +2203,16 @@
    "title": "아무도 안 읽었는데, 비밀번호가 털렸다",
    "mechanic": "chat_unread_count_deduction",
    "status": "PUBLISHED"
+  },
+  {
+   "id": "vote-001",
+   "kind": "vote",
+   "title": "냉장고 문 열어두기",
+   "mechanic": "fridge_door_open_room_warms_heat_pump_vote",
+   "answer": "C",
+   "dir": "rooms/vote-001",
+   "status": "QUEUED",
+   "post_at": "2026-11-25T05:00:00Z"
   }
  ]
 }
