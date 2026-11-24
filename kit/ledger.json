@@ -1286,11 +1286,13 @@
    "mechanic": "coin_cup_refraction_appears_when_water_poured_3d",
    "answer": "1342",
    "date": "2026.11.21",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-23T04:30:00Z",
    "manual_browser": true,
    "note": "Sat 11/21 scheduled post never went live; re-scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-23T04:30:00Z (SY chose 'post all today'). Do not post via API.",
-   "original_post_at": "2026-11-21T02:30:00Z"
+   "original_post_at": "2026-11-21T02:30:00Z",
+   "reel_url": "https://www.instagram.com/reel/DgEhrWhTZhd/",
+   "published_at": "2026-11-23T04:30:00Z"
   },
   {
    "room": 112,
@@ -1298,11 +1300,13 @@
    "mechanic": "scale_reading_dip_hung_vs_float_vs_sunk_3d",
    "answer": "3482",
    "date": "2026.11.21",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-23T05:30:00Z",
    "manual_browser": true,
    "note": "Sat 11/21 scheduled post never went live; re-scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-23T05:30:00Z (SY chose 'post all today'). Do not post via API.",
-   "original_post_at": "2026-11-21T08:30:00Z"
+   "original_post_at": "2026-11-21T08:30:00Z",
+   "reel_url": "https://www.instagram.com/reel/DgEoloeTUcQ/",
+   "published_at": "2026-11-23T05:30:00Z"
   },
   {
    "room": 113,
@@ -1310,11 +1314,13 @@
    "mechanic": "ball_bounce_same_ratio_kth_height_ruler_3d",
    "answer": "9324",
    "date": "2026.11.21",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-23T06:30:00Z",
    "manual_browser": true,
    "note": "Sat 11/21 scheduled post never went live; re-scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-23T06:30:00Z (SY chose 'post all today'). Do not post via API.",
-   "original_post_at": "2026-11-21T11:30:00Z"
+   "original_post_at": "2026-11-21T11:30:00Z",
+   "reel_url": "https://www.instagram.com/reel/DgEvXwZTWLV/",
+   "published_at": "2026-11-23T06:30:00Z"
   },
   {
    "room": 114,
@@ -1374,10 +1380,12 @@
    "mechanic": "hinged_mirrors_angle_image_count_3d",
    "answer": "5374",
    "date": "2026.11.23",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-23T08:30:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-23T08:30:00Z during Meta app restriction; reel only. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-23T08:30:00Z during Meta app restriction; reel only. Do not post via API.",
+   "reel_url": "https://www.instagram.com/reel/DgE9MGCTMcK/",
+   "published_at": "2026-11-23T08:30:00Z"
   },
   {
    "room": 119,
@@ -1385,10 +1393,12 @@
    "mechanic": "pendulum_string_cut_projectile_landing_slot_3d",
    "answer": "8643",
    "date": "2026.11.23",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-23T11:30:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-23T11:30:00Z during Meta app restriction; reel only. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-23T11:30:00Z during Meta app restriction; reel only. Do not post via API.",
+   "reel_url": "https://www.instagram.com/reel/DgFRulTzWda/",
+   "published_at": "2026-11-23T11:30:00Z"
   },
   {
    "room": 120,
