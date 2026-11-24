@@ -1782,8 +1782,10 @@
    "mechanic": "lights_out_3x3_min_presses_3d",
    "answer": "4253",
    "date": "2026.12.05",
-   "status": "QUEUED",
-   "post_at": "2026-12-05T08:30:00Z"
+   "status": "SCHEDULED_IG",
+   "post_at": "2026-12-05T08:30:00Z",
+   "manual_browser": true,
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-12-05T08:30:00Z during Meta app restriction; reel only. Do not post via API."
   },
   {
    "room": 155,
@@ -1791,8 +1793,10 @@
    "mechanic": "champagne_tower_overflow_full_glasses_3d",
    "answer": "6384",
    "date": "2026.12.05",
-   "status": "QUEUED",
-   "post_at": "2026-12-05T11:30:00Z"
+   "status": "SCHEDULED_IG",
+   "post_at": "2026-12-05T11:30:00Z",
+   "manual_browser": true,
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-12-05T11:30:00Z during Meta app restriction; reel only. Do not post via API."
   },
   {
    "room": 156,
@@ -1800,8 +1804,10 @@
    "mechanic": "curling_end_score_closest_stones_3d",
    "answer": "1324",
    "date": "2026.12.06",
-   "status": "QUEUED",
-   "post_at": "2026-12-06T02:30:00Z"
+   "status": "SCHEDULED_IG",
+   "post_at": "2026-12-06T02:30:00Z",
+   "manual_browser": true,
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-12-06T02:30:00Z during Meta app restriction; reel only. Do not post via API."
   },
   {
    "room": 157,
@@ -1809,8 +1815,10 @@
    "mechanic": "paper_strip_fold_order_top_number_3d",
    "answer": "5273",
    "date": "2026.12.06",
-   "status": "QUEUED",
-   "post_at": "2026-12-06T08:30:00Z"
+   "status": "SCHEDULED_IG",
+   "post_at": "2026-12-06T08:30:00Z",
+   "manual_browser": true,
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-12-06T08:30:00Z during Meta app restriction; reel only. Do not post via API."
   },
   {
    "room": 158,
@@ -1818,8 +1826,10 @@
    "mechanic": "fuse_two_flames_meet_post_thick_slow_3d",
    "answer": "8476",
    "date": "2026.12.06",
-   "status": "QUEUED",
-   "post_at": "2026-12-06T11:30:00Z"
+   "status": "SCHEDULED_IG",
+   "post_at": "2026-12-06T11:30:00Z",
+   "manual_browser": true,
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-12-06T11:30:00Z during Meta app restriction; reel only. Do not post via API."
   },
   {
    "room": 159,
@@ -1827,8 +1837,10 @@
    "mechanic": "train_turntable_dead_end_siding_lifo_third_out_3d",
    "answer": "9564",
    "date": "2026.12.07",
-   "status": "QUEUED",
-   "post_at": "2026-12-07T02:30:00Z"
+   "status": "SCHEDULED_IG",
+   "post_at": "2026-12-07T02:30:00Z",
+   "manual_browser": true,
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-12-07T02:30:00Z during Meta app restriction; reel only. Do not post via API."
   },
   {
    "room": 160,
