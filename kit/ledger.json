@@ -2227,6 +2227,16 @@
    "post_at": "2026-11-26T05:00:00Z",
    "manual_browser": true,
    "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-26T05:00:00Z during Meta app restriction. Do not post via API."
+  },
+  {
+   "id": "vote-003",
+   "kind": "vote",
+   "title": "가위 어디로 자를까",
+   "mechanic": "scissors_lever_cut_near_pivot_easier_vote",
+   "answer": "B",
+   "dir": "rooms/vote-003",
+   "status": "QUEUED",
+   "post_at": "2026-11-27T05:00:00Z"
   }
  ]
 }
