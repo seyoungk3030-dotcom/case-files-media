@@ -2323,8 +2323,10 @@
    "mechanic": "cold_glass_condensation_dew_point_vote",
    "answer": "B",
    "dir": "rooms/vote-004",
-   "status": "QUEUED",
-   "post_at": "2026-11-28T05:00:00Z"
+   "status": "SCHEDULED_IG",
+   "post_at": "2026-11-28T05:00:00Z",
+   "manual_browser": true,
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-28T05:00:00Z during Meta app restriction. Do not post via API."
   },
   {
    "id": "vote-005",
@@ -2333,8 +2335,10 @@
    "mechanic": "paper_yank_under_cup_inertia_short_friction_vote",
    "answer": "B",
    "dir": "rooms/vote-005",
-   "status": "QUEUED",
-   "post_at": "2026-11-29T05:00:00Z"
+   "status": "SCHEDULED_IG",
+   "post_at": "2026-11-29T05:00:00Z",
+   "manual_browser": true,
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-29T05:00:00Z during Meta app restriction. Do not post via API."
   }
  ]
 }
