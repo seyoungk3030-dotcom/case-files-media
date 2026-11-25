@@ -1443,10 +1443,11 @@
    "mechanic": "rgb_lamps_colored_shadow_subtractive_3d",
    "answer": "8517",
    "date": "2026.11.25",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-25T02:30:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-25T02:30:00Z during Meta app restriction; reel only. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-25T02:30:00Z during Meta app restriction; reel only. Do not post via API.",
+   "reel_url": "https://www.instagram.com/reel/DgJdia4TIQw/"
   },
   {
    "room": 124,
@@ -2287,10 +2288,11 @@
    "mechanic": "fridge_door_open_room_warms_heat_pump_vote",
    "answer": "C",
    "dir": "rooms/vote-001",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-25T05:00:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-25T05:00:00Z during Meta app restriction. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-25T05:00:00Z during Meta app restriction. Do not post via API.",
+   "reel_url": "https://www.instagram.com/reel/DgJutw1zB1V/"
   },
   {
    "id": "vote-002",
