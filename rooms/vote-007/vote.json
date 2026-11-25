@@ -1,0 +1,24 @@
+{
+ "room": 1007,
+ "brand": "퇴근 후 사건파일 · 1분 투표",
+ "sprite": "/home/user/case-files-media/rooms/vote-007/.build-3d/ice2.png",
+ "sprite_w": 900,
+ "hook": "90%가 틀려요",
+ "question": [
+  "같은 양의 얼음을 넣으면",
+  "콜라가 더 빨리 시원해지는 쪽은?"
+ ],
+ "caption": [
+  "왼쪽 큰 덩이 · 오른쪽 부순 얼음"
+ ],
+ "options": {
+  "A": "큰 덩이",
+  "B": "부순 것",
+  "C": "똑같다"
+ },
+ "answer": "B",
+ "count": 4,
+ "narration": {
+  "hook": "구십 퍼센트가 틀려요. 같은 양의 얼음이라면, 큰 덩어리와 잘게 부순 얼음 중 콜라가 더 빨리 시원해지는 쪽은? 에이, 비, 씨 하나만!"
+ }
+}
