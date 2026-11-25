@@ -1,0 +1,24 @@
+{
+ "room": 1006,
+ "brand": "퇴근 후 사건파일 · 1분 투표",
+ "sprite": "/home/user/case-files-media/rooms/vote-006/.build-3d/scales.png",
+ "sprite_w": 860,
+ "hook": "90%가 틀려요",
+ "question": [
+  "체중계 위에서 한 발로 서면",
+  "숫자는?"
+ ],
+ "caption": [
+  "가만히 서 있을 때예요"
+ ],
+ "options": {
+  "A": "늘어남",
+  "B": "똑같음",
+  "C": "줄어듦"
+ },
+ "answer": "B",
+ "count": 4,
+ "narration": {
+  "hook": "구십 퍼센트가 틀려요. 체중계 위에서 두 발로 서다가 한 발로 서면, 숫자는 어떻게 될까요? 에이, 비, 씨 하나만!"
+ }
+}
