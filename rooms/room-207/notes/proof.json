@@ -1,0 +1,36 @@
+{
+ "unique_answer": "6849",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "steps": 12,
+   "walk": "1",
+   "escalator": "1",
+   "seconds": 6,
+   "footsteps": 6
+  },
+  "B": {
+   "steps": 12,
+   "walk": "2",
+   "escalator": "1",
+   "seconds": 4,
+   "footsteps": 8
+  },
+  "C": {
+   "steps": 10,
+   "walk": "1",
+   "escalator": "3/2",
+   "seconds": 4,
+   "footsteps": 4
+  },
+  "D": {
+   "steps": 15,
+   "walk": "3/2",
+   "escalator": "1",
+   "seconds": 6,
+   "footsteps": 9
+  }
+ },
+ "trap": "12칸이니 12걸음",
+ "why": "걷는 동안 계단도 같이 올라와서, 칸 수 ÷ (내 속도 + 에스컬레이터 속도) 초 만에 도착해요. 걸음 수는 내 속도 × 시간"
+}
