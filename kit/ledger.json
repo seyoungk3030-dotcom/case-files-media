@@ -1851,8 +1851,10 @@
    "mechanic": "parking_lot_sliding_cars_min_moves_red_exit_3d",
    "answer": "3546",
    "date": "2026.12.07",
-   "status": "QUEUED",
-   "post_at": "2026-12-07T08:30:00Z"
+   "status": "SCHEDULED_IG",
+   "post_at": "2026-12-07T08:30:00Z",
+   "manual_browser": true,
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-12-07T08:30:00Z during Meta app restriction; reel only. Do not post via API."
   },
   {
    "room": 161,
@@ -2349,8 +2351,10 @@
    "mechanic": "bathroom_scale_one_foot_same_reading_force_vs_pressure_vote",
    "answer": "B",
    "dir": "rooms/vote-006",
-   "status": "QUEUED",
-   "post_at": "2026-11-30T05:00:00Z"
+   "status": "SCHEDULED_IG",
+   "post_at": "2026-11-30T05:00:00Z",
+   "manual_browser": true,
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-30T05:00:00Z during Meta app restriction. Do not post via API."
   }
  ]
 }
