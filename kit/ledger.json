@@ -2302,6 +2302,15 @@
    "date": "2026.12.23",
    "status": "QUEUED",
    "post_at": "2026-12-23T02:30:00Z"
+  },
+  {
+   "room": 209,
+   "title": "급브레이크 미끄럼 거리",
+   "mechanic": "car_braking_skid_distance_speed_squared_not_linear_3d",
+   "answer": "8124",
+   "date": "2026.12.23",
+   "status": "QUEUED",
+   "post_at": "2026-12-23T08:30:00Z"
   }
  ],
  "extra": [

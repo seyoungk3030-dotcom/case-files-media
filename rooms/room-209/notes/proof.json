@@ -1,0 +1,36 @@
+{
+ "unique_answer": "8124",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "known_kmh": 20,
+   "known_m": 2,
+   "asked_kmh": 40,
+   "skid_m": 8,
+   "mu": 0.79
+  },
+  "B": {
+   "known_kmh": 30,
+   "known_m": 4,
+   "asked_kmh": 15,
+   "skid_m": 1,
+   "mu": 0.88
+  },
+  "C": {
+   "known_kmh": 40,
+   "known_m": 8,
+   "asked_kmh": 20,
+   "skid_m": 2,
+   "mu": 0.79
+  },
+  "D": {
+   "known_kmh": 45,
+   "known_m": 9,
+   "asked_kmh": 30,
+   "skid_m": 4,
+   "mu": 0.88
+  }
+ },
+ "trap": "2배 빠르면 2배 멀리",
+ "why": "미끄럼 거리는 속도의 제곱에 비례해요: 속도 2배 → 4배, 절반 → 1/4"
+}
