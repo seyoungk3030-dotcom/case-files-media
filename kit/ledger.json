@@ -1455,10 +1455,11 @@
    "mechanic": "newtons_cradle_simultaneous_release_collision_3d",
    "answer": "9684",
    "date": "2026.11.25",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-25T08:30:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-25T08:30:00Z during Meta app restriction; reel only. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-25T08:30:00Z during Meta app restriction; reel only. Do not post via API.",
+   "reel_url": "https://www.instagram.com/reel/DgKGw3FTtDc/"
   },
   {
    "room": 125,
@@ -1466,10 +1467,11 @@
    "mechanic": "spring_scale_rope_two_weights_reads_one_side_3d",
    "answer": "3754",
    "date": "2026.11.25",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-25T11:30:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-25T11:30:00Z during Meta app restriction; reel only. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-25T11:30:00Z during Meta app restriction; reel only. Do not post via API.",
+   "reel_url": "https://www.instagram.com/reel/DgKbX4wzgrG/"
   },
   {
    "room": 126,
