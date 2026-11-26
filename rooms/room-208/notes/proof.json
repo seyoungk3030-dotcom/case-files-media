@@ -1,0 +1,37 @@
+{
+ "unique_answer": "3324",
+ "codes_checked": 10000,
+ "g": 9.81,
+ "boards": {
+  "A": {
+   "rider": "어린이",
+   "mass_kg": 25,
+   "chain_m": 2.25,
+   "push_deg": 15,
+   "period_s": 3.02
+  },
+  "B": {
+   "rider": "어른",
+   "mass_kg": 75,
+   "chain_m": 2.25,
+   "push_deg": 35,
+   "period_s": 3.08
+  },
+  "C": {
+   "rider": "어린이",
+   "mass_kg": 25,
+   "chain_m": 1.0,
+   "push_deg": 15,
+   "period_s": 2.01
+  },
+  "D": {
+   "rider": "어른",
+   "mass_kg": 75,
+   "chain_m": 4.0,
+   "push_deg": 30,
+   "period_s": 4.08
+  }
+ },
+ "trap": "무거우면 느리다 / 세게 밀면 빨라진다",
+ "why": "그네(진자)의 왕복 시간은 줄 길이로만 정해져요: 약 2초 × √(줄 길이 m)"
+}

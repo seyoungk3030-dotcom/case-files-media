@@ -2293,6 +2293,15 @@
    "date": "2026.12.22",
    "status": "QUEUED",
    "post_at": "2026-12-22T11:30:00Z"
+  },
+  {
+   "room": 208,
+   "title": "그네 한 번 왕복",
+   "mechanic": "swing_pendulum_period_sqrt_length_mass_amplitude_irrelevant_3d",
+   "answer": "3324",
+   "date": "2026.12.23",
+   "status": "QUEUED",
+   "post_at": "2026-12-23T02:30:00Z"
   }
  ],
  "extra": [
