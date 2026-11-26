@@ -1479,10 +1479,11 @@
    "mechanic": "bolt_nut_turns_thread_pitch_arrow_scale_3d",
    "answer": "6548",
    "date": "2026.11.26",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-26T02:30:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-26T02:30:00Z during Meta app restriction; reel only. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-26T02:30:00Z during Meta app restriction; reel only. Do not post via API.",
+   "reel_url": "https://www.instagram.com/reel/DgMCRJuz5nD/"
   },
   {
    "room": 127,
@@ -2325,10 +2326,11 @@
    "mechanic": "salt_on_ice_temperature_drops_freezing_point_vote",
    "answer": "B",
    "dir": "rooms/vote-002",
-   "status": "SCHEDULED_IG",
+   "status": "PUBLISHED",
    "post_at": "2026-11-26T05:00:00Z",
    "manual_browser": true,
-   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-26T05:00:00Z during Meta app restriction. Do not post via API."
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-11-26T05:00:00Z during Meta app restriction. Do not post via API.",
+   "reel_url": "https://www.instagram.com/reel/DgMTgeizuQT/"
   },
   {
    "id": "vote-003",
