@@ -1,0 +1,36 @@
+{
+ "unique_answer": "5749",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "pieces_known": 3,
+   "seconds": 2,
+   "pieces_asked": 6,
+   "sec_per_cut": 1,
+   "answer": 5
+  },
+  "B": {
+   "pieces_known": 4,
+   "seconds": 3,
+   "pieces_asked": 8,
+   "sec_per_cut": 1,
+   "answer": 7
+  },
+  "C": {
+   "pieces_known": 5,
+   "seconds": 8,
+   "pieces_asked": 3,
+   "sec_per_cut": 2,
+   "answer": 4
+  },
+  "D": {
+   "pieces_known": 2,
+   "seconds": 3,
+   "pieces_asked": 4,
+   "sec_per_cut": 3,
+   "answer": 9
+  }
+ },
+ "trap": "조각 수에 비례 (3조각 2초면 6조각 4초)",
+ "why": "n조각은 칼질 n-1번. 칼질 한 번 시간 = 걸린 시간 ÷ (n-1)"
+}
