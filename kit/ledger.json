@@ -2293,15 +2293,6 @@
    "date": "2026.12.22",
    "status": "QUEUED",
    "post_at": "2026-12-22T11:30:00Z"
-  },
-  {
-   "room": 208,
-   "title": "김밥 자르는 시간",
-   "mechanic": "kimbap_cut_pieces_minus_one_cuts_time_not_proportional_3d",
-   "answer": "5749",
-   "date": "2026.12.23",
-   "status": "QUEUED",
-   "post_at": "2026-12-23T02:30:00Z"
   }
  ],
  "extra": [
