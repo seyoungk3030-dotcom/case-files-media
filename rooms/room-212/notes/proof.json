@@ -1,0 +1,36 @@
+{
+ "unique_answer": "3869",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "rain_m_s": 6,
+   "across": 1,
+   "down": 2,
+   "bus_m_s": 3,
+   "bus_km_h": 11
+  },
+  "B": {
+   "rain_m_s": 6,
+   "across": 4,
+   "down": 3,
+   "bus_m_s": 8,
+   "bus_km_h": 29
+  },
+  "C": {
+   "rain_m_s": 6,
+   "across": 1,
+   "down": 1,
+   "bus_m_s": 6,
+   "bus_km_h": 22
+  },
+  "D": {
+   "rain_m_s": 6,
+   "across": 3,
+   "down": 2,
+   "bus_m_s": 9,
+   "bus_km_h": 32
+  }
+ },
+ "trap": "빗줄기가 가파를수록 빠르다",
+ "why": "버스에서 보면 비가 뒤로 v만큼 밀려 보여요: 옆으로 간 칸 ÷ 아래로 간 칸 = 버스 속도 ÷ 빗방울 속도. 많이 누울수록 빨라요"
+}
