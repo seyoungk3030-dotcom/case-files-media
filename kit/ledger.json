@@ -1900,8 +1900,10 @@
    "mechanic": "jigsaw_tab_blank_rotate_no_flip_fit_3d",
    "answer": "8759",
    "date": "2026.12.08",
-   "status": "QUEUED",
-   "post_at": "2026-12-08T11:30:00Z"
+   "status": "SCHEDULED_IG",
+   "post_at": "2026-12-08T11:30:00Z",
+   "manual_browser": true,
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-12-08T11:30:00Z during Meta app restriction; reel only. Do not post via API."
   },
   {
    "room": 165,
@@ -1909,8 +1911,10 @@
    "mechanic": "frying_pan_pancakes_both_sides_min_minutes_3d",
    "answer": "3733",
    "date": "2026.12.09",
-   "status": "QUEUED",
-   "post_at": "2026-12-09T02:30:00Z"
+   "status": "SCHEDULED_IG",
+   "post_at": "2026-12-09T02:30:00Z",
+   "manual_browser": true,
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-12-09T02:30:00Z during Meta app restriction; reel only. Do not post via API."
   },
   {
    "room": 166,
