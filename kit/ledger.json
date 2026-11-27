@@ -1923,8 +1923,10 @@
    "mechanic": "tree_planting_open_path_vs_closed_loop_count_3d",
    "answer": "5686",
    "date": "2026.12.09",
-   "status": "QUEUED",
-   "post_at": "2026-12-09T08:30:00Z"
+   "status": "SCHEDULED_IG",
+   "post_at": "2026-12-09T08:30:00Z",
+   "manual_browser": true,
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-12-09T08:30:00Z during Meta app restriction; reel only. Do not post via API."
   },
   {
    "room": 167,
@@ -1932,8 +1934,10 @@
    "mechanic": "pizza_one_big_vs_many_small_area_by_diameter_3d",
    "answer": "7236",
    "date": "2026.12.09",
-   "status": "QUEUED",
-   "post_at": "2026-12-09T11:30:00Z"
+   "status": "SCHEDULED_IG",
+   "post_at": "2026-12-09T11:30:00Z",
+   "manual_browser": true,
+   "note": "Scheduled by hand in instagram.com (콘텐츠 예약) for 2026-12-09T11:30:00Z during Meta app restriction; reel only. Do not post via API."
   },
   {
    "room": 168,
