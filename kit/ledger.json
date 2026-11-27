@@ -2317,6 +2317,15 @@
    "date": "2026.12.23",
    "status": "QUEUED",
    "post_at": "2026-12-23T08:30:00Z"
+  },
+  {
+   "room": 210,
+   "title": "빗물은 몇 cm?",
+   "mechanic": "rain_collected_depth_area_ratio_width_irrelevant_funnel_3d",
+   "answer": "3381",
+   "date": "2026.12.23",
+   "status": "QUEUED",
+   "post_at": "2026-12-23T11:30:00Z"
   }
  ],
  "extra": [

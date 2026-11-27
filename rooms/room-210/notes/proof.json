@@ -1,0 +1,40 @@
+{
+ "unique_answer": "3381",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "name": "넓은 대야",
+   "kind": "straight",
+   "opening_cm": 40,
+   "water_diameter_cm": 40,
+   "rain_cm": 3,
+   "depth_cm": 3
+  },
+  "B": {
+   "name": "좁은 컵",
+   "kind": "straight",
+   "opening_cm": 6,
+   "water_diameter_cm": 6,
+   "rain_cm": 3,
+   "depth_cm": 3
+  },
+  "C": {
+   "name": "깔때기 + 관",
+   "kind": "funnel",
+   "opening_cm": 10,
+   "water_diameter_cm": 5,
+   "rain_cm": 2,
+   "depth_cm": 8
+  },
+  "D": {
+   "name": "입구 좁은 병",
+   "kind": "jar",
+   "opening_cm": 6,
+   "water_diameter_cm": 12,
+   "rain_cm": 4,
+   "depth_cm": 1
+  }
+ },
+ "trap": "넓은 대야가 더 많이 받으니 더 깊다",
+ "why": "곧은 벽 그릇은 넓든 좁든 비 온 만큼(cm) 차요. 입구가 물 고인 곳보다 넓으면 (지름 비)² 배로 깊어지고, 좁으면 그만큼 얕아져요"
+}
