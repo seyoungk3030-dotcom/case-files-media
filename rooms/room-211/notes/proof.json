@@ -1,0 +1,36 @@
+{
+ "unique_answer": "1468",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "label": "손 안 댐",
+   "flow_L_min": 12,
+   "opening_cm2": "2",
+   "speed_m_s": 1,
+   "range_m_from_1m": 0.45
+  },
+  "B": {
+   "label": "손가락으로 막음",
+   "flow_L_min": 12,
+   "opening_cm2": "1/2",
+   "speed_m_s": 4,
+   "range_m_from_1m": 1.81
+  },
+  "C": {
+   "label": "수도 더 세게 + 막음",
+   "flow_L_min": 18,
+   "opening_cm2": "1/2",
+   "speed_m_s": 6,
+   "range_m_from_1m": 2.71
+  },
+  "D": {
+   "label": "더 좁게 막음",
+   "flow_L_min": 12,
+   "opening_cm2": "1/4",
+   "speed_m_s": 8,
+   "range_m_from_1m": 3.61
+  }
+ },
+ "trap": "막으면 물이 덜 나와서 느려진다",
+ "why": "1초에 나오는 물의 양은 같으니, 구멍 넓이가 1/4이 되면 물은 4배 빨라야 다 빠져나가요 (속도 = 양 ÷ 넓이)"
+}
