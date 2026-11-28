@@ -1,0 +1,32 @@
+{
+ "unique_answer": "3609",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "cells": "++-+",
+   "cells_n": 4,
+   "reversed": 1,
+   "volts": 3
+  },
+  "B": {
+   "cells": "++-+++",
+   "cells_n": 6,
+   "reversed": 1,
+   "volts": 6
+  },
+  "C": {
+   "cells": "+--+",
+   "cells_n": 4,
+   "reversed": 2,
+   "volts": 0
+  },
+  "D": {
+   "cells": "+++++-++",
+   "cells_n": 8,
+   "reversed": 1,
+   "volts": 9
+  }
+ },
+ "trap": "거꾸로 넣은 건전지는 빼고 센다 (0 V 취급)",
+ "why": "거꾸로 넣은 건전지는 반대 방향으로 1.5 V를 밀어서, 0이 아니라 -1.5 V예요: 전압 = 1.5 × (바른 개수 - 거꾸로 개수)"
+}

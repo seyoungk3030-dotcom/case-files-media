@@ -2349,6 +2349,15 @@
    "date": "2026.12.24",
    "status": "QUEUED",
    "post_at": "2026-12-24T08:30:00Z"
+  },
+  {
+   "room": 213,
+   "title": "건전지 하나를 거꾸로",
+   "mechanic": "battery_series_reversed_cell_subtracts_not_zero_voltmeter_3d",
+   "answer": "3609",
+   "date": "2026.12.24",
+   "status": "QUEUED",
+   "post_at": "2026-12-24T11:30:00Z"
   }
  ],
  "extra": [
