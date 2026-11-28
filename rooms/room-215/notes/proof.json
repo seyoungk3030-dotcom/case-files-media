@@ -1,0 +1,32 @@
+{
+ "unique_answer": "3052",
+ "codes_checked": 10000,
+ "boards": {
+  "A": {
+   "holes": 3,
+   "cap_on": false,
+   "air_hole_above_water": false,
+   "streams": 3
+  },
+  "B": {
+   "holes": 4,
+   "cap_on": true,
+   "air_hole_above_water": false,
+   "streams": 0
+  },
+  "C": {
+   "holes": 5,
+   "cap_on": true,
+   "air_hole_above_water": true,
+   "streams": 5
+  },
+  "D": {
+   "holes": 2,
+   "cap_on": false,
+   "air_hole_above_water": false,
+   "streams": 2
+  }
+ },
+ "trap": "구멍 수만큼 물이 샌다 (뚜껑 무시)",
+ "why": "물이 나가려면 그만큼 공기가 들어와야 해요. 뚜껑을 닫고 물 위에 구멍도 없으면 작은 구멍으로는 공기가 못 들어와 물줄기가 멈춰요"
+}
